@@ -1,0 +1,911 @@
+Transaction_ID,Date,Product_ID,Product_Name,Category,Quantity,Price,Revenue,Cost,Net_Profit,Region,Channel,Customer_Segment,CAC
+TX-100000,2025-07-27 17:37:37,P001,AuraBook Pro 15,Electronics,1,1299,1299,780,519,North America,Online,New,32
+TX-100001,2025-07-28 02:23:13,P014,FlexiCore Anti-Slip Yoga Mat,Fitness & Sports,1,40,40,12,28,North America,Online,New,34
+TX-100002,2025-07-28 11:08:49,P007,Core Denim Slim Fit,Fashion,1,65,65,22,43,Latin America,Online,Returning,0
+TX-100003,2025-07-28 19:54:25,P014,FlexiCore Anti-Slip Yoga Mat,Fitness & Sports,1,40,40,12,28,Asia-Pacific,In-Store,New,10
+TX-100004,2025-07-29 04:40:01,P013,IronPulse Adjustable Dumbbell,Fitness & Sports,2,249,498,240,258,North America,In-Store,Returning,0
+TX-100005,2025-07-29 13:25:37,P015,HydroDash Insulated Flask,Fitness & Sports,3,30,90,24,66,North America,In-Store,New,15
+TX-100006,2025-07-29 22:11:13,P012,Breeze Mist Ultrasonic Diffuser,Home & Living,1,50,50,18,32,Europe,Affiliate,New,6
+TX-100007,2025-07-30 06:56:49,P003,Quantum Charge Wireless Pad,Electronics,5,49,245,75,170,North America,Online,Returning,0
+TX-100008,2025-07-30 15:42:25,P012,Breeze Mist Ultrasonic Diffuser,Home & Living,1,50,50,18,32,Europe,Affiliate,Returning,0
+TX-100009,2025-07-31 00:28:01,P008,Voyager Anti-Theft Backpack,Fashion,3,75,225,75,150,Europe,In-Store,Returning,0
+TX-100010,2025-07-31 09:13:37,P002,SoundSync ANC Headphones,Electronics,1,199,199,85,114,North America,Online,Returning,0
+TX-100013,2025-08-01 11:30:25,P016,SonicPulse Smart Jump Rope,Fitness & Sports,1,45,45,15,30,Latin America,Affiliate,Returning,0
+TX-100014,2025-08-01 20:16:01,P018,HydroBloom Nourishing Cream,Beauty & Care,3,38,114,30,84,Asia-Pacific,Affiliate,Returning,0
+TX-100015,2025-08-02 05:01:37,P005,Luxe Linen Blazer,Fashion,1,120,120,40,80,Latin America,Online,New,28
+TX-100016,2025-08-02 13:47:13,P013,IronPulse Adjustable Dumbbell,Fitness & Sports,2,249,498,240,258,Latin America,Affiliate,Returning,0
+TX-100017,2025-08-02 22:32:49,P001,AuraBook Pro 15,Electronics,1,1169,1169,780,389,North America,Affiliate,Returning,0
+TX-100018,2025-08-03 07:18:25,P001,AuraBook Pro 15,Electronics,1,1299,1299,780,519,Asia-Pacific,Affiliate,New,155
+TX-100019,2025-08-03 16:04:01,P017,DermaBright Serum Duo,Beauty & Care,1,55,55,14,41,Europe,Online,Returning,0
+TX-100020,2025-08-04 00:49:37,P017,DermaBright Serum Duo,Beauty & Care,2,49,98,28,70,North America,Affiliate,Returning,0
+TX-100022,2025-08-04 18:20:49,P010,Ember Ceramic Coffee Mug Set,Home & Living,3,35,105,30,75,Europe,Online,New,17
+TX-100023,2025-08-05 03:06:25,P003,Quantum Charge Wireless Pad,Electronics,1,49,49,15,34,Europe,Online,Returning,0
+TX-100025,2025-08-05 20:37:37,P007,Core Denim Slim Fit,Fashion,1,65,65,22,43,Europe,Affiliate,Returning,0
+TX-100026,2025-08-06 05:23:13,P004,AeroGlide Smart Watch,Electronics,2,299,598,260,338,North America,Online,New,33
+TX-100027,2025-08-06 14:08:49,P003,Quantum Charge Wireless Pad,Electronics,2,46,92,30,62,North America,Online,New,23
+TX-100028,2025-08-06 22:54:25,P007,Core Denim Slim Fit,Fashion,2,65,130,44,86,Europe,Affiliate,Returning,0
+TX-100029,2025-08-07 07:40:01,P004,AeroGlide Smart Watch,Electronics,2,254,508,260,248,North America,In-Store,Returning,0
+TX-100031,2025-08-08 01:11:13,P013,IronPulse Adjustable Dumbbell,Fitness & Sports,1,249,249,120,129,Asia-Pacific,Online,New,29
+TX-100032,2025-08-08 09:56:49,P006,Stratus Comfort Sneakers,Fashion,1,85,85,30,55,Asia-Pacific,In-Store,New,13
+TX-100033,2025-08-08 18:42:25,P018,HydroBloom Nourishing Cream,Beauty & Care,1,38,38,10,28,North America,Online,New,30
+TX-100034,2025-08-09 03:28:01,P013,IronPulse Adjustable Dumbbell,Fitness & Sports,1,249,249,120,129,North America,Online,Returning,0
+TX-100035,2025-08-09 12:13:37,P015,HydroDash Insulated Flask,Fitness & Sports,1,30,30,8,22,Asia-Pacific,In-Store,Returning,0
+TX-100036,2025-08-09 20:59:13,P002,SoundSync ANC Headphones,Electronics,3,199,597,255,342,North America,Affiliate,Returning,0
+TX-100038,2025-08-10 14:30:25,P002,SoundSync ANC Headphones,Electronics,1,199,199,85,114,North America,Online,New,33
+TX-100039,2025-08-10 23:16:01,P020,HerbalPure Charcoal Mask Set,Beauty & Care,2,28,56,12,44,North America,Affiliate,New,6
+TX-100040,2025-08-11 08:01:37,P011,Helix Memory Foam Pillow,Home & Living,1,80,80,32,48,Asia-Pacific,Online,Returning,0
+TX-100041,2025-08-11 16:47:13,P010,Ember Ceramic Coffee Mug Set,Home & Living,1,35,35,10,25,Latin America,In-Store,New,14
+TX-100043,2025-08-12 10:18:25,P007,Core Denim Slim Fit,Fashion,1,65,65,22,43,Asia-Pacific,Online,Returning,0
+TX-100044,2025-08-12 19:04:01,P018,HydroBloom Nourishing Cream,Beauty & Care,5,38,190,50,140,Asia-Pacific,Affiliate,New,22
+TX-100045,2025-08-13 03:49:37,P004,AeroGlide Smart Watch,Electronics,2,299,598,260,338,Europe,In-Store,New,9
+TX-100046,2025-08-13 12:35:13,P007,Core Denim Slim Fit,Fashion,1,65,65,22,43,Asia-Pacific,Online,Returning,0
+TX-100047,2025-08-13 21:20:49,P003,Quantum Charge Wireless Pad,Electronics,1,49,49,15,34,North America,In-Store,New,9
+TX-100048,2025-08-14 06:06:25,P015,HydroDash Insulated Flask,Fitness & Sports,1,25,25,8,17,Latin America,Affiliate,New,3
+TX-100050,2025-08-14 23:37:37,P012,Breeze Mist Ultrasonic Diffuser,Home & Living,1,50,50,18,32,Europe,In-Store,New,5
+TX-100052,2025-08-15 17:08:49,P008,Voyager Anti-Theft Backpack,Fashion,1,75,75,25,50,North America,In-Store,Returning,0
+TX-100053,2025-08-16 01:54:25,P006,Stratus Comfort Sneakers,Fashion,1,85,85,30,55,Europe,In-Store,New,11
+TX-100054,2025-08-16 10:40:01,P008,Voyager Anti-Theft Backpack,Fashion,1,75,75,25,50,Europe,Online,New,22
+TX-100055,2025-08-16 19:25:37,P015,HydroDash Insulated Flask,Fitness & Sports,1,28,28,8,20,Asia-Pacific,In-Store,New,11
+TX-100056,2025-08-17 04:11:13,P003,Quantum Charge Wireless Pad,Electronics,3,49,147,45,102,Asia-Pacific,In-Store,Returning,0
+TX-100057,2025-08-17 12:56:49,P009,Nova Glow LED Desk Lamp,Home & Living,1,40,40,14,26,Europe,Affiliate,Returning,0
+TX-100058,2025-08-17 21:42:25,P011,Helix Memory Foam Pillow,Home & Living,2,80,160,64,96,Latin America,Affiliate,New,19
+TX-100059,2025-08-18 06:28:01,P002,SoundSync ANC Headphones,Electronics,1,199,199,85,114,North America,Online,New,25
+TX-100060,2025-08-18 15:13:37,P004,AeroGlide Smart Watch,Electronics,1,299,299,130,169,Asia-Pacific,Affiliate,Returning,0
+TX-100061,2025-08-18 23:59:13,P005,Luxe Linen Blazer,Fashion,1,120,120,40,80,Europe,In-Store,Returning,0
+TX-100062,2025-08-19 08:44:49,P018,HydroBloom Nourishing Cream,Beauty & Care,1,38,38,10,28,North America,In-Store,Returning,0
+TX-100063,2025-08-19 17:30:25,P011,Helix Memory Foam Pillow,Home & Living,1,80,80,32,48,Latin America,In-Store,Returning,0
+TX-100064,2025-08-20 02:16:01,P006,Stratus Comfort Sneakers,Fashion,1,85,85,30,55,Europe,In-Store,Returning,0
+TX-100065,2025-08-20 11:01:37,P007,Core Denim Slim Fit,Fashion,2,65,130,44,86,Europe,Online,New,17
+TX-100066,2025-08-20 19:47:13,P019,SilkDuo Ionic Hair Dryer,Beauty & Care,2,110,220,96,124,Europe,Affiliate,Returning,0
+TX-100067,2025-08-21 04:32:49,P001,AuraBook Pro 15,Electronics,2,1299,2598,1560,1038,North America,In-Store,New,5
+TX-100068,2025-08-21 13:18:25,P004,AeroGlide Smart Watch,Electronics,2,299,598,260,338,Latin America,Online,Returning,0
+TX-100071,2025-08-22 15:35:13,P017,DermaBright Serum Duo,Beauty & Care,1,55,55,14,41,Latin America,Affiliate,Returning,0
+TX-100072,2025-08-23 00:20:49,P009,Nova Glow LED Desk Lamp,Home & Living,3,45,135,42,93,Europe,Affiliate,Returning,0
+TX-100073,2025-08-23 09:06:25,P015,HydroDash Insulated Flask,Fitness & Sports,1,30,30,8,22,North America,Affiliate,Returning,0
+TX-100074,2025-08-23 17:52:01,P018,HydroBloom Nourishing Cream,Beauty & Care,1,38,38,10,28,North America,Online,New,19
+TX-100075,2025-08-24 02:37:37,P003,Quantum Charge Wireless Pad,Electronics,2,44,88,30,58,Latin America,In-Store,Returning,0
+TX-100076,2025-08-24 11:23:13,P019,SilkDuo Ionic Hair Dryer,Beauty & Care,2,99,198,96,102,North America,Affiliate,Returning,0
+TX-100077,2025-08-24 20:08:49,P013,IronPulse Adjustable Dumbbell,Fitness & Sports,1,249,249,120,129,Latin America,Affiliate,New,29
+TX-100078,2025-08-25 04:54:25,P001,AuraBook Pro 15,Electronics,1,1299,1299,780,519,Latin America,In-Store,Returning,0
+TX-100080,2025-08-25 22:25:37,P013,IronPulse Adjustable Dumbbell,Fitness & Sports,1,249,249,120,129,North America,Online,Returning,0
+TX-100081,2025-08-26 07:11:13,P009,Nova Glow LED Desk Lamp,Home & Living,2,45,90,28,62,Latin America,In-Store,New,11
+TX-100082,2025-08-26 15:56:49,P014,FlexiCore Anti-Slip Yoga Mat,Fitness & Sports,1,40,40,12,28,Asia-Pacific,Online,Returning,0
+TX-100083,2025-08-27 00:42:25,P012,Breeze Mist Ultrasonic Diffuser,Home & Living,1,50,50,18,32,Europe,Affiliate,New,6
+TX-100085,2025-08-27 18:13:37,P001,AuraBook Pro 15,Electronics,1,1299,1299,780,519,Europe,Online,New,21
+TX-100086,2025-08-28 02:59:13,P009,Nova Glow LED Desk Lamp,Home & Living,1,45,45,14,31,Asia-Pacific,Online,New,18
+TX-100087,2025-08-28 11:44:49,P010,Ember Ceramic Coffee Mug Set,Home & Living,1,35,35,10,25,Latin America,In-Store,New,15
+TX-100088,2025-08-28 20:30:25,P010,Ember Ceramic Coffee Mug Set,Home & Living,2,35,70,20,50,North America,Affiliate,New,8
+TX-100089,2025-08-29 05:16:01,P003,Quantum Charge Wireless Pad,Electronics,1,49,49,15,34,Asia-Pacific,Online,Returning,0
+TX-100090,2025-08-29 14:01:37,P015,HydroDash Insulated Flask,Fitness & Sports,5,30,150,40,110,Europe,In-Store,New,15
+TX-100091,2025-08-29 22:47:13,P018,HydroBloom Nourishing Cream,Beauty & Care,5,38,190,50,140,Latin America,In-Store,Returning,0
+TX-100092,2025-08-30 07:32:49,P008,Voyager Anti-Theft Backpack,Fashion,2,75,150,50,100,Europe,In-Store,Returning,0
+TX-100093,2025-08-30 16:18:25,P011,Helix Memory Foam Pillow,Home & Living,1,80,80,32,48,North America,In-Store,Returning,0
+TX-100094,2025-08-31 01:04:01,P009,Nova Glow LED Desk Lamp,Home & Living,3,42,126,42,84,Asia-Pacific,In-Store,Returning,0
+TX-100095,2025-08-31 09:49:37,P014,FlexiCore Anti-Slip Yoga Mat,Fitness & Sports,5,40,200,60,140,Latin America,Affiliate,New,24
+TX-100096,2025-08-31 18:35:13,P015,HydroDash Insulated Flask,Fitness & Sports,1,30,30,8,22,North America,Online,Returning,0
+TX-100097,2025-09-01 03:20:49,P019,SilkDuo Ionic Hair Dryer,Beauty & Care,2,110,220,96,124,Asia-Pacific,In-Store,Returning,0
+TX-100098,2025-09-01 12:06:25,P012,Breeze Mist Ultrasonic Diffuser,Home & Living,1,50,50,18,32,Latin America,In-Store,Returning,0
+TX-100099,2025-09-01 20:52:01,P011,Helix Memory Foam Pillow,Home & Living,1,80,80,32,48,North America,Affiliate,New,9
+TX-100100,2025-09-02 05:37:37,P019,SilkDuo Ionic Hair Dryer,Beauty & Care,1,110,110,48,62,Asia-Pacific,Online,New,20
+TX-100101,2025-09-02 14:23:13,P018,HydroBloom Nourishing Cream,Beauty & Care,1,38,38,10,28,Europe,In-Store,New,7
+TX-100102,2025-09-02 23:08:49,P016,SonicPulse Smart Jump Rope,Fitness & Sports,2,45,90,30,60,North America,Online,Returning,0
+TX-100103,2025-09-03 07:54:25,P002,SoundSync ANC Headphones,Electronics,2,199,398,170,228,Asia-Pacific,In-Store,New,14
+TX-100104,2025-09-03 16:40:01,P002,SoundSync ANC Headphones,Electronics,1,179,179,85,94,North America,Online,Returning,0
+TX-100105,2025-09-04 01:25:37,P020,HerbalPure Charcoal Mask Set,Beauty & Care,2,28,56,12,44,Europe,Affiliate,Returning,0
+TX-100106,2025-09-04 10:11:13,P019,SilkDuo Ionic Hair Dryer,Beauty & Care,3,110,330,144,186,Latin America,In-Store,New,6
+TX-100108,2025-09-05 03:42:25,P007,Core Denim Slim Fit,Fashion,1,65,65,22,43,Europe,Affiliate,New,7
+TX-100109,2025-09-05 12:28:01,P014,FlexiCore Anti-Slip Yoga Mat,Fitness & Sports,2,36,72,24,48,Latin America,Affiliate,Returning,0
+TX-100110,2025-09-05 21:13:37,P015,HydroDash Insulated Flask,Fitness & Sports,2,30,60,16,44,North America,Affiliate,New,7
+TX-100111,2025-09-06 05:59:13,P007,Core Denim Slim Fit,Fashion,1,65,65,22,43,Latin America,Online,New,17
+TX-100112,2025-09-06 14:44:49,P010,Ember Ceramic Coffee Mug Set,Home & Living,2,35,70,20,50,Asia-Pacific,In-Store,New,11
+TX-100114,2025-09-07 08:16:01,P016,SonicPulse Smart Jump Rope,Fitness & Sports,2,45,90,30,60,Latin America,Online,New,34
+TX-100115,2025-09-07 17:01:37,P003,Quantum Charge Wireless Pad,Electronics,5,49,245,75,170,Europe,Affiliate,New,29
+TX-100116,2025-09-08 01:47:13,P006,Stratus Comfort Sneakers,Fashion,1,85,85,30,55,Latin America,Affiliate,Returning,0
+TX-100117,2025-09-08 10:32:49,P016,SonicPulse Smart Jump Rope,Fitness & Sports,2,45,90,30,60,North America,In-Store,Returning,0
+TX-100118,2025-09-08 19:18:25,P006,Stratus Comfort Sneakers,Fashion,2,85,170,60,110,Europe,In-Store,Returning,0
+TX-100119,2025-09-09 04:04:01,P015,HydroDash Insulated Flask,Fitness & Sports,2,27,54,16,38,North America,In-Store,Returning,0
+TX-100121,2025-09-09 21:35:13,P001,AuraBook Pro 15,Electronics,1,1299,1299,780,519,North America,In-Store,New,12
+TX-100122,2025-09-10 06:20:49,P002,SoundSync ANC Headphones,Electronics,2,199,398,170,228,Europe,In-Store,New,12
+TX-100123,2025-09-10 15:06:25,P020,HerbalPure Charcoal Mask Set,Beauty & Care,2,28,56,12,44,Europe,Affiliate,New,6
+TX-100124,2025-09-10 23:52:01,P003,Quantum Charge Wireless Pad,Electronics,5,49,245,75,170,Europe,Online,Returning,0
+TX-100125,2025-09-11 08:37:37,P010,Ember Ceramic Coffee Mug Set,Home & Living,2,35,70,20,50,Asia-Pacific,In-Store,Returning,0
+TX-100126,2025-09-11 17:23:13,P013,IronPulse Adjustable Dumbbell,Fitness & Sports,1,249,249,120,129,Europe,Affiliate,New,29
+TX-100127,2025-09-12 02:08:49,P014,FlexiCore Anti-Slip Yoga Mat,Fitness & Sports,1,40,40,12,28,Asia-Pacific,Affiliate,Returning,0
+TX-100128,2025-09-12 10:54:25,P019,SilkDuo Ionic Hair Dryer,Beauty & Care,3,110,330,144,186,Latin America,Online,Returning,0
+TX-100129,2025-09-12 19:40:01,P018,HydroBloom Nourishing Cream,Beauty & Care,1,38,38,10,28,Latin America,In-Store,Returning,0
+TX-100130,2025-09-13 04:25:37,P013,IronPulse Adjustable Dumbbell,Fitness & Sports,1,249,249,120,129,Europe,In-Store,New,11
+TX-100131,2025-09-13 13:11:13,P005,Luxe Linen Blazer,Fashion,3,120,360,120,240,Latin America,Online,New,18
+TX-100133,2025-09-14 06:42:25,P017,DermaBright Serum Duo,Beauty & Care,2,55,110,28,82,Latin America,Online,New,19
+TX-100134,2025-09-14 15:28:01,P009,Nova Glow LED Desk Lamp,Home & Living,5,40,200,70,130,Asia-Pacific,Affiliate,Returning,0
+TX-100137,2025-09-15 17:44:49,P011,Helix Memory Foam Pillow,Home & Living,3,68,204,96,108,Latin America,Affiliate,New,24
+TX-100138,2025-09-16 02:30:25,P010,Ember Ceramic Coffee Mug Set,Home & Living,2,35,70,20,50,Europe,Affiliate,New,8
+TX-100139,2025-09-16 11:16:01,P004,AeroGlide Smart Watch,Electronics,1,299,299,130,169,Latin America,Online,Returning,0
+TX-100140,2025-09-16 20:01:37,P012,Breeze Mist Ultrasonic Diffuser,Home & Living,1,50,50,18,32,Asia-Pacific,In-Store,New,14
+TX-100141,2025-09-17 04:47:13,P006,Stratus Comfort Sneakers,Fashion,2,85,170,60,110,Europe,Online,New,22
+TX-100142,2025-09-17 13:32:49,P019,SilkDuo Ionic Hair Dryer,Beauty & Care,1,110,110,48,62,Europe,Online,Returning,0
+TX-100143,2025-09-17 22:18:25,P015,HydroDash Insulated Flask,Fitness & Sports,1,30,30,8,22,Asia-Pacific,Affiliate,New,3
+TX-100144,2025-09-18 07:04:01,P019,SilkDuo Ionic Hair Dryer,Beauty & Care,1,110,110,48,62,Asia-Pacific,Affiliate,Returning,0
+TX-100145,2025-09-18 15:49:37,P013,IronPulse Adjustable Dumbbell,Fitness & Sports,1,249,249,120,129,Latin America,Online,New,33
+TX-100146,2025-09-19 00:35:13,P010,Ember Ceramic Coffee Mug Set,Home & Living,2,29,58,20,38,North America,Affiliate,Returning,0
+TX-100147,2025-09-19 09:20:49,P002,SoundSync ANC Headphones,Electronics,1,199,199,85,114,Latin America,In-Store,New,8
+TX-100148,2025-09-19 18:06:25,P005,Luxe Linen Blazer,Fashion,2,108,216,80,136,Europe,Affiliate,New,25
+TX-100149,2025-09-20 02:52:01,P003,Quantum Charge Wireless Pad,Electronics,1,49,49,15,34,North America,In-Store,Returning,0
+TX-100151,2025-09-20 20:23:13,P017,DermaBright Serum Duo,Beauty & Care,2,55,110,28,82,Asia-Pacific,Online,Returning,0
+TX-100152,2025-09-21 05:08:49,P011,Helix Memory Foam Pillow,Home & Living,1,80,80,32,48,North America,In-Store,New,8
+TX-100154,2025-09-21 22:40:01,P013,IronPulse Adjustable Dumbbell,Fitness & Sports,1,249,249,120,129,Asia-Pacific,Online,Returning,0
+TX-100155,2025-09-22 07:25:37,P012,Breeze Mist Ultrasonic Diffuser,Home & Living,1,47,47,18,29,Asia-Pacific,Affiliate,Returning,0
+TX-100156,2025-09-22 16:11:13,P020,HerbalPure Charcoal Mask Set,Beauty & Care,5,25,125,30,95,Asia-Pacific,Affiliate,New,15
+TX-100158,2025-09-23 09:42:25,P014,FlexiCore Anti-Slip Yoga Mat,Fitness & Sports,1,40,40,12,28,North America,Online,New,30
+TX-100159,2025-09-23 18:28:01,P008,Voyager Anti-Theft Backpack,Fashion,3,75,225,75,150,Europe,In-Store,Returning,0
+TX-100160,2025-09-24 03:13:37,P005,Luxe Linen Blazer,Fashion,3,120,360,120,240,Latin America,Affiliate,New,43
+TX-100162,2025-09-24 20:44:49,P012,Breeze Mist Ultrasonic Diffuser,Home & Living,1,50,50,18,32,Europe,In-Store,Returning,0
+TX-100163,2025-09-25 05:30:25,P012,Breeze Mist Ultrasonic Diffuser,Home & Living,1,50,50,18,32,Asia-Pacific,Online,Returning,0
+TX-100164,2025-09-25 14:16:01,P015,HydroDash Insulated Flask,Fitness & Sports,5,30,150,40,110,North America,Affiliate,New,18
+TX-100166,2025-09-26 07:47:13,P011,Helix Memory Foam Pillow,Home & Living,1,80,80,32,48,Europe,Online,New,32
+TX-100167,2025-09-26 16:32:49,P007,Core Denim Slim Fit,Fashion,3,61,183,66,117,Europe,In-Store,New,7
+TX-100168,2025-09-27 01:18:25,P006,Stratus Comfort Sneakers,Fashion,1,85,85,30,55,Europe,Affiliate,New,10
+TX-100169,2025-09-27 10:04:01,P011,Helix Memory Foam Pillow,Home & Living,1,72,72,32,40,North America,Online,Returning,0
+TX-100170,2025-09-27 18:49:37,P003,Quantum Charge Wireless Pad,Electronics,1,49,49,15,34,Latin America,In-Store,Returning,0
+TX-100171,2025-09-28 03:35:13,P020,HerbalPure Charcoal Mask Set,Beauty & Care,2,28,56,12,44,North America,Affiliate,Returning,0
+TX-100172,2025-09-28 12:20:49,P016,SonicPulse Smart Jump Rope,Fitness & Sports,2,45,90,30,60,Latin America,In-Store,New,12
+TX-100173,2025-09-28 21:06:25,P003,Quantum Charge Wireless Pad,Electronics,2,49,98,30,68,North America,Affiliate,New,11
+TX-100174,2025-09-29 05:52:01,P011,Helix Memory Foam Pillow,Home & Living,2,80,160,64,96,Latin America,Affiliate,Returning,0
+TX-100175,2025-09-29 14:37:37,P004,AeroGlide Smart Watch,Electronics,1,299,299,130,169,Europe,In-Store,Returning,0
+TX-100176,2025-09-29 23:23:13,P014,FlexiCore Anti-Slip Yoga Mat,Fitness & Sports,2,40,80,24,56,North America,In-Store,Returning,0
+TX-100177,2025-09-30 08:08:49,P005,Luxe Linen Blazer,Fashion,1,120,120,40,80,Latin America,Online,New,26
+TX-100178,2025-09-30 16:54:25,P018,HydroBloom Nourishing Cream,Beauty & Care,5,34,170,50,120,North America,Affiliate,Returning,0
+TX-100181,2025-10-01 19:11:13,P002,SoundSync ANC Headphones,Electronics,3,199,597,255,342,North America,Affiliate,Returning,0
+TX-100182,2025-10-02 03:56:49,P016,SonicPulse Smart Jump Rope,Fitness & Sports,3,45,135,45,90,Europe,Online,Returning,0
+TX-100183,2025-10-02 12:42:25,P019,SilkDuo Ionic Hair Dryer,Beauty & Care,3,110,330,144,186,Europe,In-Store,New,9
+TX-100184,2025-10-02 21:28:01,P009,Nova Glow LED Desk Lamp,Home & Living,1,45,45,14,31,Asia-Pacific,In-Store,Returning,0
+TX-100185,2025-10-03 06:13:37,P013,IronPulse Adjustable Dumbbell,Fitness & Sports,1,249,249,120,129,North America,Online,New,21
+TX-100186,2025-10-03 14:59:13,P015,HydroDash Insulated Flask,Fitness & Sports,2,30,60,16,44,Asia-Pacific,Online,Returning,0
+TX-100187,2025-10-03 23:44:49,P019,SilkDuo Ionic Hair Dryer,Beauty & Care,1,110,110,48,62,North America,Online,New,16
+TX-100188,2025-10-04 08:30:25,P009,Nova Glow LED Desk Lamp,Home & Living,2,45,90,28,62,Latin America,Affiliate,Returning,0
+TX-100189,2025-10-04 17:16:01,P007,Core Denim Slim Fit,Fashion,3,65,195,66,129,Europe,In-Store,Returning,0
+TX-100190,2025-10-05 02:01:37,P002,SoundSync ANC Headphones,Electronics,1,199,199,85,114,North America,In-Store,New,7
+TX-100191,2025-10-05 10:47:13,P010,Ember Ceramic Coffee Mug Set,Home & Living,2,35,70,20,50,Asia-Pacific,Online,New,20
+TX-100192,2025-10-05 19:32:49,P018,HydroBloom Nourishing Cream,Beauty & Care,1,38,38,10,28,Europe,Affiliate,Returning,0
+TX-100193,2025-10-06 04:18:25,P014,FlexiCore Anti-Slip Yoga Mat,Fitness & Sports,2,40,80,24,56,North America,In-Store,New,14
+TX-100194,2025-10-06 13:04:01,P014,FlexiCore Anti-Slip Yoga Mat,Fitness & Sports,1,40,40,12,28,Asia-Pacific,Online,Returning,0
+TX-100195,2025-10-06 21:49:37,P020,HerbalPure Charcoal Mask Set,Beauty & Care,1,28,28,6,22,Latin America,Affiliate,Returning,0
+TX-100196,2025-10-07 06:35:13,P014,FlexiCore Anti-Slip Yoga Mat,Fitness & Sports,2,40,80,24,56,Latin America,Affiliate,New,9
+TX-100197,2025-10-07 15:20:49,P008,Voyager Anti-Theft Backpack,Fashion,1,75,75,25,50,Asia-Pacific,Online,New,21
+TX-100199,2025-10-08 08:52:01,P005,Luxe Linen Blazer,Fashion,1,120,120,40,80,Europe,Online,New,35
+TX-100200,2025-10-08 17:37:37,P016,SonicPulse Smart Jump Rope,Fitness & Sports,5,45,225,75,150,Latin America,Affiliate,Returning,0
+TX-100201,2025-10-09 02:23:13,P020,HerbalPure Charcoal Mask Set,Beauty & Care,1,28,28,6,22,Asia-Pacific,Affiliate,Returning,0
+TX-100202,2025-10-09 11:08:49,P010,Ember Ceramic Coffee Mug Set,Home & Living,2,35,70,20,50,Asia-Pacific,Affiliate,New,8
+TX-100203,2025-10-09 19:54:25,P015,HydroDash Insulated Flask,Fitness & Sports,2,28,56,16,40,North America,Online,Returning,0
+TX-100204,2025-10-10 04:40:01,P017,DermaBright Serum Duo,Beauty & Care,2,55,110,28,82,Latin America,In-Store,New,14
+TX-100205,2025-10-10 13:25:37,P011,Helix Memory Foam Pillow,Home & Living,1,80,80,32,48,Latin America,Affiliate,New,9
+TX-100206,2025-10-10 22:11:13,P011,Helix Memory Foam Pillow,Home & Living,1,80,80,32,48,North America,Affiliate,New,9
+TX-100207,2025-10-11 06:56:49,P015,HydroDash Insulated Flask,Fitness & Sports,2,30,60,16,44,Europe,In-Store,Returning,0
+TX-100208,2025-10-11 15:42:25,P020,HerbalPure Charcoal Mask Set,Beauty & Care,1,28,28,6,22,North America,Affiliate,Returning,0
+TX-100209,2025-10-12 00:28:01,P013,IronPulse Adjustable Dumbbell,Fitness & Sports,1,211,211,120,91,Asia-Pacific,In-Store,New,7
+TX-100211,2025-10-12 17:59:13,P013,IronPulse Adjustable Dumbbell,Fitness & Sports,1,249,249,120,129,Europe,Affiliate,New,29
+TX-100212,2025-10-13 02:44:49,P011,Helix Memory Foam Pillow,Home & Living,2,80,160,64,96,Europe,Affiliate,New,19
+TX-100213,2025-10-13 11:30:25,P010,Ember Ceramic Coffee Mug Set,Home & Living,2,35,70,20,50,Europe,Online,Returning,0
+TX-100215,2025-10-14 05:01:37,P010,Ember Ceramic Coffee Mug Set,Home & Living,5,35,175,50,125,North America,Affiliate,New,21
+TX-100216,2025-10-14 13:47:13,P005,Luxe Linen Blazer,Fashion,3,120,360,120,240,Europe,Online,New,20
+TX-100217,2025-10-14 22:32:49,P002,SoundSync ANC Headphones,Electronics,3,199,597,255,342,Latin America,In-Store,New,12
+TX-100218,2025-10-15 07:18:25,P008,Voyager Anti-Theft Backpack,Fashion,3,75,225,75,150,Europe,In-Store,New,12
+TX-100219,2025-10-15 16:04:01,P013,IronPulse Adjustable Dumbbell,Fitness & Sports,2,224,448,240,208,Latin America,Online,New,16
+TX-100220,2025-10-16 00:49:37,P012,Breeze Mist Ultrasonic Diffuser,Home & Living,1,47,47,18,29,North America,Affiliate,New,5
+TX-100221,2025-10-16 09:35:13,P017,DermaBright Serum Duo,Beauty & Care,1,55,55,14,41,Europe,In-Store,New,10
+TX-100223,2025-10-17 03:06:25,P013,IronPulse Adjustable Dumbbell,Fitness & Sports,1,249,249,120,129,Asia-Pacific,Online,Returning,0
+TX-100224,2025-10-17 11:52:01,P004,AeroGlide Smart Watch,Electronics,1,299,299,130,169,North America,Online,New,19
+TX-100225,2025-10-17 20:37:37,P016,SonicPulse Smart Jump Rope,Fitness & Sports,1,42,42,15,27,Latin America,Affiliate,New,5
+TX-100226,2025-10-18 05:23:13,P018,HydroBloom Nourishing Cream,Beauty & Care,1,38,38,10,28,Latin America,Online,Returning,0
+TX-100227,2025-10-18 14:08:49,P014,FlexiCore Anti-Slip Yoga Mat,Fitness & Sports,2,40,80,24,56,Latin America,Online,New,15
+TX-100228,2025-10-18 22:54:25,P019,SilkDuo Ionic Hair Dryer,Beauty & Care,1,110,110,48,62,Europe,Affiliate,New,13
+TX-100229,2025-10-19 07:40:01,P008,Voyager Anti-Theft Backpack,Fashion,1,63,63,25,38,Latin America,Online,New,32
+TX-100230,2025-10-19 16:25:37,P017,DermaBright Serum Duo,Beauty & Care,1,55,55,14,41,North America,In-Store,Returning,0
+TX-100232,2025-10-20 09:56:49,P001,AuraBook Pro 15,Electronics,2,1299,2598,1560,1038,North America,Online,Returning,0
+TX-100233,2025-10-20 18:42:25,P011,Helix Memory Foam Pillow,Home & Living,3,80,240,96,144,Europe,Online,Returning,0
+TX-100234,2025-10-21 03:28:01,P015,HydroDash Insulated Flask,Fitness & Sports,1,27,27,8,19,Latin America,Affiliate,New,3
+TX-100235,2025-10-21 12:13:37,P007,Core Denim Slim Fit,Fashion,1,65,65,22,43,Europe,Online,New,32
+TX-100236,2025-10-21 20:59:13,P002,SoundSync ANC Headphones,Electronics,1,199,199,85,114,Europe,In-Store,Returning,0
+TX-100237,2025-10-22 05:44:49,P004,AeroGlide Smart Watch,Electronics,1,299,299,130,169,Asia-Pacific,In-Store,Returning,0
+TX-100238,2025-10-22 14:30:25,P016,SonicPulse Smart Jump Rope,Fitness & Sports,1,45,45,15,30,Asia-Pacific,Affiliate,Returning,0
+TX-100239,2025-10-22 23:16:01,P020,HerbalPure Charcoal Mask Set,Beauty & Care,2,25,50,12,38,Europe,Affiliate,Returning,0
+TX-100240,2025-10-23 08:01:37,P010,Ember Ceramic Coffee Mug Set,Home & Living,1,35,35,10,25,Latin America,Affiliate,Returning,0
+TX-100241,2025-10-23 16:47:13,P002,SoundSync ANC Headphones,Electronics,1,169,169,85,84,North America,Affiliate,Returning,0
+TX-100242,2025-10-24 01:32:49,P017,DermaBright Serum Duo,Beauty & Care,3,55,165,42,123,Europe,Online,New,29
+TX-100243,2025-10-24 10:18:25,P003,Quantum Charge Wireless Pad,Electronics,3,46,138,45,93,North America,Affiliate,Returning,0
+TX-100244,2025-10-24 19:04:01,P012,Breeze Mist Ultrasonic Diffuser,Home & Living,3,45,135,54,81,Asia-Pacific,In-Store,New,11
+TX-100245,2025-10-25 03:49:37,P009,Nova Glow LED Desk Lamp,Home & Living,5,45,225,70,155,Europe,Online,New,31
+TX-100246,2025-10-25 12:35:13,P018,HydroBloom Nourishing Cream,Beauty & Care,5,38,190,50,140,North America,In-Store,Returning,0
+TX-100248,2025-10-26 06:06:25,P016,SonicPulse Smart Jump Rope,Fitness & Sports,1,45,45,15,30,Europe,Online,New,29
+TX-100250,2025-10-26 23:37:37,P011,Helix Memory Foam Pillow,Home & Living,3,80,240,96,144,Asia-Pacific,Affiliate,New,28
+TX-100253,2025-10-28 01:54:25,P006,Stratus Comfort Sneakers,Fashion,1,85,85,30,55,Europe,Affiliate,New,10
+TX-100254,2025-10-28 10:40:01,P016,SonicPulse Smart Jump Rope,Fitness & Sports,2,45,90,30,60,North America,In-Store,Returning,0
+TX-100255,2025-10-28 19:25:37,P020,HerbalPure Charcoal Mask Set,Beauty & Care,2,28,56,12,44,North America,Online,Returning,0
+TX-100256,2025-10-29 04:11:13,P017,DermaBright Serum Duo,Beauty & Care,1,55,55,14,41,Latin America,In-Store,New,15
+TX-100257,2025-10-29 12:56:49,P015,HydroDash Insulated Flask,Fitness & Sports,1,30,30,8,22,Asia-Pacific,Online,New,16
+TX-100258,2025-10-29 21:42:25,P017,DermaBright Serum Duo,Beauty & Care,1,55,55,14,41,Europe,In-Store,New,8
+TX-100259,2025-10-30 06:28:01,P017,DermaBright Serum Duo,Beauty & Care,1,55,55,14,41,Asia-Pacific,Online,Returning,0
+TX-100260,2025-10-30 15:13:37,P005,Luxe Linen Blazer,Fashion,1,120,120,40,80,Asia-Pacific,Affiliate,New,14
+TX-100261,2025-10-30 23:59:13,P006,Stratus Comfort Sneakers,Fashion,1,72,72,30,42,Asia-Pacific,Affiliate,New,8
+TX-100262,2025-10-31 08:44:49,P009,Nova Glow LED Desk Lamp,Home & Living,3,45,135,42,93,Europe,Affiliate,Returning,0
+TX-100263,2025-10-31 17:30:25,P018,HydroBloom Nourishing Cream,Beauty & Care,2,38,76,20,56,Asia-Pacific,Affiliate,Returning,0
+TX-100264,2025-11-01 02:16:01,P013,IronPulse Adjustable Dumbbell,Fitness & Sports,2,224,448,240,208,Asia-Pacific,In-Store,New,11
+TX-100265,2025-11-01 11:01:37,P007,Core Denim Slim Fit,Fashion,1,65,65,22,43,Europe,Affiliate,New,7
+TX-100266,2025-11-01 19:47:13,P013,IronPulse Adjustable Dumbbell,Fitness & Sports,1,249,249,120,129,Europe,In-Store,New,6
+TX-100267,2025-11-02 04:32:49,P008,Voyager Anti-Theft Backpack,Fashion,2,75,150,50,100,Europe,Online,New,28
+TX-100268,2025-11-02 13:18:25,P006,Stratus Comfort Sneakers,Fashion,1,85,85,30,55,Europe,Affiliate,Returning,0
+TX-100269,2025-11-02 22:04:01,P016,SonicPulse Smart Jump Rope,Fitness & Sports,1,45,45,15,30,Asia-Pacific,In-Store,New,13
+TX-100270,2025-11-03 06:49:37,P008,Voyager Anti-Theft Backpack,Fashion,1,75,75,25,50,Europe,Affiliate,Returning,0
+TX-100271,2025-11-03 15:35:13,P016,SonicPulse Smart Jump Rope,Fitness & Sports,1,45,45,15,30,Asia-Pacific,Affiliate,New,5
+TX-100272,2025-11-04 00:20:49,P012,Breeze Mist Ultrasonic Diffuser,Home & Living,2,42,84,36,48,Latin America,In-Store,New,8
+TX-100273,2025-11-04 09:06:25,P010,Ember Ceramic Coffee Mug Set,Home & Living,3,35,105,30,75,North America,In-Store,Returning,0
+TX-100274,2025-11-04 17:52:01,P020,HerbalPure Charcoal Mask Set,Beauty & Care,2,28,56,12,44,North America,Online,New,25
+TX-100275,2025-11-05 02:37:37,P012,Breeze Mist Ultrasonic Diffuser,Home & Living,3,47,141,54,87,Europe,Online,Returning,0
+TX-100276,2025-11-05 11:23:13,P011,Helix Memory Foam Pillow,Home & Living,1,80,80,32,48,Latin America,Affiliate,Returning,0
+TX-100277,2025-11-05 20:08:49,P011,Helix Memory Foam Pillow,Home & Living,3,80,240,96,144,Asia-Pacific,Online,Returning,0
+TX-100278,2025-11-06 04:54:25,P011,Helix Memory Foam Pillow,Home & Living,2,80,160,64,96,Latin America,Affiliate,Returning,0
+TX-100279,2025-11-06 13:40:01,P004,AeroGlide Smart Watch,Electronics,2,299,598,260,338,Latin America,Affiliate,Returning,0
+TX-100280,2025-11-06 22:25:37,P020,HerbalPure Charcoal Mask Set,Beauty & Care,5,25,125,30,95,Latin America,In-Store,New,7
+TX-100281,2025-11-07 07:11:13,P020,HerbalPure Charcoal Mask Set,Beauty & Care,1,28,28,6,22,Latin America,Online,New,18
+TX-100282,2025-11-07 15:56:49,P015,HydroDash Insulated Flask,Fitness & Sports,2,30,60,16,44,Asia-Pacific,In-Store,New,11
+TX-100283,2025-11-08 00:42:25,P020,HerbalPure Charcoal Mask Set,Beauty & Care,5,26,130,30,100,Latin America,Affiliate,New,15
+TX-100284,2025-11-08 09:28:01,P016,SonicPulse Smart Jump Rope,Fitness & Sports,2,45,90,30,60,Latin America,In-Store,New,10
+TX-100285,2025-11-08 18:13:37,P009,Nova Glow LED Desk Lamp,Home & Living,2,45,90,28,62,Latin America,Online,New,22
+TX-100286,2025-11-09 02:59:13,P010,Ember Ceramic Coffee Mug Set,Home & Living,5,35,175,50,125,Asia-Pacific,Affiliate,New,21
+TX-100287,2025-11-09 11:44:49,P012,Breeze Mist Ultrasonic Diffuser,Home & Living,3,50,150,54,96,Asia-Pacific,In-Store,New,11
+TX-100288,2025-11-09 20:30:25,P013,IronPulse Adjustable Dumbbell,Fitness & Sports,1,249,249,120,129,Asia-Pacific,Online,Returning,0
+TX-100289,2025-11-10 05:16:01,P012,Breeze Mist Ultrasonic Diffuser,Home & Living,2,50,100,36,64,Latin America,Affiliate,Returning,0
+TX-100290,2025-11-10 14:01:37,P009,Nova Glow LED Desk Lamp,Home & Living,3,45,135,42,93,Asia-Pacific,Online,New,22
+TX-100291,2025-11-10 22:47:13,P017,DermaBright Serum Duo,Beauty & Care,1,49,49,14,35,Europe,Affiliate,New,5
+TX-100292,2025-11-11 07:32:49,P004,AeroGlide Smart Watch,Electronics,1,299,299,130,169,North America,Online,New,21
+TX-100293,2025-11-11 16:18:25,P010,Ember Ceramic Coffee Mug Set,Home & Living,1,35,35,10,25,Asia-Pacific,In-Store,New,8
+TX-100294,2025-11-12 01:04:01,P002,SoundSync ANC Headphones,Electronics,1,199,199,85,114,Europe,In-Store,New,11
+TX-100295,2025-11-12 09:49:37,P006,Stratus Comfort Sneakers,Fashion,3,76,228,90,138,Europe,Online,New,24
+TX-100296,2025-11-12 18:35:13,P018,HydroBloom Nourishing Cream,Beauty & Care,2,38,76,20,56,Latin America,Online,Returning,0
+TX-100297,2025-11-13 03:20:49,P006,Stratus Comfort Sneakers,Fashion,1,85,85,30,55,Latin America,Affiliate,Returning,0
+TX-100298,2025-11-13 12:06:25,P019,SilkDuo Ionic Hair Dryer,Beauty & Care,2,110,220,96,124,Europe,Online,Returning,0
+TX-100299,2025-11-13 20:52:01,P004,AeroGlide Smart Watch,Electronics,1,269,269,130,139,North America,Online,Returning,0
+TX-100300,2025-11-14 05:37:37,P009,Nova Glow LED Desk Lamp,Home & Living,2,45,90,28,62,Asia-Pacific,In-Store,New,8
+TX-100301,2025-11-14 14:23:13,P004,AeroGlide Smart Watch,Electronics,2,299,598,260,338,North America,In-Store,New,9
+TX-100302,2025-11-14 23:08:49,P010,Ember Ceramic Coffee Mug Set,Home & Living,1,35,35,10,25,Asia-Pacific,Affiliate,New,4
+TX-100303,2025-11-15 07:54:25,P015,HydroDash Insulated Flask,Fitness & Sports,3,30,90,24,66,Asia-Pacific,In-Store,Returning,0
+TX-100304,2025-11-15 16:40:01,P008,Voyager Anti-Theft Backpack,Fashion,1,63,63,25,38,North America,Affiliate,Returning,0
+TX-100305,2025-11-16 01:25:37,P018,HydroBloom Nourishing Cream,Beauty & Care,1,38,38,10,28,Europe,Affiliate,New,4
+TX-100306,2025-11-16 10:11:13,P004,AeroGlide Smart Watch,Electronics,2,299,598,260,338,North America,Affiliate,Returning,0
+TX-100307,2025-11-16 18:56:49,P005,Luxe Linen Blazer,Fashion,1,120,120,40,80,Latin America,In-Store,New,11
+TX-100308,2025-11-17 03:42:25,P001,AuraBook Pro 15,Electronics,1,1299,1299,780,519,North America,Affiliate,New,155
+TX-100309,2025-11-17 12:28:01,P002,SoundSync ANC Headphones,Electronics,1,199,199,85,114,North America,In-Store,New,15
+TX-100310,2025-11-17 21:13:37,P014,FlexiCore Anti-Slip Yoga Mat,Fitness & Sports,2,40,80,24,56,Asia-Pacific,In-Store,Returning,0
+TX-100311,2025-11-18 05:59:13,P018,HydroBloom Nourishing Cream,Beauty & Care,1,38,38,10,28,Europe,Affiliate,Returning,0
+TX-100312,2025-11-18 14:44:49,P017,DermaBright Serum Duo,Beauty & Care,1,55,55,14,41,Europe,Affiliate,New,6
+TX-100313,2025-11-18 23:30:25,P015,HydroDash Insulated Flask,Fitness & Sports,1,30,30,8,22,Latin America,Affiliate,Returning,0
+TX-100314,2025-11-19 08:16:01,P009,Nova Glow LED Desk Lamp,Home & Living,1,45,45,14,31,Europe,Affiliate,New,5
+TX-100315,2025-11-19 17:01:37,P001,AuraBook Pro 15,Electronics,1,1299,1299,780,519,North America,Online,New,16
+TX-100316,2025-11-20 01:47:13,P002,SoundSync ANC Headphones,Electronics,1,179,179,85,94,Latin America,In-Store,New,8
+TX-100317,2025-11-20 10:32:49,P019,SilkDuo Ionic Hair Dryer,Beauty & Care,1,110,110,48,62,Asia-Pacific,Affiliate,Returning,0
+TX-100318,2025-11-20 19:18:25,P017,DermaBright Serum Duo,Beauty & Care,1,46,46,14,32,Europe,In-Store,Returning,0
+TX-100319,2025-11-21 04:04:01,P006,Stratus Comfort Sneakers,Fashion,1,85,85,30,55,Europe,Affiliate,Returning,0
+TX-100320,2025-11-21 12:49:37,P017,DermaBright Serum Duo,Beauty & Care,2,49,98,28,70,Asia-Pacific,Affiliate,Returning,0
+TX-100321,2025-11-21 21:35:13,P018,HydroBloom Nourishing Cream,Beauty & Care,2,38,76,20,56,Latin America,Online,New,19
+TX-100322,2025-11-22 06:20:49,P002,SoundSync ANC Headphones,Electronics,1,199,199,85,114,North America,In-Store,New,15
+TX-100323,2025-11-22 15:06:25,P015,HydroDash Insulated Flask,Fitness & Sports,1,30,30,8,22,Asia-Pacific,Online,New,34
+TX-100324,2025-11-22 23:52:01,P003,Quantum Charge Wireless Pad,Electronics,2,49,98,30,68,Europe,Affiliate,New,11
+TX-100325,2025-11-23 08:37:37,P007,Core Denim Slim Fit,Fashion,2,65,130,44,86,Europe,Affiliate,New,15
+TX-100326,2025-11-23 17:23:13,P007,Core Denim Slim Fit,Fashion,2,65,130,44,86,Latin America,Online,Returning,0
+TX-100327,2025-11-24 02:08:49,P010,Ember Ceramic Coffee Mug Set,Home & Living,2,29,58,20,38,Asia-Pacific,In-Store,Returning,0
+TX-100328,2025-11-24 10:54:25,P011,Helix Memory Foam Pillow,Home & Living,2,76,152,64,88,Europe,In-Store,Returning,0
+TX-100329,2025-11-24 19:40:01,P001,AuraBook Pro 15,Electronics,1,1299,1299,780,519,North America,Affiliate,Returning,0
+TX-100330,2025-11-25 04:25:37,P008,Voyager Anti-Theft Backpack,Fashion,2,75,150,50,100,Europe,Affiliate,Returning,0
+TX-100331,2025-11-25 13:11:13,P016,SonicPulse Smart Jump Rope,Fitness & Sports,1,38,38,15,23,Latin America,Online,Returning,0
+TX-100332,2025-11-25 21:56:49,P018,HydroBloom Nourishing Cream,Beauty & Care,1,38,38,10,28,North America,Affiliate,New,4
+TX-100333,2025-11-26 06:42:25,P001,AuraBook Pro 15,Electronics,1,1104,1104,780,324,North America,Online,New,29
+TX-100334,2025-11-26 15:28:01,P020,HerbalPure Charcoal Mask Set,Beauty & Care,1,23,23,6,17,Latin America,Affiliate,Returning,0
+TX-100335,2025-11-27 00:13:37,P001,AuraBook Pro 15,Electronics,2,1299,2598,1560,1038,North America,Affiliate,Returning,0
+TX-100336,2025-11-27 08:59:13,P006,Stratus Comfort Sneakers,Fashion,3,85,255,90,165,Europe,Online,New,26
+TX-100337,2025-11-27 17:44:49,P013,IronPulse Adjustable Dumbbell,Fitness & Sports,1,249,249,120,129,North America,In-Store,Returning,0
+TX-100338,2025-11-28 02:30:25,P008,Voyager Anti-Theft Backpack,Fashion,1,67,67,25,42,Asia-Pacific,Affiliate,New,8
+TX-100339,2025-11-28 11:16:01,P016,SonicPulse Smart Jump Rope,Fitness & Sports,5,45,225,75,150,North America,Affiliate,New,27
+TX-100340,2025-11-28 20:01:37,P014,FlexiCore Anti-Slip Yoga Mat,Fitness & Sports,3,40,120,36,84,Asia-Pacific,Affiliate,New,14
+TX-100341,2025-11-29 04:47:13,P019,SilkDuo Ionic Hair Dryer,Beauty & Care,1,110,110,48,62,Latin America,In-Store,New,9
+TX-100342,2025-11-29 13:32:49,P019,SilkDuo Ionic Hair Dryer,Beauty & Care,1,110,110,48,62,North America,Online,Returning,0
+TX-100343,2025-11-29 22:18:25,P013,IronPulse Adjustable Dumbbell,Fitness & Sports,2,249,498,240,258,North America,In-Store,New,11
+TX-100344,2025-11-30 07:04:01,P018,HydroBloom Nourishing Cream,Beauty & Care,5,38,190,50,140,Asia-Pacific,In-Store,New,13
+TX-100345,2025-11-30 15:49:37,P012,Breeze Mist Ultrasonic Diffuser,Home & Living,1,50,50,18,32,North America,Online,Returning,0
+TX-100346,2025-12-01 00:35:13,P020,HerbalPure Charcoal Mask Set,Beauty & Care,5,28,140,30,110,Latin America,In-Store,New,12
+TX-100347,2025-12-01 09:20:49,P012,Breeze Mist Ultrasonic Diffuser,Home & Living,3,50,150,54,96,Latin America,In-Store,New,6
+TX-100348,2025-12-01 18:06:25,P010,Ember Ceramic Coffee Mug Set,Home & Living,1,35,35,10,25,Europe,Affiliate,New,4
+TX-100349,2025-12-02 02:52:01,P005,Luxe Linen Blazer,Fashion,1,120,120,40,80,Europe,In-Store,Returning,0
+TX-100350,2025-12-02 11:37:37,P009,Nova Glow LED Desk Lamp,Home & Living,1,45,45,14,31,North America,Online,New,32
+TX-100351,2025-12-02 20:23:13,P014,FlexiCore Anti-Slip Yoga Mat,Fitness & Sports,2,40,80,24,56,North America,Online,New,34
+TX-100352,2025-12-03 05:08:49,P011,Helix Memory Foam Pillow,Home & Living,2,80,160,64,96,Latin America,Online,Returning,0
+TX-100353,2025-12-03 13:54:25,P018,HydroBloom Nourishing Cream,Beauty & Care,5,38,190,50,140,Europe,Affiliate,New,22
+TX-100354,2025-12-03 22:40:01,P010,Ember Ceramic Coffee Mug Set,Home & Living,1,35,35,10,25,Asia-Pacific,In-Store,New,9
+TX-100355,2025-12-04 07:25:37,P016,SonicPulse Smart Jump Rope,Fitness & Sports,1,45,45,15,30,North America,In-Store,Returning,0
+TX-100356,2025-12-04 16:11:13,P020,HerbalPure Charcoal Mask Set,Beauty & Care,1,28,28,6,22,Europe,In-Store,New,11
+TX-100357,2025-12-05 00:56:49,P020,HerbalPure Charcoal Mask Set,Beauty & Care,2,28,56,12,44,Latin America,In-Store,Returning,0
+TX-100358,2025-12-05 09:42:25,P020,HerbalPure Charcoal Mask Set,Beauty & Care,3,28,84,18,66,Europe,In-Store,Returning,0
+TX-100359,2025-12-05 18:28:01,P011,Helix Memory Foam Pillow,Home & Living,1,80,80,32,48,Europe,In-Store,Returning,0
+TX-100360,2025-12-06 03:13:37,P019,SilkDuo Ionic Hair Dryer,Beauty & Care,1,110,110,48,62,Europe,In-Store,Returning,0
+TX-100361,2025-12-06 11:59:13,P004,AeroGlide Smart Watch,Electronics,2,254,508,260,248,Europe,Affiliate,New,60
+TX-100362,2025-12-06 20:44:49,P007,Core Denim Slim Fit,Fashion,2,65,130,44,86,Latin America,In-Store,New,7
+TX-100363,2025-12-07 05:30:25,P008,Voyager Anti-Theft Backpack,Fashion,2,63,126,50,76,Asia-Pacific,Affiliate,New,15
+TX-100364,2025-12-07 14:16:01,P013,IronPulse Adjustable Dumbbell,Fitness & Sports,1,249,249,120,129,Latin America,Affiliate,New,29
+TX-100365,2025-12-07 23:01:37,P020,HerbalPure Charcoal Mask Set,Beauty & Care,5,28,140,30,110,North America,Online,New,20
+TX-100366,2025-12-08 07:47:13,P002,SoundSync ANC Headphones,Electronics,1,199,199,85,114,North America,In-Store,Returning,0
+TX-100367,2025-12-08 16:32:49,P017,DermaBright Serum Duo,Beauty & Care,2,55,110,28,82,Europe,In-Store,Returning,0
+TX-100368,2025-12-09 01:18:25,P017,DermaBright Serum Duo,Beauty & Care,2,49,98,28,70,Europe,In-Store,New,6
+TX-100369,2025-12-09 10:04:01,P005,Luxe Linen Blazer,Fashion,1,120,120,40,80,Asia-Pacific,In-Store,Returning,0
+TX-100370,2025-12-09 18:49:37,P004,AeroGlide Smart Watch,Electronics,1,254,254,130,124,North America,Affiliate,Returning,0
+TX-100371,2025-12-10 03:35:13,P011,Helix Memory Foam Pillow,Home & Living,1,80,80,32,48,North America,Affiliate,New,9
+TX-100372,2025-12-10 12:20:49,P011,Helix Memory Foam Pillow,Home & Living,2,80,160,64,96,Latin America,In-Store,New,7
+TX-100373,2025-12-10 21:06:25,P014,FlexiCore Anti-Slip Yoga Mat,Fitness & Sports,2,40,80,24,56,Latin America,Online,New,27
+TX-100374,2025-12-11 05:52:01,P007,Core Denim Slim Fit,Fashion,3,65,195,66,129,Europe,In-Store,New,10
+TX-100375,2025-12-11 14:37:37,P004,AeroGlide Smart Watch,Electronics,2,299,598,260,338,Asia-Pacific,Affiliate,Returning,0
+TX-100376,2025-12-11 23:23:13,P013,IronPulse Adjustable Dumbbell,Fitness & Sports,1,249,249,120,129,North America,In-Store,Returning,0
+TX-100377,2025-12-12 08:08:49,P010,Ember Ceramic Coffee Mug Set,Home & Living,2,31,62,20,42,North America,Affiliate,New,7
+TX-100378,2025-12-12 16:54:25,P012,Breeze Mist Ultrasonic Diffuser,Home & Living,2,50,100,36,64,Europe,Affiliate,Returning,0
+TX-100379,2025-12-13 01:40:01,P014,FlexiCore Anti-Slip Yoga Mat,Fitness & Sports,3,40,120,36,84,Europe,In-Store,New,9
+TX-100380,2025-12-13 10:25:37,P011,Helix Memory Foam Pillow,Home & Living,1,80,80,32,48,Latin America,Affiliate,New,9
+TX-100381,2025-12-13 19:11:13,P007,Core Denim Slim Fit,Fashion,2,65,130,44,86,Latin America,Affiliate,Returning,0
+TX-100382,2025-12-14 03:56:49,P016,SonicPulse Smart Jump Rope,Fitness & Sports,1,45,45,15,30,Europe,Online,New,23
+TX-100383,2025-12-14 12:42:25,P010,Ember Ceramic Coffee Mug Set,Home & Living,3,35,105,30,75,Europe,In-Store,Returning,0
+TX-100384,2025-12-14 21:28:01,P009,Nova Glow LED Desk Lamp,Home & Living,5,45,225,70,155,Asia-Pacific,Affiliate,New,27
+TX-100385,2025-12-15 06:13:37,P014,FlexiCore Anti-Slip Yoga Mat,Fitness & Sports,2,40,80,24,56,North America,Affiliate,New,9
+TX-100386,2025-12-15 14:59:13,P009,Nova Glow LED Desk Lamp,Home & Living,1,45,45,14,31,Asia-Pacific,Online,Returning,0
+TX-100387,2025-12-15 23:44:49,P019,SilkDuo Ionic Hair Dryer,Beauty & Care,1,110,110,48,62,Asia-Pacific,Affiliate,Returning,0
+TX-100388,2025-12-16 08:30:25,P007,Core Denim Slim Fit,Fashion,3,65,195,66,129,North America,Affiliate,Returning,0
+TX-100389,2025-12-16 17:16:01,P010,Ember Ceramic Coffee Mug Set,Home & Living,3,35,105,30,75,Asia-Pacific,Affiliate,Returning,0
+TX-100390,2025-12-17 02:01:37,P004,AeroGlide Smart Watch,Electronics,2,284,568,260,308,Europe,In-Store,New,8
+TX-100391,2025-12-17 10:47:13,P011,Helix Memory Foam Pillow,Home & Living,2,68,136,64,72,Europe,Affiliate,Returning,0
+TX-100392,2025-12-17 19:32:49,P014,FlexiCore Anti-Slip Yoga Mat,Fitness & Sports,5,40,200,60,140,Latin America,In-Store,New,6
+TX-100393,2025-12-18 04:18:25,P009,Nova Glow LED Desk Lamp,Home & Living,2,45,90,28,62,Asia-Pacific,In-Store,Returning,0
+TX-100394,2025-12-18 13:04:01,P003,Quantum Charge Wireless Pad,Electronics,3,49,147,45,102,Latin America,Affiliate,Returning,0
+TX-100395,2025-12-18 21:49:37,P007,Core Denim Slim Fit,Fashion,1,65,65,22,43,Latin America,In-Store,Returning,0
+TX-100396,2025-12-19 06:35:13,P016,SonicPulse Smart Jump Rope,Fitness & Sports,1,40,40,15,25,Asia-Pacific,Affiliate,New,4
+TX-100397,2025-12-19 15:20:49,P006,Stratus Comfort Sneakers,Fashion,2,85,170,60,110,Latin America,In-Store,New,7
+TX-100398,2025-12-20 00:06:25,P010,Ember Ceramic Coffee Mug Set,Home & Living,5,35,175,50,125,Europe,In-Store,New,6
+TX-100399,2025-12-20 08:52:01,P006,Stratus Comfort Sneakers,Fashion,1,85,85,30,55,North America,In-Store,Returning,0
+TX-100400,2025-12-20 17:37:37,P004,AeroGlide Smart Watch,Electronics,2,299,598,260,338,North America,Online,Returning,0
+TX-100401,2025-12-21 02:23:13,P001,AuraBook Pro 15,Electronics,1,1299,1299,780,519,North America,Affiliate,Returning,0
+TX-100402,2025-12-21 11:08:49,P008,Voyager Anti-Theft Backpack,Fashion,1,75,75,25,50,Europe,Online,New,19
+TX-100403,2025-12-21 19:54:25,P005,Luxe Linen Blazer,Fashion,1,120,120,40,80,Europe,Online,New,21
+TX-100404,2025-12-22 04:40:01,P005,Luxe Linen Blazer,Fashion,1,120,120,40,80,Latin America,Affiliate,Returning,0
+TX-100405,2025-12-22 13:25:37,P004,AeroGlide Smart Watch,Electronics,1,299,299,130,169,North America,In-Store,Returning,0
+TX-100406,2025-12-22 22:11:13,P008,Voyager Anti-Theft Backpack,Fashion,1,75,75,25,50,Asia-Pacific,Affiliate,New,9
+TX-100407,2025-12-23 06:56:49,P007,Core Denim Slim Fit,Fashion,1,65,65,22,43,Latin America,In-Store,New,6
+TX-100408,2025-12-23 15:42:25,P020,HerbalPure Charcoal Mask Set,Beauty & Care,2,28,56,12,44,North America,Affiliate,New,6
+TX-100409,2025-12-24 00:28:01,P019,SilkDuo Ionic Hair Dryer,Beauty & Care,2,110,220,96,124,Latin America,In-Store,New,6
+TX-100410,2025-12-24 09:13:37,P003,Quantum Charge Wireless Pad,Electronics,1,49,49,15,34,North America,In-Store,New,11
+TX-100411,2025-12-24 17:59:13,P017,DermaBright Serum Duo,Beauty & Care,1,55,55,14,41,Latin America,In-Store,Returning,0
+TX-100412,2025-12-25 02:44:49,P005,Luxe Linen Blazer,Fashion,1,120,120,40,80,Europe,Online,Returning,0
+TX-100413,2025-12-25 11:30:25,P011,Helix Memory Foam Pillow,Home & Living,1,80,80,32,48,Latin America,Affiliate,New,9
+TX-100414,2025-12-25 20:16:01,P008,Voyager Anti-Theft Backpack,Fashion,1,75,75,25,50,North America,Online,New,34
+TX-100415,2025-12-26 05:01:37,P006,Stratus Comfort Sneakers,Fashion,1,85,85,30,55,North America,Online,New,26
+TX-100416,2025-12-26 13:47:13,P009,Nova Glow LED Desk Lamp,Home & Living,5,45,225,70,155,Europe,In-Store,New,9
+TX-100417,2025-12-26 22:32:49,P004,AeroGlide Smart Watch,Electronics,1,299,299,130,169,North America,In-Store,Returning,0
+TX-100418,2025-12-27 07:18:25,P003,Quantum Charge Wireless Pad,Electronics,3,49,147,45,102,North America,In-Store,Returning,0
+TX-100419,2025-12-27 16:04:01,P004,AeroGlide Smart Watch,Electronics,1,299,299,130,169,North America,Online,New,30
+TX-100420,2025-12-28 00:49:37,P005,Luxe Linen Blazer,Fashion,1,120,120,40,80,Europe,Online,Returning,0
+TX-100421,2025-12-28 09:35:13,P009,Nova Glow LED Desk Lamp,Home & Living,1,45,45,14,31,North America,Affiliate,Returning,0
+TX-100422,2025-12-28 18:20:49,P006,Stratus Comfort Sneakers,Fashion,1,85,85,30,55,Europe,Affiliate,New,10
+TX-100423,2025-12-29 03:06:25,P010,Ember Ceramic Coffee Mug Set,Home & Living,1,35,35,10,25,Asia-Pacific,Online,Returning,0
+TX-100424,2025-12-29 11:52:01,P010,Ember Ceramic Coffee Mug Set,Home & Living,3,35,105,30,75,Europe,In-Store,Returning,0
+TX-100425,2025-12-29 20:37:37,P007,Core Denim Slim Fit,Fashion,1,65,65,22,43,Europe,Online,New,26
+TX-100426,2025-12-30 05:23:13,P001,AuraBook Pro 15,Electronics,2,1299,2598,1560,1038,Asia-Pacific,Online,Returning,0
+TX-100427,2025-12-30 14:08:49,P008,Voyager Anti-Theft Backpack,Fashion,1,75,75,25,50,Latin America,In-Store,New,6
+TX-100428,2025-12-30 22:54:25,P008,Voyager Anti-Theft Backpack,Fashion,1,75,75,25,50,Latin America,Affiliate,Returning,0
+TX-100429,2025-12-31 07:40:01,P013,IronPulse Adjustable Dumbbell,Fitness & Sports,1,249,249,120,129,North America,Affiliate,New,29
+TX-100430,2025-12-31 16:25:37,P010,Ember Ceramic Coffee Mug Set,Home & Living,5,35,175,50,125,Asia-Pacific,In-Store,Returning,0
+TX-100431,2026-01-01 01:11:13,P015,HydroDash Insulated Flask,Fitness & Sports,1,25,25,8,17,Asia-Pacific,Online,New,18
+TX-100432,2026-01-01 09:56:49,P006,Stratus Comfort Sneakers,Fashion,3,85,255,90,165,Latin America,In-Store,Returning,0
+TX-100433,2026-01-01 18:42:25,P015,HydroDash Insulated Flask,Fitness & Sports,1,25,25,8,17,Asia-Pacific,In-Store,Returning,0
+TX-100434,2026-01-02 03:28:01,P020,HerbalPure Charcoal Mask Set,Beauty & Care,1,26,26,6,20,North America,Online,Returning,0
+TX-100436,2026-01-02 20:59:13,P002,SoundSync ANC Headphones,Electronics,2,199,398,170,228,North America,In-Store,New,13
+TX-100437,2026-01-03 05:44:49,P008,Voyager Anti-Theft Backpack,Fashion,1,71,71,25,46,North America,In-Store,New,8
+TX-100438,2026-01-03 14:30:25,P013,IronPulse Adjustable Dumbbell,Fitness & Sports,2,249,498,240,258,Asia-Pacific,Affiliate,New,59
+TX-100440,2026-01-04 08:01:37,P003,Quantum Charge Wireless Pad,Electronics,1,49,49,15,34,Europe,Affiliate,Returning,0
+TX-100441,2026-01-04 16:47:13,P011,Helix Memory Foam Pillow,Home & Living,1,80,80,32,48,North America,Online,Returning,0
+TX-100442,2026-01-05 01:32:49,P013,IronPulse Adjustable Dumbbell,Fitness & Sports,2,249,498,240,258,Latin America,Online,Returning,0
+TX-100443,2026-01-05 10:18:25,P006,Stratus Comfort Sneakers,Fashion,1,85,85,30,55,Asia-Pacific,In-Store,Returning,0
+TX-100444,2026-01-05 19:04:01,P010,Ember Ceramic Coffee Mug Set,Home & Living,1,31,31,10,21,Latin America,In-Store,Returning,0
+TX-100445,2026-01-06 03:49:37,P007,Core Denim Slim Fit,Fashion,1,65,65,22,43,Europe,Affiliate,New,7
+TX-100446,2026-01-06 12:35:13,P012,Breeze Mist Ultrasonic Diffuser,Home & Living,1,42,42,18,24,Asia-Pacific,In-Store,Returning,0
+TX-100447,2026-01-06 21:20:49,P009,Nova Glow LED Desk Lamp,Home & Living,3,45,135,42,93,North America,In-Store,Returning,0
+TX-100449,2026-01-07 14:52:01,P008,Voyager Anti-Theft Backpack,Fashion,1,75,75,25,50,Asia-Pacific,Affiliate,New,9
+TX-100451,2026-01-08 08:23:13,P006,Stratus Comfort Sneakers,Fashion,1,85,85,30,55,Europe,Online,Returning,0
+TX-100452,2026-01-08 17:08:49,P012,Breeze Mist Ultrasonic Diffuser,Home & Living,2,50,100,36,64,Europe,Affiliate,New,12
+TX-100453,2026-01-09 01:54:25,P002,SoundSync ANC Headphones,Electronics,1,199,199,85,114,North America,Online,New,15
+TX-100454,2026-01-09 10:40:01,P020,HerbalPure Charcoal Mask Set,Beauty & Care,5,28,140,30,110,Europe,Online,Returning,0
+TX-100455,2026-01-09 19:25:37,P011,Helix Memory Foam Pillow,Home & Living,3,80,240,96,144,North America,Online,New,19
+TX-100456,2026-01-10 04:11:13,P017,DermaBright Serum Duo,Beauty & Care,2,55,110,28,82,Asia-Pacific,Online,Returning,0
+TX-100457,2026-01-10 12:56:49,P011,Helix Memory Foam Pillow,Home & Living,2,80,160,64,96,Europe,Online,Returning,0
+TX-100458,2026-01-10 21:42:25,P018,HydroBloom Nourishing Cream,Beauty & Care,2,38,76,20,56,Asia-Pacific,Online,New,24
+TX-100459,2026-01-11 06:28:01,P001,AuraBook Pro 15,Electronics,1,1299,1299,780,519,North America,Affiliate,New,155
+TX-100461,2026-01-11 23:59:13,P019,SilkDuo Ionic Hair Dryer,Beauty & Care,1,110,110,48,62,North America,In-Store,New,8
+TX-100462,2026-01-12 08:44:49,P011,Helix Memory Foam Pillow,Home & Living,1,80,80,32,48,Europe,Affiliate,New,9
+TX-100463,2026-01-12 17:30:25,P008,Voyager Anti-Theft Backpack,Fashion,1,67,67,25,42,North America,In-Store,Returning,0
+TX-100464,2026-01-13 02:16:01,P006,Stratus Comfort Sneakers,Fashion,2,76,152,60,92,Europe,In-Store,Returning,0
+TX-100465,2026-01-13 11:01:37,P019,SilkDuo Ionic Hair Dryer,Beauty & Care,1,110,110,48,62,Europe,Online,Returning,0
+TX-100466,2026-01-13 19:47:13,P001,AuraBook Pro 15,Electronics,1,1299,1299,780,519,North America,In-Store,New,7
+TX-100467,2026-01-14 04:32:49,P018,HydroBloom Nourishing Cream,Beauty & Care,5,32,160,50,110,North America,In-Store,Returning,0
+TX-100468,2026-01-14 13:18:25,P014,FlexiCore Anti-Slip Yoga Mat,Fitness & Sports,2,40,80,24,56,Europe,Online,New,21
+TX-100469,2026-01-14 22:04:01,P018,HydroBloom Nourishing Cream,Beauty & Care,2,38,76,20,56,Asia-Pacific,Affiliate,Returning,0
+TX-100470,2026-01-15 06:49:37,P019,SilkDuo Ionic Hair Dryer,Beauty & Care,1,104,104,48,56,Latin America,Online,New,24
+TX-100471,2026-01-15 15:35:13,P020,HerbalPure Charcoal Mask Set,Beauty & Care,1,28,28,6,22,Latin America,Online,New,35
+TX-100472,2026-01-16 00:20:49,P003,Quantum Charge Wireless Pad,Electronics,2,49,98,30,68,Latin America,Online,Returning,0
+TX-100473,2026-01-16 09:06:25,P003,Quantum Charge Wireless Pad,Electronics,2,49,98,30,68,Latin America,Online,Returning,0
+TX-100474,2026-01-16 17:52:01,P015,HydroDash Insulated Flask,Fitness & Sports,2,30,60,16,44,Latin America,In-Store,New,7
+TX-100475,2026-01-17 02:37:37,P004,AeroGlide Smart Watch,Electronics,1,299,299,130,169,North America,Affiliate,Returning,0
+TX-100476,2026-01-17 11:23:13,P018,HydroBloom Nourishing Cream,Beauty & Care,3,38,114,30,84,North America,In-Store,Returning,0
+TX-100478,2026-01-18 04:54:25,P008,Voyager Anti-Theft Backpack,Fashion,1,75,75,25,50,Europe,In-Store,New,13
+TX-100479,2026-01-18 13:40:01,P020,HerbalPure Charcoal Mask Set,Beauty & Care,1,28,28,6,22,Europe,Online,Returning,0
+TX-100480,2026-01-18 22:25:37,P007,Core Denim Slim Fit,Fashion,2,65,130,44,86,Europe,Online,New,35
+TX-100481,2026-01-19 07:11:13,P020,HerbalPure Charcoal Mask Set,Beauty & Care,1,28,28,6,22,Asia-Pacific,In-Store,New,11
+TX-100482,2026-01-19 15:56:49,P009,Nova Glow LED Desk Lamp,Home & Living,1,45,45,14,31,Latin America,Online,Returning,0
+TX-100483,2026-01-20 00:42:25,P019,SilkDuo Ionic Hair Dryer,Beauty & Care,1,110,110,48,62,North America,Online,New,26
+TX-100485,2026-01-20 18:13:37,P016,SonicPulse Smart Jump Rope,Fitness & Sports,2,45,90,30,60,Latin America,Online,New,34
+TX-100486,2026-01-21 02:59:13,P013,IronPulse Adjustable Dumbbell,Fitness & Sports,2,249,498,240,258,North America,In-Store,Returning,0
+TX-100487,2026-01-21 11:44:49,P009,Nova Glow LED Desk Lamp,Home & Living,2,45,90,28,62,Asia-Pacific,Online,Returning,0
+TX-100488,2026-01-21 20:30:25,P004,AeroGlide Smart Watch,Electronics,1,299,299,130,169,Europe,Online,Returning,0
+TX-100489,2026-01-22 05:16:01,P014,FlexiCore Anti-Slip Yoga Mat,Fitness & Sports,1,40,40,12,28,North America,Online,Returning,0
+TX-100490,2026-01-22 14:01:37,P016,SonicPulse Smart Jump Rope,Fitness & Sports,1,45,45,15,30,Asia-Pacific,Online,New,31
+TX-100491,2026-01-22 22:47:13,P017,DermaBright Serum Duo,Beauty & Care,1,55,55,14,41,North America,Online,New,22
+TX-100492,2026-01-23 07:32:49,P002,SoundSync ANC Headphones,Electronics,2,199,398,170,228,North America,Affiliate,New,47
+TX-100493,2026-01-23 16:18:25,P004,AeroGlide Smart Watch,Electronics,1,299,299,130,169,North America,Online,Returning,0
+TX-100495,2026-01-24 09:49:37,P012,Breeze Mist Ultrasonic Diffuser,Home & Living,1,50,50,18,32,Asia-Pacific,Online,Returning,0
+TX-100496,2026-01-24 18:35:13,P006,Stratus Comfort Sneakers,Fashion,1,85,85,30,55,Europe,Online,New,31
+TX-100497,2026-01-25 03:20:49,P001,AuraBook Pro 15,Electronics,1,1299,1299,780,519,Latin America,Online,New,34
+TX-100498,2026-01-25 12:06:25,P010,Ember Ceramic Coffee Mug Set,Home & Living,2,35,70,20,50,Asia-Pacific,In-Store,Returning,0
+TX-100499,2026-01-25 20:52:01,P010,Ember Ceramic Coffee Mug Set,Home & Living,1,35,35,10,25,Latin America,Affiliate,New,4
+TX-100500,2026-01-26 05:37:37,P012,Breeze Mist Ultrasonic Diffuser,Home & Living,2,45,90,36,54,Asia-Pacific,In-Store,New,15
+TX-100501,2026-01-26 14:23:13,P009,Nova Glow LED Desk Lamp,Home & Living,1,42,42,14,28,Asia-Pacific,Affiliate,Returning,0
+TX-100503,2026-01-27 07:54:25,P020,HerbalPure Charcoal Mask Set,Beauty & Care,5,26,130,30,100,Latin America,Affiliate,Returning,0
+TX-100504,2026-01-27 16:40:01,P010,Ember Ceramic Coffee Mug Set,Home & Living,2,35,70,20,50,Asia-Pacific,In-Store,Returning,0
+TX-100505,2026-01-28 01:25:37,P019,SilkDuo Ionic Hair Dryer,Beauty & Care,3,110,330,144,186,Europe,In-Store,New,12
+TX-100507,2026-01-28 18:56:49,P017,DermaBright Serum Duo,Beauty & Care,1,52,52,14,38,Asia-Pacific,Online,New,23
+TX-100508,2026-01-29 03:42:25,P018,HydroBloom Nourishing Cream,Beauty & Care,5,34,170,50,120,Europe,Affiliate,Returning,0
+TX-100509,2026-01-29 12:28:01,P010,Ember Ceramic Coffee Mug Set,Home & Living,2,35,70,20,50,Latin America,In-Store,Returning,0
+TX-100510,2026-01-29 21:13:37,P004,AeroGlide Smart Watch,Electronics,1,299,299,130,169,Latin America,Online,New,27
+TX-100511,2026-01-30 05:59:13,P014,FlexiCore Anti-Slip Yoga Mat,Fitness & Sports,1,40,40,12,28,North America,Online,New,33
+TX-100514,2026-01-31 08:16:01,P006,Stratus Comfort Sneakers,Fashion,1,85,85,30,55,North America,In-Store,Returning,0
+TX-100515,2026-01-31 17:01:37,P015,HydroDash Insulated Flask,Fitness & Sports,3,30,90,24,66,Asia-Pacific,Online,New,30
+TX-100516,2026-02-01 01:47:13,P003,Quantum Charge Wireless Pad,Electronics,2,49,98,30,68,Europe,Affiliate,Returning,0
+TX-100517,2026-02-01 10:32:49,P001,AuraBook Pro 15,Electronics,1,1299,1299,780,519,North America,Affiliate,New,155
+TX-100518,2026-02-01 19:18:25,P017,DermaBright Serum Duo,Beauty & Care,1,55,55,14,41,Europe,Online,New,26
+TX-100519,2026-02-02 04:04:01,P004,AeroGlide Smart Watch,Electronics,1,299,299,130,169,North America,Affiliate,Returning,0
+TX-100520,2026-02-02 12:49:37,P017,DermaBright Serum Duo,Beauty & Care,1,55,55,14,41,Asia-Pacific,In-Store,New,12
+TX-100521,2026-02-02 21:35:13,P007,Core Denim Slim Fit,Fashion,1,65,65,22,43,Europe,In-Store,New,5
+TX-100522,2026-02-03 06:20:49,P006,Stratus Comfort Sneakers,Fashion,1,85,85,30,55,Europe,In-Store,New,14
+TX-100523,2026-02-03 15:06:25,P002,SoundSync ANC Headphones,Electronics,1,199,199,85,114,North America,Affiliate,New,23
+TX-100524,2026-02-03 23:52:01,P018,HydroBloom Nourishing Cream,Beauty & Care,1,38,38,10,28,Asia-Pacific,In-Store,New,15
+TX-100525,2026-02-04 08:37:37,P014,FlexiCore Anti-Slip Yoga Mat,Fitness & Sports,3,40,120,36,84,North America,Affiliate,Returning,0
+TX-100526,2026-02-04 17:23:13,P004,AeroGlide Smart Watch,Electronics,1,299,299,130,169,North America,In-Store,New,8
+TX-100527,2026-02-05 02:08:49,P017,DermaBright Serum Duo,Beauty & Care,1,55,55,14,41,Europe,In-Store,Returning,0
+TX-100528,2026-02-05 10:54:25,P007,Core Denim Slim Fit,Fashion,1,65,65,22,43,Europe,In-Store,New,14
+TX-100529,2026-02-05 19:40:01,P005,Luxe Linen Blazer,Fashion,1,120,120,40,80,North America,Affiliate,New,14
+TX-100530,2026-02-06 04:25:37,P015,HydroDash Insulated Flask,Fitness & Sports,1,28,28,8,20,Asia-Pacific,In-Store,Returning,0
+TX-100533,2026-02-07 06:42:25,P011,Helix Memory Foam Pillow,Home & Living,1,80,80,32,48,Latin America,Affiliate,New,9
+TX-100535,2026-02-08 00:13:37,P005,Luxe Linen Blazer,Fashion,3,120,360,120,240,Europe,In-Store,Returning,0
+TX-100536,2026-02-08 08:59:13,P012,Breeze Mist Ultrasonic Diffuser,Home & Living,2,50,100,36,64,Asia-Pacific,Online,New,29
+TX-100537,2026-02-08 17:44:49,P013,IronPulse Adjustable Dumbbell,Fitness & Sports,1,211,211,120,91,Latin America,In-Store,New,5
+TX-100539,2026-02-09 11:16:01,P004,AeroGlide Smart Watch,Electronics,2,299,598,260,338,Latin America,Affiliate,Returning,0
+TX-100540,2026-02-09 20:01:37,P012,Breeze Mist Ultrasonic Diffuser,Home & Living,2,50,100,36,64,North America,Affiliate,New,12
+TX-100541,2026-02-10 04:47:13,P014,FlexiCore Anti-Slip Yoga Mat,Fitness & Sports,2,40,80,24,56,Latin America,Online,New,15
+TX-100542,2026-02-10 13:32:49,P017,DermaBright Serum Duo,Beauty & Care,3,55,165,42,123,Europe,Affiliate,Returning,0
+TX-100543,2026-02-10 22:18:25,P004,AeroGlide Smart Watch,Electronics,2,299,598,260,338,Latin America,Affiliate,New,71
+TX-100544,2026-02-11 07:04:01,P018,HydroBloom Nourishing Cream,Beauty & Care,3,38,114,30,84,North America,Online,New,30
+TX-100546,2026-02-12 00:35:13,P016,SonicPulse Smart Jump Rope,Fitness & Sports,2,42,84,30,54,Asia-Pacific,Online,Returning,0
+TX-100547,2026-02-12 09:20:49,P013,IronPulse Adjustable Dumbbell,Fitness & Sports,1,249,249,120,129,Latin America,Online,New,33
+TX-100548,2026-02-12 18:06:25,P016,SonicPulse Smart Jump Rope,Fitness & Sports,2,45,90,30,60,Latin America,In-Store,New,5
+TX-100549,2026-02-13 02:52:01,P014,FlexiCore Anti-Slip Yoga Mat,Fitness & Sports,1,40,40,12,28,North America,Affiliate,New,4
+TX-100551,2026-02-13 20:23:13,P017,DermaBright Serum Duo,Beauty & Care,1,55,55,14,41,Europe,Affiliate,Returning,0
+TX-100552,2026-02-14 05:08:49,P008,Voyager Anti-Theft Backpack,Fashion,1,75,75,25,50,Latin America,In-Store,Returning,0
+TX-100553,2026-02-14 13:54:25,P008,Voyager Anti-Theft Backpack,Fashion,1,75,75,25,50,North America,In-Store,Returning,0
+TX-100554,2026-02-14 22:40:01,P004,AeroGlide Smart Watch,Electronics,2,299,598,260,338,North America,Online,Returning,0
+TX-100555,2026-02-15 07:25:37,P009,Nova Glow LED Desk Lamp,Home & Living,2,45,90,28,62,Europe,Online,New,21
+TX-100556,2026-02-15 16:11:13,P004,AeroGlide Smart Watch,Electronics,1,299,299,130,169,Latin America,Online,New,33
+TX-100558,2026-02-16 09:42:25,P016,SonicPulse Smart Jump Rope,Fitness & Sports,3,45,135,45,90,North America,Affiliate,New,16
+TX-100559,2026-02-16 18:28:01,P016,SonicPulse Smart Jump Rope,Fitness & Sports,5,45,225,75,150,Europe,Affiliate,New,27
+TX-100560,2026-02-17 03:13:37,P020,HerbalPure Charcoal Mask Set,Beauty & Care,2,28,56,12,44,Asia-Pacific,Affiliate,Returning,0
+TX-100562,2026-02-17 20:44:49,P009,Nova Glow LED Desk Lamp,Home & Living,2,45,90,28,62,Latin America,In-Store,Returning,0
+TX-100563,2026-02-18 05:30:25,P020,HerbalPure Charcoal Mask Set,Beauty & Care,5,28,140,30,110,Asia-Pacific,Affiliate,Returning,0
+TX-100564,2026-02-18 14:16:01,P007,Core Denim Slim Fit,Fashion,1,65,65,22,43,Europe,Online,Returning,0
+TX-100565,2026-02-18 23:01:37,P006,Stratus Comfort Sneakers,Fashion,3,85,255,90,165,Asia-Pacific,Affiliate,New,30
+TX-100566,2026-02-19 07:47:13,P014,FlexiCore Anti-Slip Yoga Mat,Fitness & Sports,3,36,108,36,72,Asia-Pacific,In-Store,New,7
+TX-100567,2026-02-19 16:32:49,P002,SoundSync ANC Headphones,Electronics,1,189,189,85,104,Europe,In-Store,New,9
+TX-100568,2026-02-20 01:18:25,P018,HydroBloom Nourishing Cream,Beauty & Care,1,38,38,10,28,North America,In-Store,Returning,0
+TX-100569,2026-02-20 10:04:01,P018,HydroBloom Nourishing Cream,Beauty & Care,1,38,38,10,28,Europe,Affiliate,Returning,0
+TX-100570,2026-02-20 18:49:37,P010,Ember Ceramic Coffee Mug Set,Home & Living,2,35,70,20,50,North America,In-Store,Returning,0
+TX-100572,2026-02-21 12:20:49,P018,HydroBloom Nourishing Cream,Beauty & Care,1,38,38,10,28,North America,Online,Returning,0
+TX-100573,2026-02-21 21:06:25,P015,HydroDash Insulated Flask,Fitness & Sports,3,30,90,24,66,Europe,Affiliate,Returning,0
+TX-100574,2026-02-22 05:52:01,P007,Core Denim Slim Fit,Fashion,1,65,65,22,43,Asia-Pacific,In-Store,New,7
+TX-100575,2026-02-22 14:37:37,P004,AeroGlide Smart Watch,Electronics,1,254,254,130,124,North America,Online,Returning,0
+TX-100576,2026-02-22 23:23:13,P001,AuraBook Pro 15,Electronics,1,1299,1299,780,519,North America,In-Store,New,15
+TX-100577,2026-02-23 08:08:49,P010,Ember Ceramic Coffee Mug Set,Home & Living,1,35,35,10,25,Latin America,Affiliate,Returning,0
+TX-100578,2026-02-23 16:54:25,P008,Voyager Anti-Theft Backpack,Fashion,1,75,75,25,50,Europe,Affiliate,New,9
+TX-100579,2026-02-24 01:40:01,P003,Quantum Charge Wireless Pad,Electronics,2,49,98,30,68,Asia-Pacific,Online,New,21
+TX-100581,2026-02-24 19:11:13,P016,SonicPulse Smart Jump Rope,Fitness & Sports,2,45,90,30,60,North America,Online,Returning,0
+TX-100582,2026-02-25 03:56:49,P020,HerbalPure Charcoal Mask Set,Beauty & Care,2,28,56,12,44,Europe,Online,Returning,0
+TX-100584,2026-02-25 21:28:01,P018,HydroBloom Nourishing Cream,Beauty & Care,3,38,114,30,84,Asia-Pacific,Online,Returning,0
+TX-100585,2026-02-26 06:13:37,P002,SoundSync ANC Headphones,Electronics,1,199,199,85,114,North America,Affiliate,New,23
+TX-100586,2026-02-26 14:59:13,P018,HydroBloom Nourishing Cream,Beauty & Care,1,38,38,10,28,North America,Affiliate,New,4
+TX-100587,2026-02-26 23:44:49,P014,FlexiCore Anti-Slip Yoga Mat,Fitness & Sports,5,40,200,60,140,North America,Online,Returning,0
+TX-100588,2026-02-27 08:30:25,P005,Luxe Linen Blazer,Fashion,1,108,108,40,68,Europe,In-Store,Returning,0
+TX-100589,2026-02-27 17:16:01,P019,SilkDuo Ionic Hair Dryer,Beauty & Care,2,110,220,96,124,Europe,In-Store,Returning,0
+TX-100590,2026-02-28 02:01:37,P011,Helix Memory Foam Pillow,Home & Living,3,68,204,96,108,North America,In-Store,New,14
+TX-100591,2026-02-28 10:47:13,P019,SilkDuo Ionic Hair Dryer,Beauty & Care,1,110,110,48,62,North America,Affiliate,New,13
+TX-100592,2026-02-28 19:32:49,P010,Ember Ceramic Coffee Mug Set,Home & Living,2,35,70,20,50,North America,In-Store,Returning,0
+TX-100593,2026-03-01 04:18:25,P016,SonicPulse Smart Jump Rope,Fitness & Sports,1,45,45,15,30,Europe,Affiliate,New,5
+TX-100594,2026-03-01 13:04:01,P018,HydroBloom Nourishing Cream,Beauty & Care,2,38,76,20,56,Asia-Pacific,Affiliate,New,9
+TX-100595,2026-03-01 21:49:37,P012,Breeze Mist Ultrasonic Diffuser,Home & Living,1,42,42,18,24,North America,Affiliate,New,5
+TX-100596,2026-03-02 06:35:13,P018,HydroBloom Nourishing Cream,Beauty & Care,5,38,190,50,140,North America,In-Store,New,10
+TX-100597,2026-03-02 15:20:49,P017,DermaBright Serum Duo,Beauty & Care,1,55,55,14,41,Europe,Online,New,23
+TX-100598,2026-03-03 00:06:25,P006,Stratus Comfort Sneakers,Fashion,1,85,85,30,55,North America,Affiliate,Returning,0
+TX-100599,2026-03-03 08:52:01,P004,AeroGlide Smart Watch,Electronics,1,254,254,130,124,Europe,Affiliate,Returning,0
+TX-100600,2026-03-03 17:37:37,P010,Ember Ceramic Coffee Mug Set,Home & Living,2,35,70,20,50,North America,Online,Returning,0
+TX-100601,2026-03-04 02:23:13,P010,Ember Ceramic Coffee Mug Set,Home & Living,2,35,70,20,50,Europe,Affiliate,Returning,0
+TX-100602,2026-03-04 11:08:49,P011,Helix Memory Foam Pillow,Home & Living,1,80,80,32,48,Europe,Online,Returning,0
+TX-100603,2026-03-04 19:54:25,P011,Helix Memory Foam Pillow,Home & Living,1,80,80,32,48,Latin America,In-Store,Returning,0
+TX-100604,2026-03-05 04:40:01,P004,AeroGlide Smart Watch,Electronics,1,299,299,130,169,Europe,Affiliate,New,35
+TX-100605,2026-03-05 13:25:37,P003,Quantum Charge Wireless Pad,Electronics,3,49,147,45,102,North America,Online,New,33
+TX-100606,2026-03-05 22:11:13,P002,SoundSync ANC Headphones,Electronics,1,199,199,85,114,Asia-Pacific,Affiliate,Returning,0
+TX-100607,2026-03-06 06:56:49,P019,SilkDuo Ionic Hair Dryer,Beauty & Care,3,110,330,144,186,Asia-Pacific,Online,Returning,0
+TX-100608,2026-03-06 15:42:25,P017,DermaBright Serum Duo,Beauty & Care,3,55,165,42,123,North America,Affiliate,New,19
+TX-100609,2026-03-07 00:28:01,P005,Luxe Linen Blazer,Fashion,3,120,360,120,240,Latin America,Online,New,19
+TX-100610,2026-03-07 09:13:37,P016,SonicPulse Smart Jump Rope,Fitness & Sports,2,45,90,30,60,Asia-Pacific,Online,New,23
+TX-100611,2026-03-07 17:59:13,P002,SoundSync ANC Headphones,Electronics,2,199,398,170,228,North America,Affiliate,Returning,0
+TX-100612,2026-03-08 02:44:49,P011,Helix Memory Foam Pillow,Home & Living,1,80,80,32,48,North America,Affiliate,Returning,0
+TX-100613,2026-03-08 11:30:25,P013,IronPulse Adjustable Dumbbell,Fitness & Sports,2,249,498,240,258,Latin America,In-Store,New,8
+TX-100614,2026-03-08 20:16:01,P012,Breeze Mist Ultrasonic Diffuser,Home & Living,3,47,141,54,87,Asia-Pacific,In-Store,Returning,0
+TX-100615,2026-03-09 05:01:37,P008,Voyager Anti-Theft Backpack,Fashion,1,75,75,25,50,Europe,Affiliate,Returning,0
+TX-100616,2026-03-09 13:47:13,P004,AeroGlide Smart Watch,Electronics,1,299,299,130,169,Europe,In-Store,Returning,0
+TX-100617,2026-03-09 22:32:49,P019,SilkDuo Ionic Hair Dryer,Beauty & Care,1,110,110,48,62,Europe,Affiliate,Returning,0
+TX-100618,2026-03-10 07:18:25,P019,SilkDuo Ionic Hair Dryer,Beauty & Care,3,104,312,144,168,Europe,Online,New,23
+TX-100619,2026-03-10 16:04:01,P017,DermaBright Serum Duo,Beauty & Care,1,55,55,14,41,Latin America,Affiliate,New,6
+TX-100620,2026-03-11 00:49:37,P020,HerbalPure Charcoal Mask Set,Beauty & Care,1,28,28,6,22,Latin America,In-Store,New,14
+TX-100621,2026-03-11 09:35:13,P019,SilkDuo Ionic Hair Dryer,Beauty & Care,1,110,110,48,62,Europe,Affiliate,Returning,0
+TX-100622,2026-03-11 18:20:49,P015,HydroDash Insulated Flask,Fitness & Sports,2,28,56,16,40,North America,Online,Returning,0
+TX-100623,2026-03-12 03:06:25,P017,DermaBright Serum Duo,Beauty & Care,1,55,55,14,41,Latin America,Online,New,34
+TX-100624,2026-03-12 11:52:01,P018,HydroBloom Nourishing Cream,Beauty & Care,5,32,160,50,110,North America,Online,Returning,0
+TX-100625,2026-03-12 20:37:37,P001,AuraBook Pro 15,Electronics,1,1299,1299,780,519,North America,Affiliate,Returning,0
+TX-100626,2026-03-13 05:23:13,P016,SonicPulse Smart Jump Rope,Fitness & Sports,2,40,80,30,50,Latin America,In-Store,New,8
+TX-100627,2026-03-13 14:08:49,P003,Quantum Charge Wireless Pad,Electronics,1,49,49,15,34,North America,Affiliate,Returning,0
+TX-100628,2026-03-13 22:54:25,P019,SilkDuo Ionic Hair Dryer,Beauty & Care,2,110,220,96,124,North America,Affiliate,New,26
+TX-100629,2026-03-14 07:40:01,P011,Helix Memory Foam Pillow,Home & Living,1,80,80,32,48,Latin America,In-Store,New,14
+TX-100630,2026-03-14 16:25:37,P018,HydroBloom Nourishing Cream,Beauty & Care,3,38,114,30,84,Latin America,Affiliate,Returning,0
+TX-100631,2026-03-15 01:11:13,P007,Core Denim Slim Fit,Fashion,3,65,195,66,129,Europe,Affiliate,Returning,0
+TX-100632,2026-03-15 09:56:49,P010,Ember Ceramic Coffee Mug Set,Home & Living,5,29,145,50,95,Asia-Pacific,Affiliate,Returning,0
+TX-100633,2026-03-15 18:42:25,P008,Voyager Anti-Theft Backpack,Fashion,3,75,225,75,150,Europe,Affiliate,New,27
+TX-100634,2026-03-16 03:28:01,P018,HydroBloom Nourishing Cream,Beauty & Care,5,36,180,50,130,North America,Online,Returning,0
+TX-100635,2026-03-16 12:13:37,P016,SonicPulse Smart Jump Rope,Fitness & Sports,2,45,90,30,60,Latin America,Online,New,17
+TX-100636,2026-03-16 20:59:13,P013,IronPulse Adjustable Dumbbell,Fitness & Sports,2,249,498,240,258,Latin America,Affiliate,Returning,0
+TX-100637,2026-03-17 05:44:49,P006,Stratus Comfort Sneakers,Fashion,3,85,255,90,165,Europe,In-Store,New,5
+TX-100638,2026-03-17 14:30:25,P017,DermaBright Serum Duo,Beauty & Care,1,55,55,14,41,Europe,Affiliate,New,6
+TX-100639,2026-03-17 23:16:01,P006,Stratus Comfort Sneakers,Fashion,2,85,170,60,110,Europe,In-Store,Returning,0
+TX-100640,2026-03-18 08:01:37,P001,AuraBook Pro 15,Electronics,2,1299,2598,1560,1038,North America,Online,Returning,0
+TX-100641,2026-03-18 16:47:13,P009,Nova Glow LED Desk Lamp,Home & Living,2,45,90,28,62,Europe,Affiliate,New,10
+TX-100642,2026-03-19 01:32:49,P009,Nova Glow LED Desk Lamp,Home & Living,3,40,120,42,78,Europe,In-Store,New,10
+TX-100643,2026-03-19 10:18:25,P017,DermaBright Serum Duo,Beauty & Care,2,55,110,28,82,Asia-Pacific,Affiliate,Returning,0
+TX-100644,2026-03-19 19:04:01,P008,Voyager Anti-Theft Backpack,Fashion,1,75,75,25,50,Asia-Pacific,In-Store,Returning,0
+TX-100645,2026-03-20 03:49:37,P013,IronPulse Adjustable Dumbbell,Fitness & Sports,1,249,249,120,129,Europe,Affiliate,New,29
+TX-100646,2026-03-20 12:35:13,P018,HydroBloom Nourishing Cream,Beauty & Care,1,38,38,10,28,North America,Affiliate,Returning,0
+TX-100647,2026-03-20 21:20:49,P011,Helix Memory Foam Pillow,Home & Living,2,80,160,64,96,North America,Affiliate,New,19
+TX-100648,2026-03-21 06:06:25,P019,SilkDuo Ionic Hair Dryer,Beauty & Care,2,110,220,96,124,Asia-Pacific,Online,New,22
+TX-100649,2026-03-21 14:52:01,P009,Nova Glow LED Desk Lamp,Home & Living,1,45,45,14,31,Europe,Online,New,26
+TX-100650,2026-03-21 23:37:37,P004,AeroGlide Smart Watch,Electronics,2,299,598,260,338,North America,Online,Returning,0
+TX-100651,2026-03-22 08:23:13,P012,Breeze Mist Ultrasonic Diffuser,Home & Living,2,50,100,36,64,Asia-Pacific,In-Store,Returning,0
+TX-100652,2026-03-22 17:08:49,P017,DermaBright Serum Duo,Beauty & Care,3,46,138,42,96,Asia-Pacific,In-Store,New,11
+TX-100653,2026-03-23 01:54:25,P018,HydroBloom Nourishing Cream,Beauty & Care,2,38,76,20,56,North America,Affiliate,Returning,0
+TX-100654,2026-03-23 10:40:01,P015,HydroDash Insulated Flask,Fitness & Sports,2,30,60,16,44,North America,Affiliate,Returning,0
+TX-100655,2026-03-23 19:25:37,P007,Core Denim Slim Fit,Fashion,3,65,195,66,129,Europe,Affiliate,New,23
+TX-100656,2026-03-24 04:11:13,P009,Nova Glow LED Desk Lamp,Home & Living,3,45,135,42,93,Europe,In-Store,Returning,0
+TX-100657,2026-03-24 12:56:49,P014,FlexiCore Anti-Slip Yoga Mat,Fitness & Sports,2,40,80,24,56,Europe,In-Store,Returning,0
+TX-100658,2026-03-24 21:42:25,P006,Stratus Comfort Sneakers,Fashion,1,85,85,30,55,Europe,Affiliate,New,10
+TX-100659,2026-03-25 06:28:01,P013,IronPulse Adjustable Dumbbell,Fitness & Sports,1,249,249,120,129,Europe,Online,New,20
+TX-100660,2026-03-25 15:13:37,P005,Luxe Linen Blazer,Fashion,3,114,342,120,222,Europe,In-Store,Returning,0
+TX-100661,2026-03-25 23:59:13,P002,SoundSync ANC Headphones,Electronics,1,199,199,85,114,Europe,In-Store,Returning,0
+TX-100662,2026-03-26 08:44:49,P012,Breeze Mist Ultrasonic Diffuser,Home & Living,1,47,47,18,29,Asia-Pacific,Affiliate,Returning,0
+TX-100663,2026-03-26 17:30:25,P020,HerbalPure Charcoal Mask Set,Beauty & Care,2,28,56,12,44,Europe,Affiliate,New,6
+TX-100664,2026-03-27 02:16:01,P016,SonicPulse Smart Jump Rope,Fitness & Sports,3,45,135,45,90,Latin America,Online,Returning,0
+TX-100665,2026-03-27 11:01:37,P005,Luxe Linen Blazer,Fashion,3,120,360,120,240,Europe,Affiliate,Returning,0
+TX-100666,2026-03-27 19:47:13,P003,Quantum Charge Wireless Pad,Electronics,2,49,98,30,68,North America,Online,Returning,0
+TX-100667,2026-03-28 04:32:49,P020,HerbalPure Charcoal Mask Set,Beauty & Care,2,28,56,12,44,Latin America,In-Store,Returning,0
+TX-100668,2026-03-28 13:18:25,P015,HydroDash Insulated Flask,Fitness & Sports,1,28,28,8,20,Latin America,Online,New,23
+TX-100669,2026-03-28 22:04:01,P003,Quantum Charge Wireless Pad,Electronics,1,49,49,15,34,North America,Online,Returning,0
+TX-100670,2026-03-29 06:49:37,P002,SoundSync ANC Headphones,Electronics,3,199,597,255,342,North America,In-Store,New,15
+TX-100671,2026-03-29 15:35:13,P013,IronPulse Adjustable Dumbbell,Fitness & Sports,2,249,498,240,258,Asia-Pacific,Online,New,35
+TX-100672,2026-03-30 00:20:49,P017,DermaBright Serum Duo,Beauty & Care,1,55,55,14,41,Europe,Online,New,25
+TX-100673,2026-03-30 09:06:25,P015,HydroDash Insulated Flask,Fitness & Sports,1,30,30,8,22,Asia-Pacific,Affiliate,Returning,0
+TX-100674,2026-03-30 17:52:01,P006,Stratus Comfort Sneakers,Fashion,3,85,255,90,165,Latin America,Affiliate,Returning,0
+TX-100675,2026-03-31 02:37:37,P018,HydroBloom Nourishing Cream,Beauty & Care,2,38,76,20,56,Europe,Online,Returning,0
+TX-100676,2026-03-31 11:23:13,P010,Ember Ceramic Coffee Mug Set,Home & Living,2,35,70,20,50,North America,Online,New,32
+TX-100677,2026-03-31 20:08:49,P016,SonicPulse Smart Jump Rope,Fitness & Sports,2,45,90,30,60,Latin America,In-Store,New,14
+TX-100678,2026-04-01 04:54:25,P001,AuraBook Pro 15,Electronics,1,1299,1299,780,519,Asia-Pacific,Online,Returning,0
+TX-100679,2026-04-01 13:40:01,P013,IronPulse Adjustable Dumbbell,Fitness & Sports,1,249,249,120,129,Latin America,Online,Returning,0
+TX-100680,2026-04-01 22:25:37,P020,HerbalPure Charcoal Mask Set,Beauty & Care,2,28,56,12,44,Asia-Pacific,In-Store,Returning,0
+TX-100681,2026-04-02 07:11:13,P005,Luxe Linen Blazer,Fashion,1,120,120,40,80,Asia-Pacific,Online,Returning,0
+TX-100682,2026-04-02 15:56:49,P011,Helix Memory Foam Pillow,Home & Living,3,76,228,96,132,North America,Online,New,24
+TX-100683,2026-04-03 00:42:25,P015,HydroDash Insulated Flask,Fitness & Sports,1,28,28,8,20,North America,Online,New,25
+TX-100684,2026-04-03 09:28:01,P016,SonicPulse Smart Jump Rope,Fitness & Sports,2,42,84,30,54,Asia-Pacific,In-Store,New,5
+TX-100685,2026-04-03 18:13:37,P013,IronPulse Adjustable Dumbbell,Fitness & Sports,1,249,249,120,129,North America,Affiliate,Returning,0
+TX-100686,2026-04-04 02:59:13,P013,IronPulse Adjustable Dumbbell,Fitness & Sports,1,249,249,120,129,North America,Online,New,29
+TX-100687,2026-04-04 11:44:49,P002,SoundSync ANC Headphones,Electronics,1,199,199,85,114,Europe,In-Store,New,15
+TX-100688,2026-04-04 20:30:25,P011,Helix Memory Foam Pillow,Home & Living,3,80,240,96,144,Europe,Affiliate,New,28
+TX-100689,2026-04-05 05:16:01,P010,Ember Ceramic Coffee Mug Set,Home & Living,5,35,175,50,125,Europe,In-Store,New,6
+TX-100690,2026-04-05 14:01:37,P014,FlexiCore Anti-Slip Yoga Mat,Fitness & Sports,2,40,80,24,56,Asia-Pacific,Online,New,27
+TX-100691,2026-04-05 22:47:13,P001,AuraBook Pro 15,Electronics,1,1299,1299,780,519,North America,Affiliate,Returning,0
+TX-100692,2026-04-06 07:32:49,P006,Stratus Comfort Sneakers,Fashion,1,72,72,30,42,Latin America,Online,Returning,0
+TX-100693,2026-04-06 16:18:25,P018,HydroBloom Nourishing Cream,Beauty & Care,1,38,38,10,28,North America,Online,Returning,0
+TX-100694,2026-04-07 01:04:01,P012,Breeze Mist Ultrasonic Diffuser,Home & Living,1,50,50,18,32,Latin America,Affiliate,New,6
+TX-100695,2026-04-07 09:49:37,P005,Luxe Linen Blazer,Fashion,3,120,360,120,240,Asia-Pacific,Online,Returning,0
+TX-100696,2026-04-07 18:35:13,P007,Core Denim Slim Fit,Fashion,2,65,130,44,86,Europe,Affiliate,Returning,0
+TX-100697,2026-04-08 03:20:49,P018,HydroBloom Nourishing Cream,Beauty & Care,2,38,76,20,56,Europe,Online,New,23
+TX-100698,2026-04-08 12:06:25,P015,HydroDash Insulated Flask,Fitness & Sports,5,30,150,40,110,North America,Affiliate,Returning,0
+TX-100699,2026-04-08 20:52:01,P012,Breeze Mist Ultrasonic Diffuser,Home & Living,3,50,150,54,96,Europe,In-Store,New,8
+TX-100700,2026-04-09 05:37:37,P016,SonicPulse Smart Jump Rope,Fitness & Sports,2,45,90,30,60,Europe,Affiliate,Returning,0
+TX-100701,2026-04-09 14:23:13,P004,AeroGlide Smart Watch,Electronics,1,299,299,130,169,North America,Online,New,30
+TX-100702,2026-04-09 23:08:49,P002,SoundSync ANC Headphones,Electronics,3,199,597,255,342,Latin America,Affiliate,Returning,0
+TX-100703,2026-04-10 07:54:25,P020,HerbalPure Charcoal Mask Set,Beauty & Care,5,28,140,30,110,North America,Online,New,17
+TX-100704,2026-04-10 16:40:01,P002,SoundSync ANC Headphones,Electronics,1,199,199,85,114,Asia-Pacific,Affiliate,Returning,0
+TX-100705,2026-04-11 01:25:37,P002,SoundSync ANC Headphones,Electronics,3,169,507,255,252,North America,In-Store,New,8
+TX-100706,2026-04-11 10:11:13,P007,Core Denim Slim Fit,Fashion,1,65,65,22,43,Europe,Affiliate,New,7
+TX-100707,2026-04-11 18:56:49,P004,AeroGlide Smart Watch,Electronics,1,299,299,130,169,Asia-Pacific,Affiliate,Returning,0
+TX-100708,2026-04-12 03:42:25,P006,Stratus Comfort Sneakers,Fashion,3,85,255,90,165,Latin America,Affiliate,Returning,0
+TX-100709,2026-04-12 12:28:01,P012,Breeze Mist Ultrasonic Diffuser,Home & Living,1,50,50,18,32,Asia-Pacific,Affiliate,Returning,0
+TX-100710,2026-04-12 21:13:37,P011,Helix Memory Foam Pillow,Home & Living,2,80,160,64,96,Europe,Affiliate,New,19
+TX-100711,2026-04-13 05:59:13,P009,Nova Glow LED Desk Lamp,Home & Living,2,42,84,28,56,Asia-Pacific,In-Store,Returning,0
+TX-100713,2026-04-13 23:30:25,P017,DermaBright Serum Duo,Beauty & Care,1,55,55,14,41,Europe,In-Store,New,8
+TX-100714,2026-04-14 08:16:01,P001,AuraBook Pro 15,Electronics,1,1299,1299,780,519,North America,Affiliate,New,155
+TX-100715,2026-04-14 17:01:37,P012,Breeze Mist Ultrasonic Diffuser,Home & Living,1,45,45,18,27,Europe,Online,Returning,0
+TX-100716,2026-04-15 01:47:13,P007,Core Denim Slim Fit,Fashion,1,65,65,22,43,North America,Affiliate,Returning,0
+TX-100717,2026-04-15 10:32:49,P019,SilkDuo Ionic Hair Dryer,Beauty & Care,1,110,110,48,62,North America,Affiliate,Returning,0
+TX-100718,2026-04-15 19:18:25,P003,Quantum Charge Wireless Pad,Electronics,2,49,98,30,68,North America,In-Store,Returning,0
+TX-100719,2026-04-16 04:04:01,P008,Voyager Anti-Theft Backpack,Fashion,3,63,189,75,114,Europe,Affiliate,Returning,0
+TX-100720,2026-04-16 12:49:37,P011,Helix Memory Foam Pillow,Home & Living,2,80,160,64,96,Europe,Online,New,34
+TX-100721,2026-04-16 21:35:13,P003,Quantum Charge Wireless Pad,Electronics,1,46,46,15,31,Europe,In-Store,Returning,0
+TX-100722,2026-04-17 06:20:49,P002,SoundSync ANC Headphones,Electronics,2,199,398,170,228,North America,In-Store,New,7
+TX-100723,2026-04-17 15:06:25,P016,SonicPulse Smart Jump Rope,Fitness & Sports,5,45,225,75,150,Europe,In-Store,Returning,0
+TX-100724,2026-04-17 23:52:01,P017,DermaBright Serum Duo,Beauty & Care,1,55,55,14,41,Europe,Online,New,25
+TX-100725,2026-04-18 08:37:37,P019,SilkDuo Ionic Hair Dryer,Beauty & Care,2,110,220,96,124,North America,Online,Returning,0
+TX-100726,2026-04-18 17:23:13,P012,Breeze Mist Ultrasonic Diffuser,Home & Living,1,50,50,18,32,North America,In-Store,New,12
+TX-100727,2026-04-19 02:08:49,P015,HydroDash Insulated Flask,Fitness & Sports,5,30,150,40,110,North America,Online,New,17
+TX-100728,2026-04-19 10:54:25,P002,SoundSync ANC Headphones,Electronics,1,169,169,85,84,Europe,Affiliate,New,20
+TX-100729,2026-04-19 19:40:01,P010,Ember Ceramic Coffee Mug Set,Home & Living,2,35,70,20,50,Latin America,In-Store,New,13
+TX-100730,2026-04-20 04:25:37,P018,HydroBloom Nourishing Cream,Beauty & Care,3,38,114,30,84,Asia-Pacific,Affiliate,Returning,0
+TX-100731,2026-04-20 13:11:13,P001,AuraBook Pro 15,Electronics,1,1299,1299,780,519,North America,Affiliate,New,155
+TX-100732,2026-04-20 21:56:49,P020,HerbalPure Charcoal Mask Set,Beauty & Care,5,28,140,30,110,Asia-Pacific,Online,Returning,0
+TX-100733,2026-04-21 06:42:25,P009,Nova Glow LED Desk Lamp,Home & Living,2,45,90,28,62,Asia-Pacific,Online,New,35
+TX-100734,2026-04-21 15:28:01,P013,IronPulse Adjustable Dumbbell,Fitness & Sports,2,249,498,240,258,North America,In-Store,Returning,0
+TX-100735,2026-04-22 00:13:37,P017,DermaBright Serum Duo,Beauty & Care,1,55,55,14,41,Latin America,Affiliate,New,6
+TX-100736,2026-04-22 08:59:13,P011,Helix Memory Foam Pillow,Home & Living,1,80,80,32,48,Latin America,In-Store,New,10
+TX-100737,2026-04-22 17:44:49,P010,Ember Ceramic Coffee Mug Set,Home & Living,1,35,35,10,25,Europe,Affiliate,Returning,0
+TX-100738,2026-04-23 02:30:25,P001,AuraBook Pro 15,Electronics,1,1299,1299,780,519,North America,Online,New,17
+TX-100739,2026-04-23 11:16:01,P017,DermaBright Serum Duo,Beauty & Care,3,55,165,42,123,Europe,In-Store,New,9
+TX-100740,2026-04-23 20:01:37,P011,Helix Memory Foam Pillow,Home & Living,1,80,80,32,48,Latin America,Affiliate,New,9
+TX-100741,2026-04-24 04:47:13,P007,Core Denim Slim Fit,Fashion,1,65,65,22,43,Europe,In-Store,New,14
+TX-100742,2026-04-24 13:32:49,P011,Helix Memory Foam Pillow,Home & Living,1,80,80,32,48,North America,Affiliate,New,9
+TX-100743,2026-04-24 22:18:25,P001,AuraBook Pro 15,Electronics,2,1299,2598,1560,1038,North America,In-Store,Returning,0
+TX-100744,2026-04-25 07:04:01,P009,Nova Glow LED Desk Lamp,Home & Living,1,45,45,14,31,Europe,Online,New,34
+TX-100745,2026-04-25 15:49:37,P020,HerbalPure Charcoal Mask Set,Beauty & Care,1,28,28,6,22,Europe,Affiliate,New,3
+TX-100746,2026-04-26 00:35:13,P016,SonicPulse Smart Jump Rope,Fitness & Sports,5,45,225,75,150,Europe,Affiliate,Returning,0
+TX-100747,2026-04-26 09:20:49,P013,IronPulse Adjustable Dumbbell,Fitness & Sports,1,249,249,120,129,Latin America,In-Store,New,5
+TX-100748,2026-04-26 18:06:25,P001,AuraBook Pro 15,Electronics,1,1299,1299,780,519,Asia-Pacific,In-Store,New,6
+TX-100749,2026-04-27 02:52:01,P015,HydroDash Insulated Flask,Fitness & Sports,2,30,60,16,44,Latin America,Affiliate,Returning,0
+TX-100750,2026-04-27 11:37:37,P002,SoundSync ANC Headphones,Electronics,3,199,597,255,342,North America,Affiliate,Returning,0
+TX-100751,2026-04-27 20:23:13,P002,SoundSync ANC Headphones,Electronics,1,199,199,85,114,North America,In-Store,Returning,0
+TX-100752,2026-04-28 05:08:49,P018,HydroBloom Nourishing Cream,Beauty & Care,3,38,114,30,84,Latin America,Affiliate,New,13
+TX-100753,2026-04-28 13:54:25,P002,SoundSync ANC Headphones,Electronics,1,199,199,85,114,North America,In-Store,Returning,0
+TX-100754,2026-04-28 22:40:01,P006,Stratus Comfort Sneakers,Fashion,1,85,85,30,55,Latin America,In-Store,New,15
+TX-100755,2026-04-29 07:25:37,P017,DermaBright Serum Duo,Beauty & Care,2,55,110,28,82,North America,Online,New,29
+TX-100756,2026-04-29 16:11:13,P015,HydroDash Insulated Flask,Fitness & Sports,2,30,60,16,44,Europe,In-Store,New,15
+TX-100757,2026-04-30 00:56:49,P006,Stratus Comfort Sneakers,Fashion,1,72,72,30,42,North America,Online,New,27
+TX-100758,2026-04-30 09:42:25,P017,DermaBright Serum Duo,Beauty & Care,1,55,55,14,41,Europe,In-Store,Returning,0
+TX-100759,2026-04-30 18:28:01,P019,SilkDuo Ionic Hair Dryer,Beauty & Care,1,110,110,48,62,Europe,Online,New,16
+TX-100760,2026-05-01 03:13:37,P010,Ember Ceramic Coffee Mug Set,Home & Living,1,35,35,10,25,Latin America,In-Store,New,8
+TX-100761,2026-05-01 11:59:13,P009,Nova Glow LED Desk Lamp,Home & Living,2,45,90,28,62,North America,In-Store,Returning,0
+TX-100762,2026-05-01 20:44:49,P016,SonicPulse Smart Jump Rope,Fitness & Sports,2,45,90,30,60,Europe,Online,Returning,0
+TX-100763,2026-05-02 05:30:25,P020,HerbalPure Charcoal Mask Set,Beauty & Care,3,28,84,18,66,North America,Online,Returning,0
+TX-100764,2026-05-02 14:16:01,P007,Core Denim Slim Fit,Fashion,1,61,61,22,39,Europe,Online,New,33
+TX-100765,2026-05-02 23:01:37,P010,Ember Ceramic Coffee Mug Set,Home & Living,1,35,35,10,25,Asia-Pacific,Online,New,20
+TX-100766,2026-05-03 07:47:13,P010,Ember Ceramic Coffee Mug Set,Home & Living,1,31,31,10,21,Europe,In-Store,Returning,0
+TX-100767,2026-05-03 16:32:49,P013,IronPulse Adjustable Dumbbell,Fitness & Sports,1,249,249,120,129,North America,In-Store,New,6
+TX-100768,2026-05-04 01:18:25,P009,Nova Glow LED Desk Lamp,Home & Living,3,45,135,42,93,Asia-Pacific,Affiliate,Returning,0
+TX-100769,2026-05-04 10:04:01,P002,SoundSync ANC Headphones,Electronics,3,199,597,255,342,North America,Affiliate,New,71
+TX-100771,2026-05-05 03:35:13,P020,HerbalPure Charcoal Mask Set,Beauty & Care,1,28,28,6,22,Asia-Pacific,In-Store,Returning,0
+TX-100772,2026-05-05 12:20:49,P016,SonicPulse Smart Jump Rope,Fitness & Sports,5,45,225,75,150,Latin America,Online,New,21
+TX-100773,2026-05-05 21:06:25,P001,AuraBook Pro 15,Electronics,1,1299,1299,780,519,Latin America,Affiliate,New,155
+TX-100775,2026-05-06 14:37:37,P011,Helix Memory Foam Pillow,Home & Living,1,80,80,32,48,Asia-Pacific,Affiliate,New,9
+TX-100776,2026-05-06 23:23:13,P009,Nova Glow LED Desk Lamp,Home & Living,3,45,135,42,93,North America,In-Store,Returning,0
+TX-100777,2026-05-07 08:08:49,P004,AeroGlide Smart Watch,Electronics,2,299,598,260,338,Asia-Pacific,In-Store,Returning,0
+TX-100778,2026-05-07 16:54:25,P007,Core Denim Slim Fit,Fashion,1,65,65,22,43,Asia-Pacific,In-Store,Returning,0
+TX-100779,2026-05-08 01:40:01,P015,HydroDash Insulated Flask,Fitness & Sports,5,25,125,40,85,Asia-Pacific,In-Store,Returning,0
+TX-100780,2026-05-08 10:25:37,P011,Helix Memory Foam Pillow,Home & Living,1,76,76,32,44,North America,Online,Returning,0
+TX-100781,2026-05-08 19:11:13,P001,AuraBook Pro 15,Electronics,1,1299,1299,780,519,Asia-Pacific,In-Store,New,6
+TX-100783,2026-05-09 12:42:25,P011,Helix Memory Foam Pillow,Home & Living,1,80,80,32,48,North America,In-Store,Returning,0
+TX-100784,2026-05-09 21:28:01,P015,HydroDash Insulated Flask,Fitness & Sports,1,28,28,8,20,Asia-Pacific,Online,Returning,0
+TX-100785,2026-05-10 06:13:37,P003,Quantum Charge Wireless Pad,Electronics,3,49,147,45,102,Latin America,Affiliate,New,17
+TX-100786,2026-05-10 14:59:13,P016,SonicPulse Smart Jump Rope,Fitness & Sports,1,45,45,15,30,Asia-Pacific,In-Store,New,13
+TX-100787,2026-05-10 23:44:49,P005,Luxe Linen Blazer,Fashion,3,108,324,120,204,Europe,Affiliate,New,38
+TX-100789,2026-05-11 17:16:01,P020,HerbalPure Charcoal Mask Set,Beauty & Care,1,23,23,6,17,North America,In-Store,Returning,0
+TX-100790,2026-05-12 02:01:37,P001,AuraBook Pro 15,Electronics,1,1299,1299,780,519,North America,Affiliate,New,155
+TX-100791,2026-05-12 10:47:13,P015,HydroDash Insulated Flask,Fitness & Sports,1,30,30,8,22,North America,In-Store,New,5
+TX-100793,2026-05-13 04:18:25,P004,AeroGlide Smart Watch,Electronics,1,254,254,130,124,Europe,Affiliate,Returning,0
+TX-100794,2026-05-13 13:04:01,P019,SilkDuo Ionic Hair Dryer,Beauty & Care,1,110,110,48,62,Europe,Online,New,25
+TX-100795,2026-05-13 21:49:37,P002,SoundSync ANC Headphones,Electronics,1,189,189,85,104,Europe,Online,Returning,0
+TX-100796,2026-05-14 06:35:13,P013,IronPulse Adjustable Dumbbell,Fitness & Sports,2,249,498,240,258,Europe,Affiliate,Returning,0
+TX-100797,2026-05-14 15:20:49,P007,Core Denim Slim Fit,Fashion,2,58,116,44,72,Europe,In-Store,New,15
+TX-100798,2026-05-15 00:06:25,P015,HydroDash Insulated Flask,Fitness & Sports,1,30,30,8,22,Latin America,Online,New,34
+TX-100799,2026-05-15 08:52:01,P012,Breeze Mist Ultrasonic Diffuser,Home & Living,1,50,50,18,32,Latin America,Online,Returning,0
+TX-100800,2026-05-15 17:37:37,P016,SonicPulse Smart Jump Rope,Fitness & Sports,2,45,90,30,60,North America,In-Store,Returning,0
+TX-100801,2026-05-16 02:23:13,P012,Breeze Mist Ultrasonic Diffuser,Home & Living,2,50,100,36,64,Europe,Affiliate,New,12
+TX-100802,2026-05-16 11:08:49,P011,Helix Memory Foam Pillow,Home & Living,2,80,160,64,96,North America,In-Store,Returning,0
+TX-100803,2026-05-16 19:54:25,P008,Voyager Anti-Theft Backpack,Fashion,1,75,75,25,50,Europe,In-Store,Returning,0
+TX-100804,2026-05-17 04:40:01,P014,FlexiCore Anti-Slip Yoga Mat,Fitness & Sports,1,40,40,12,28,Asia-Pacific,Affiliate,New,4
+TX-100805,2026-05-17 13:25:37,P019,SilkDuo Ionic Hair Dryer,Beauty & Care,1,110,110,48,62,Latin America,Online,Returning,0
+TX-100806,2026-05-17 22:11:13,P006,Stratus Comfort Sneakers,Fashion,3,85,255,90,165,Asia-Pacific,In-Store,New,11
+TX-100807,2026-05-18 06:56:49,P002,SoundSync ANC Headphones,Electronics,1,199,199,85,114,North America,Online,New,19
+TX-100808,2026-05-18 15:42:25,P010,Ember Ceramic Coffee Mug Set,Home & Living,1,35,35,10,25,Latin America,Affiliate,Returning,0
+TX-100810,2026-05-19 09:13:37,P010,Ember Ceramic Coffee Mug Set,Home & Living,1,35,35,10,25,Latin America,Affiliate,Returning,0
+TX-100811,2026-05-19 17:59:13,P017,DermaBright Serum Duo,Beauty & Care,1,55,55,14,41,Latin America,Online,Returning,0
+TX-100812,2026-05-20 02:44:49,P002,SoundSync ANC Headphones,Electronics,1,199,199,85,114,North America,Affiliate,Returning,0
+TX-100813,2026-05-20 11:30:25,P019,SilkDuo Ionic Hair Dryer,Beauty & Care,2,110,220,96,124,Latin America,Affiliate,Returning,0
+TX-100814,2026-05-20 20:16:01,P007,Core Denim Slim Fit,Fashion,2,65,130,44,86,Europe,In-Store,New,10
+TX-100815,2026-05-21 05:01:37,P005,Luxe Linen Blazer,Fashion,1,120,120,40,80,Europe,Affiliate,New,14
+TX-100816,2026-05-21 13:47:13,P016,SonicPulse Smart Jump Rope,Fitness & Sports,1,45,45,15,30,Latin America,Online,New,28
+TX-100819,2026-05-22 16:04:01,P014,FlexiCore Anti-Slip Yoga Mat,Fitness & Sports,3,40,120,36,84,Europe,In-Store,Returning,0
+TX-100820,2026-05-23 00:49:37,P008,Voyager Anti-Theft Backpack,Fashion,1,75,75,25,50,Europe,In-Store,New,9
+TX-100821,2026-05-23 09:35:13,P018,HydroBloom Nourishing Cream,Beauty & Care,3,38,114,30,84,Asia-Pacific,Online,New,26
+TX-100822,2026-05-23 18:20:49,P016,SonicPulse Smart Jump Rope,Fitness & Sports,2,45,90,30,60,North America,Online,Returning,0
+TX-100823,2026-05-24 03:06:25,P020,HerbalPure Charcoal Mask Set,Beauty & Care,5,28,140,30,110,North America,Online,Returning,0
+TX-100825,2026-05-24 20:37:37,P018,HydroBloom Nourishing Cream,Beauty & Care,2,38,76,20,56,Asia-Pacific,Affiliate,New,9
+TX-100826,2026-05-25 05:23:13,P015,HydroDash Insulated Flask,Fitness & Sports,2,30,60,16,44,Latin America,Affiliate,Returning,0
+TX-100828,2026-05-25 22:54:25,P006,Stratus Comfort Sneakers,Fashion,3,85,255,90,165,North America,Affiliate,Returning,0
+TX-100829,2026-05-26 07:40:01,P019,SilkDuo Ionic Hair Dryer,Beauty & Care,1,110,110,48,62,Europe,Affiliate,New,13
+TX-100830,2026-05-26 16:25:37,P010,Ember Ceramic Coffee Mug Set,Home & Living,3,31,93,30,63,Latin America,Online,New,23
+TX-100831,2026-05-27 01:11:13,P009,Nova Glow LED Desk Lamp,Home & Living,5,42,210,70,140,Asia-Pacific,In-Store,New,14
+TX-100832,2026-05-27 09:56:49,P015,HydroDash Insulated Flask,Fitness & Sports,5,30,150,40,110,Asia-Pacific,Online,Returning,0
+TX-100833,2026-05-27 18:42:25,P017,DermaBright Serum Duo,Beauty & Care,1,55,55,14,41,North America,In-Store,New,7
+TX-100834,2026-05-28 03:28:01,P014,FlexiCore Anti-Slip Yoga Mat,Fitness & Sports,5,40,200,60,140,Latin America,Online,Returning,0
+TX-100835,2026-05-28 12:13:37,P012,Breeze Mist Ultrasonic Diffuser,Home & Living,1,45,45,18,27,North America,Affiliate,Returning,0
+TX-100836,2026-05-28 20:59:13,P010,Ember Ceramic Coffee Mug Set,Home & Living,2,35,70,20,50,Latin America,Affiliate,New,8
+TX-100837,2026-05-29 05:44:49,P009,Nova Glow LED Desk Lamp,Home & Living,1,45,45,14,31,Europe,Affiliate,Returning,0
+TX-100838,2026-05-29 14:30:25,P013,IronPulse Adjustable Dumbbell,Fitness & Sports,1,249,249,120,129,Asia-Pacific,Affiliate,New,29
+TX-100839,2026-05-29 23:16:01,P014,FlexiCore Anti-Slip Yoga Mat,Fitness & Sports,2,40,80,24,56,Asia-Pacific,In-Store,Returning,0
+TX-100840,2026-05-30 08:01:37,P019,SilkDuo Ionic Hair Dryer,Beauty & Care,3,110,330,144,186,Latin America,In-Store,New,13
+TX-100841,2026-05-30 16:47:13,P006,Stratus Comfort Sneakers,Fashion,1,80,80,30,50,Asia-Pacific,Affiliate,New,9
+TX-100842,2026-05-31 01:32:49,P015,HydroDash Insulated Flask,Fitness & Sports,2,30,60,16,44,Asia-Pacific,Online,Returning,0
+TX-100843,2026-05-31 10:18:25,P003,Quantum Charge Wireless Pad,Electronics,5,46,230,75,155,North America,Affiliate,New,27
+TX-100844,2026-05-31 19:04:01,P020,HerbalPure Charcoal Mask Set,Beauty & Care,1,28,28,6,22,Europe,In-Store,New,9
+TX-100845,2026-06-01 03:49:37,P003,Quantum Charge Wireless Pad,Electronics,5,49,245,75,170,Latin America,In-Store,Returning,0
+TX-100846,2026-06-01 12:35:13,P006,Stratus Comfort Sneakers,Fashion,1,85,85,30,55,Europe,In-Store,New,9
+TX-100848,2026-06-02 06:06:25,P015,HydroDash Insulated Flask,Fitness & Sports,3,30,90,24,66,North America,In-Store,New,15
+TX-100849,2026-06-02 14:52:01,P005,Luxe Linen Blazer,Fashion,1,114,114,40,74,Latin America,Online,New,17
+TX-100850,2026-06-02 23:37:37,P009,Nova Glow LED Desk Lamp,Home & Living,1,45,45,14,31,Latin America,Online,Returning,0
+TX-100851,2026-06-03 08:23:13,P002,SoundSync ANC Headphones,Electronics,2,199,398,170,228,Latin America,In-Store,New,13
+TX-100852,2026-06-03 17:08:49,P016,SonicPulse Smart Jump Rope,Fitness & Sports,5,45,225,75,150,Latin America,In-Store,Returning,0
+TX-100853,2026-06-04 01:54:25,P018,HydroBloom Nourishing Cream,Beauty & Care,5,38,190,50,140,Europe,Online,Returning,0
+TX-100854,2026-06-04 10:40:01,P019,SilkDuo Ionic Hair Dryer,Beauty & Care,2,93,186,96,90,Asia-Pacific,In-Store,Returning,0
+TX-100855,2026-06-04 19:25:37,P018,HydroBloom Nourishing Cream,Beauty & Care,2,38,76,20,56,Asia-Pacific,Online,Returning,0
+TX-100856,2026-06-05 04:11:13,P002,SoundSync ANC Headphones,Electronics,2,199,398,170,228,North America,Affiliate,New,47
+TX-100857,2026-06-05 12:56:49,P012,Breeze Mist Ultrasonic Diffuser,Home & Living,1,47,47,18,29,Latin America,Online,Returning,0
+TX-100858,2026-06-05 21:42:25,P019,SilkDuo Ionic Hair Dryer,Beauty & Care,1,110,110,48,62,Europe,In-Store,Returning,0
+TX-100859,2026-06-06 06:28:01,P016,SonicPulse Smart Jump Rope,Fitness & Sports,2,38,76,30,46,Latin America,Online,New,16
+TX-100860,2026-06-06 15:13:37,P007,Core Denim Slim Fit,Fashion,1,65,65,22,43,Latin America,Affiliate,New,7
+TX-100861,2026-06-06 23:59:13,P005,Luxe Linen Blazer,Fashion,3,102,306,120,186,Latin America,Affiliate,New,36
+TX-100862,2026-06-07 08:44:49,P001,AuraBook Pro 15,Electronics,1,1299,1299,780,519,Europe,Affiliate,New,155
+TX-100863,2026-06-07 17:30:25,P019,SilkDuo Ionic Hair Dryer,Beauty & Care,2,110,220,96,124,North America,Online,New,34
+TX-100864,2026-06-08 02:16:01,P007,Core Denim Slim Fit,Fashion,3,65,195,66,129,Europe,In-Store,Returning,0
+TX-100865,2026-06-08 11:01:37,P007,Core Denim Slim Fit,Fashion,1,65,65,22,43,Europe,Affiliate,New,7
+TX-100866,2026-06-08 19:47:13,P006,Stratus Comfort Sneakers,Fashion,3,80,240,90,150,Asia-Pacific,Affiliate,New,28
+TX-100867,2026-06-09 04:32:49,P020,HerbalPure Charcoal Mask Set,Beauty & Care,2,26,52,12,40,Latin America,Online,New,20
+TX-100869,2026-06-09 22:04:01,P019,SilkDuo Ionic Hair Dryer,Beauty & Care,1,110,110,48,62,Asia-Pacific,In-Store,Returning,0
+TX-100870,2026-06-10 06:49:37,P017,DermaBright Serum Duo,Beauty & Care,1,55,55,14,41,Latin America,In-Store,New,5
+TX-100871,2026-06-10 15:35:13,P016,SonicPulse Smart Jump Rope,Fitness & Sports,2,45,90,30,60,North America,Affiliate,Returning,0
+TX-100872,2026-06-11 00:20:49,P007,Core Denim Slim Fit,Fashion,3,65,195,66,129,North America,Affiliate,New,23
+TX-100873,2026-06-11 09:06:25,P007,Core Denim Slim Fit,Fashion,1,65,65,22,43,Europe,Online,New,30
+TX-100874,2026-06-11 17:52:01,P006,Stratus Comfort Sneakers,Fashion,2,85,170,60,110,Europe,Online,Returning,0
+TX-100875,2026-06-12 02:37:37,P015,HydroDash Insulated Flask,Fitness & Sports,3,30,90,24,66,North America,Online,New,15
+TX-100876,2026-06-12 11:23:13,P004,AeroGlide Smart Watch,Electronics,1,299,299,130,169,North America,Online,Returning,0
+TX-100877,2026-06-12 20:08:49,P011,Helix Memory Foam Pillow,Home & Living,1,68,68,32,36,Europe,Online,Returning,0
+TX-100878,2026-06-13 04:54:25,P007,Core Denim Slim Fit,Fashion,2,58,116,44,72,Latin America,Online,New,19
+TX-100879,2026-06-13 13:40:01,P020,HerbalPure Charcoal Mask Set,Beauty & Care,2,23,46,12,34,Latin America,Online,Returning,0
+TX-100880,2026-06-13 22:25:37,P012,Breeze Mist Ultrasonic Diffuser,Home & Living,1,42,42,18,24,Asia-Pacific,Online,Returning,0
+TX-100881,2026-06-14 07:11:13,P005,Luxe Linen Blazer,Fashion,1,120,120,40,80,North America,In-Store,Returning,0
+TX-100882,2026-06-14 15:56:49,P006,Stratus Comfort Sneakers,Fashion,3,85,255,90,165,Europe,Affiliate,New,30
+TX-100884,2026-06-15 09:28:01,P015,HydroDash Insulated Flask,Fitness & Sports,5,30,150,40,110,Asia-Pacific,Online,Returning,0
+TX-100885,2026-06-15 18:13:37,P014,FlexiCore Anti-Slip Yoga Mat,Fitness & Sports,3,40,120,36,84,Europe,Affiliate,New,14
+TX-100886,2026-06-16 02:59:13,P002,SoundSync ANC Headphones,Electronics,2,199,398,170,228,North America,In-Store,New,6
+TX-100887,2026-06-16 11:44:49,P008,Voyager Anti-Theft Backpack,Fashion,2,75,150,50,100,North America,Affiliate,New,18
+TX-100888,2026-06-16 20:30:25,P010,Ember Ceramic Coffee Mug Set,Home & Living,1,35,35,10,25,Europe,Affiliate,New,4
+TX-100889,2026-06-17 05:16:01,P015,HydroDash Insulated Flask,Fitness & Sports,1,30,30,8,22,North America,In-Store,Returning,0
+TX-100890,2026-06-17 14:01:37,P012,Breeze Mist Ultrasonic Diffuser,Home & Living,1,50,50,18,32,Latin America,Affiliate,New,6
+TX-100891,2026-06-17 22:47:13,P017,DermaBright Serum Duo,Beauty & Care,1,55,55,14,41,North America,In-Store,Returning,0
+TX-100892,2026-06-18 07:32:49,P019,SilkDuo Ionic Hair Dryer,Beauty & Care,3,110,330,144,186,Europe,Affiliate,New,39
+TX-100893,2026-06-18 16:18:25,P002,SoundSync ANC Headphones,Electronics,2,199,398,170,228,North America,Online,New,26
+TX-100894,2026-06-19 01:04:01,P018,HydroBloom Nourishing Cream,Beauty & Care,1,38,38,10,28,North America,Affiliate,New,4
+TX-100895,2026-06-19 09:49:37,P004,AeroGlide Smart Watch,Electronics,1,299,299,130,169,Latin America,Affiliate,New,35
+TX-100897,2026-06-20 03:20:49,P014,FlexiCore Anti-Slip Yoga Mat,Fitness & Sports,2,40,80,24,56,Asia-Pacific,Online,New,30
+TX-100898,2026-06-20 12:06:25,P004,AeroGlide Smart Watch,Electronics,1,299,299,130,169,Latin America,Affiliate,Returning,0
+TX-100900,2026-06-21 05:37:37,P003,Quantum Charge Wireless Pad,Electronics,1,49,49,15,34,North America,In-Store,New,6
+TX-100901,2026-06-21 14:23:13,P009,Nova Glow LED Desk Lamp,Home & Living,2,45,90,28,62,North America,Affiliate,New,10
+TX-100902,2026-06-21 23:08:49,P001,AuraBook Pro 15,Electronics,1,1299,1299,780,519,Asia-Pacific,In-Store,New,15
+TX-100903,2026-06-22 07:54:25,P007,Core Denim Slim Fit,Fashion,3,65,195,66,129,North America,Online,New,28
+TX-100904,2026-06-22 16:40:01,P011,Helix Memory Foam Pillow,Home & Living,2,80,160,64,96,Latin America,Affiliate,Returning,0
+TX-100905,2026-06-23 01:25:37,P010,Ember Ceramic Coffee Mug Set,Home & Living,2,35,70,20,50,Europe,In-Store,New,9
+TX-100906,2026-06-23 10:11:13,P002,SoundSync ANC Headphones,Electronics,1,199,199,85,114,Europe,In-Store,Returning,0
+TX-100907,2026-06-23 18:56:49,P018,HydroBloom Nourishing Cream,Beauty & Care,5,38,190,50,140,Asia-Pacific,Online,New,19
+TX-100908,2026-06-24 03:42:25,P004,AeroGlide Smart Watch,Electronics,1,299,299,130,169,North America,In-Store,New,13
+TX-100909,2026-06-24 12:28:01,P011,Helix Memory Foam Pillow,Home & Living,2,80,160,64,96,Asia-Pacific,Online,Returning,0
+TX-100910,2026-06-24 21:13:37,P010,Ember Ceramic Coffee Mug Set,Home & Living,2,35,70,20,50,North America,Online,Returning,0
+TX-100913,2026-06-25 23:30:25,P018,HydroBloom Nourishing Cream,Beauty & Care,2,38,76,20,56,Asia-Pacific,Affiliate,Returning,0
+TX-100915,2026-06-26 17:01:37,P019,SilkDuo Ionic Hair Dryer,Beauty & Care,1,110,110,48,62,Europe,Affiliate,Returning,0
+TX-100916,2026-06-27 01:47:13,P002,SoundSync ANC Headphones,Electronics,2,199,398,170,228,North America,Affiliate,New,47
+TX-100917,2026-06-27 10:32:49,P012,Breeze Mist Ultrasonic Diffuser,Home & Living,3,50,150,54,96,North America,In-Store,New,14
+TX-100918,2026-06-27 19:18:25,P009,Nova Glow LED Desk Lamp,Home & Living,3,45,135,42,93,Europe,Online,New,17
+TX-100920,2026-06-28 12:49:37,P016,SonicPulse Smart Jump Rope,Fitness & Sports,5,45,225,75,150,Asia-Pacific,Affiliate,New,27
+TX-100921,2026-06-28 21:35:13,P014,FlexiCore Anti-Slip Yoga Mat,Fitness & Sports,1,40,40,12,28,Asia-Pacific,In-Store,Returning,0
+TX-100922,2026-06-29 06:20:49,P015,HydroDash Insulated Flask,Fitness & Sports,5,30,150,40,110,North America,Online,Returning,0
+TX-100923,2026-06-29 15:06:25,P010,Ember Ceramic Coffee Mug Set,Home & Living,5,35,175,50,125,Europe,Affiliate,Returning,0
+TX-100924,2026-06-29 23:52:01,P019,SilkDuo Ionic Hair Dryer,Beauty & Care,1,110,110,48,62,North America,Online,New,31
+TX-100926,2026-06-30 17:23:13,P019,SilkDuo Ionic Hair Dryer,Beauty & Care,2,110,220,96,124,Latin America,Online,New,23
+TX-100927,2026-07-01 02:08:49,P018,HydroBloom Nourishing Cream,Beauty & Care,1,38,38,10,28,Latin America,Affiliate,New,4
+TX-100928,2026-07-01 10:54:25,P018,HydroBloom Nourishing Cream,Beauty & Care,3,38,114,30,84,Latin America,Online,Returning,0
+TX-100929,2026-07-01 19:40:01,P015,HydroDash Insulated Flask,Fitness & Sports,1,30,30,8,22,Europe,Online,New,35
+TX-100930,2026-07-02 04:25:37,P016,SonicPulse Smart Jump Rope,Fitness & Sports,2,45,90,30,60,North America,Affiliate,Returning,0
+TX-100932,2026-07-02 21:56:49,P001,AuraBook Pro 15,Electronics,1,1299,1299,780,519,North America,In-Store,Returning,0
+TX-100933,2026-07-03 06:42:25,P016,SonicPulse Smart Jump Rope,Fitness & Sports,5,45,225,75,150,Latin America,In-Store,Returning,0
+TX-100934,2026-07-03 15:28:01,P019,SilkDuo Ionic Hair Dryer,Beauty & Care,3,99,297,144,153,North America,In-Store,New,12
+TX-100936,2026-07-04 08:59:13,P006,Stratus Comfort Sneakers,Fashion,1,76,76,30,46,North America,In-Store,Returning,0
+TX-100937,2026-07-04 17:44:49,P003,Quantum Charge Wireless Pad,Electronics,3,49,147,45,102,Europe,Affiliate,New,17
+TX-100938,2026-07-05 02:30:25,P011,Helix Memory Foam Pillow,Home & Living,1,80,80,32,48,Asia-Pacific,In-Store,Returning,0
+TX-100939,2026-07-05 11:16:01,P005,Luxe Linen Blazer,Fashion,2,120,240,80,160,Europe,Online,Returning,0
+TX-100941,2026-07-06 04:47:13,P007,Core Denim Slim Fit,Fashion,3,65,195,66,129,Europe,Affiliate,New,23
+TX-100942,2026-07-06 13:32:49,P017,DermaBright Serum Duo,Beauty & Care,1,52,52,14,38,North America,In-Store,Returning,0
+TX-100944,2026-07-07 07:04:01,P010,Ember Ceramic Coffee Mug Set,Home & Living,3,35,105,30,75,Asia-Pacific,Online,Returning,0
+TX-100946,2026-07-08 00:35:13,P010,Ember Ceramic Coffee Mug Set,Home & Living,1,29,29,10,19,North America,Affiliate,New,3
+TX-100947,2026-07-08 09:20:49,P008,Voyager Anti-Theft Backpack,Fashion,1,75,75,25,50,Europe,Online,New,18
+TX-100948,2026-07-08 18:06:25,P016,SonicPulse Smart Jump Rope,Fitness & Sports,1,38,38,15,23,Latin America,Online,New,31
+TX-100949,2026-07-09 02:52:01,P016,SonicPulse Smart Jump Rope,Fitness & Sports,1,45,45,15,30,North America,In-Store,New,5
+TX-100950,2026-07-09 11:37:37,P004,AeroGlide Smart Watch,Electronics,1,284,284,130,154,North America,Affiliate,New,34
+TX-100951,2026-07-09 20:23:13,P009,Nova Glow LED Desk Lamp,Home & Living,3,45,135,42,93,Asia-Pacific,In-Store,New,14
+TX-100952,2026-07-10 05:08:49,P019,SilkDuo Ionic Hair Dryer,Beauty & Care,3,110,330,144,186,North America,Online,New,21
+TX-100954,2026-07-10 22:40:01,P018,HydroBloom Nourishing Cream,Beauty & Care,1,38,38,10,28,North America,Affiliate,New,4
+TX-100956,2026-07-11 16:11:13,P019,SilkDuo Ionic Hair Dryer,Beauty & Care,1,110,110,48,62,Europe,In-Store,New,11
+TX-100957,2026-07-12 00:56:49,P017,DermaBright Serum Duo,Beauty & Care,1,52,52,14,38,Europe,In-Store,New,13
+TX-100958,2026-07-12 09:42:25,P012,Breeze Mist Ultrasonic Diffuser,Home & Living,1,50,50,18,32,Asia-Pacific,Affiliate,New,6
+TX-100959,2026-07-12 18:28:01,P010,Ember Ceramic Coffee Mug Set,Home & Living,5,35,175,50,125,Latin America,Affiliate,Returning,0
+TX-100960,2026-07-13 03:13:37,P018,HydroBloom Nourishing Cream,Beauty & Care,1,38,38,10,28,Latin America,In-Store,Returning,0
+TX-100962,2026-07-13 20:44:49,P012,Breeze Mist Ultrasonic Diffuser,Home & Living,1,50,50,18,32,Europe,Online,Returning,0
+TX-100963,2026-07-14 05:30:25,P003,Quantum Charge Wireless Pad,Electronics,3,49,147,45,102,North America,Online,Returning,0
+TX-100964,2026-07-14 14:16:01,P006,Stratus Comfort Sneakers,Fashion,3,85,255,90,165,Europe,In-Store,New,11
+TX-100965,2026-07-14 23:01:37,P014,FlexiCore Anti-Slip Yoga Mat,Fitness & Sports,5,40,200,60,140,Latin America,In-Store,Returning,0
+TX-100966,2026-07-15 07:47:13,P020,HerbalPure Charcoal Mask Set,Beauty & Care,1,28,28,6,22,Latin America,In-Store,Returning,0
+TX-100967,2026-07-15 16:32:49,P009,Nova Glow LED Desk Lamp,Home & Living,5,45,225,70,155,Latin America,In-Store,New,5
+TX-100968,2026-07-16 01:18:25,P002,SoundSync ANC Headphones,Electronics,2,199,398,170,228,North America,In-Store,New,10
+TX-100969,2026-07-16 10:04:01,P020,HerbalPure Charcoal Mask Set,Beauty & Care,2,28,56,12,44,North America,Online,Returning,0
+TX-100970,2026-07-16 18:49:37,P016,SonicPulse Smart Jump Rope,Fitness & Sports,3,45,135,45,90,Asia-Pacific,Affiliate,Returning,0
+TX-100972,2026-07-17 12:20:49,P014,FlexiCore Anti-Slip Yoga Mat,Fitness & Sports,2,40,80,24,56,North America,In-Store,Returning,0
+TX-100973,2026-07-17 21:06:25,P002,SoundSync ANC Headphones,Electronics,1,199,199,85,114,North America,Online,Returning,0
+TX-100974,2026-07-18 05:52:01,P013,IronPulse Adjustable Dumbbell,Fitness & Sports,2,249,498,240,258,Latin America,Online,Returning,0
+TX-100975,2026-07-18 14:37:37,P016,SonicPulse Smart Jump Rope,Fitness & Sports,3,40,120,45,75,Latin America,Affiliate,New,14
+TX-100976,2026-07-18 23:23:13,P013,IronPulse Adjustable Dumbbell,Fitness & Sports,1,236,236,120,116,Asia-Pacific,In-Store,Returning,0
+TX-100977,2026-07-19 08:08:49,P012,Breeze Mist Ultrasonic Diffuser,Home & Living,1,50,50,18,32,Asia-Pacific,Affiliate,New,6
+TX-100978,2026-07-19 16:54:25,P012,Breeze Mist Ultrasonic Diffuser,Home & Living,1,50,50,18,32,Latin America,In-Store,New,15
+TX-100979,2026-07-20 01:40:01,P003,Quantum Charge Wireless Pad,Electronics,1,49,49,15,34,North America,In-Store,New,5
+TX-100980,2026-07-20 10:25:37,P014,FlexiCore Anti-Slip Yoga Mat,Fitness & Sports,5,40,200,60,140,Latin America,In-Store,New,5
+TX-100982,2026-07-21 03:56:49,P013,IronPulse Adjustable Dumbbell,Fitness & Sports,1,211,211,120,91,Asia-Pacific,Affiliate,New,25
+TX-100983,2026-07-21 12:42:25,P016,SonicPulse Smart Jump Rope,Fitness & Sports,2,45,90,30,60,Asia-Pacific,Online,Returning,0
+TX-100984,2026-07-21 21:28:01,P003,Quantum Charge Wireless Pad,Electronics,3,49,147,45,102,North America,In-Store,Returning,0
+TX-100985,2026-07-22 06:13:37,P003,Quantum Charge Wireless Pad,Electronics,3,49,147,45,102,North America,Affiliate,Returning,0
+TX-100986,2026-07-22 14:59:13,P007,Core Denim Slim Fit,Fashion,1,65,65,22,43,Asia-Pacific,Online,Returning,0
+TX-100987,2026-07-22 23:44:49,P007,Core Denim Slim Fit,Fashion,2,65,130,44,86,Latin America,In-Store,Returning,0
+TX-100988,2026-07-23 08:30:25,P001,AuraBook Pro 15,Electronics,2,1299,2598,1560,1038,North America,Affiliate,Returning,0
+TX-100989,2026-07-23 17:16:01,P018,HydroBloom Nourishing Cream,Beauty & Care,3,38,114,30,84,Latin America,Affiliate,New,13
+TX-100990,2026-07-24 02:01:37,P008,Voyager Anti-Theft Backpack,Fashion,2,75,150,50,100,Europe,Affiliate,Returning,0
+TX-100991,2026-07-24 10:47:13,P003,Quantum Charge Wireless Pad,Electronics,5,49,245,75,170,Europe,In-Store,Returning,0
+TX-100992,2026-07-24 19:32:49,P008,Voyager Anti-Theft Backpack,Fashion,1,75,75,25,50,Europe,Online,New,24
+TX-100993,2026-07-25 04:18:25,P018,HydroBloom Nourishing Cream,Beauty & Care,1,38,38,10,28,Latin America,In-Store,New,7
+TX-100994,2026-07-25 13:04:01,P009,Nova Glow LED Desk Lamp,Home & Living,5,45,225,70,155,Europe,Affiliate,New,27
+TX-100995,2026-07-25 21:49:37,P003,Quantum Charge Wireless Pad,Electronics,2,49,98,30,68,Asia-Pacific,Affiliate,Returning,0
+TX-100996,2026-07-26 06:35:13,P003,Quantum Charge Wireless Pad,Electronics,3,49,147,45,102,North America,Affiliate,New,17
+TX-100998,2026-07-27 00:06:25,P019,SilkDuo Ionic Hair Dryer,Beauty & Care,1,110,110,48,62,Asia-Pacific,In-Store,New,10
+TX-100999,2026-07-27 08:52:01,P019,SilkDuo Ionic Hair Dryer,Beauty & Care,2,110,220,96,124,Latin America,Affiliate,New,26

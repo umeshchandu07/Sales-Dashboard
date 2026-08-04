@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AuraSales // Performance & Predictive Analytics Dashboard</title>
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Lucide Icon Font CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-static@0.344.0/font/lucide.min.css">
+</head>
+<body>
+
+  <div class="app-container">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="brand-section">
+        <div class="brand-logo">
+          <i class="lucide-trending-up"></i>
+        </div>
+        <span class="brand-name">AuraSales</span>
+      </div>
+      
+      <ul class="sidebar-menu">
+        <li class="menu-item active" data-tab="dashboard">
+          <i class="lucide-layout-dashboard"></i>
+          <span>Dashboard</span>
+        </li>
+        <li class="menu-item" data-tab="explorer">
+          <i class="lucide-database"></i>
+          <span>Sales Explorer</span>
+        </li>
+        <li class="menu-item" data-tab="planner">
+          <i class="lucide-line-chart"></i>
+          <span>Scenario Planner</span>
+        </li>
+        <li class="menu-item" data-tab="alerts">
+          <i class="lucide-bell-ring"></i>
+          <span>Alerts & Insights</span>
+        </li>
+      </ul>
+
+      <div class="sidebar-footer">
+        <p>AuraSales v1.0.0</p>
+        <p style="margin-top: 4px; font-size: 10px;">Prototype Workspace</p>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      
+      <!-- Top Header -->
+      <header class="top-header">
+        <div class="page-title-section">
+          <h1 id="current-tab-title">Sales Overview</h1>
+          <p id="current-tab-subtitle">Real-time performance metrics and business health insights.</p>
+        </div>
+        
+        <div class="header-actions">
+          <!-- Global Timeframe Selector -->
+          <div class="form-group" style="margin-bottom: 0;">
+            <select id="global-timeframe" class="filter-dropdown">
+              <option value="all" selected>All Time (12 Months)</option>
+              <option value="30">Last 30 Days</option>
+              <option value="90">Last 90 Days</option>
+              <option value="ytd">Year to Date (YTD)</option>
+            </select>
+          </div>
+          
+          <!-- Alerts Bell Indicator -->
+          <div class="alert-indicator" id="header-alert-btn" onclick="switchTab('alerts')">
+            <i class="lucide-bell"></i>
+            <span class="alert-badge" id="active-alert-dot" style="display: none;"></span>
+          </div>
+
+          <!-- Quick Refresh Button -->
+          <button class="btn-icon" id="btn-refresh" title="Regenerate/Reload Data">
+            <i class="lucide-rotate-cw"></i>
+          </button>
+        </div>
+      </header>
+
+      <!-- Main Scrollable Content Body -->
+      <div class="content-body">
+        
+        <!-- Tab 1: Dashboard Panel -->
+        <section id="panel-dashboard" class="tab-panel active">
+          <!-- KPI Cards Grid -->
+          <div class="kpi-grid" id="kpi-summary-cards">
+            <!-- Revenue Card -->
+            <div class="card kpi-card revenue">
+              <div class="kpi-header">
+                <span>TOTAL REVENUE</span>
+                <div class="kpi-icon"><i class="lucide-dollar-sign"></i></div>
+              </div>
+              <div class="kpi-value" id="kpi-revenue">$0</div>
+              <div class="kpi-footer">
+                <span class="trend-indicator up" id="trend-revenue"><i class="lucide-arrow-up-right"></i> 0.0%</span>
+                <span class="trend-text">vs baseline</span>
+              </div>
+            </div>
+
+            <!-- Orders Card -->
+            <div class="card kpi-card orders">
+              <div class="kpi-header">
+                <span>UNITS SOLD</span>
+                <div class="kpi-icon"><i class="lucide-shopping-bag"></i></div>
+              </div>
+              <div class="kpi-value" id="kpi-units">0</div>
+              <div class="kpi-footer">
+                <span class="trend-indicator up" id="trend-units"><i class="lucide-arrow-up-right"></i> 0.0%</span>
+                <span class="trend-text">vs baseline</span>
+              </div>
+            </div>
+
+            <!-- Profit Card -->
+            <div class="card kpi-card profit">
+              <div class="kpi-header">
+                <span>NET PROFIT (MARGIN)</span>
+                <div class="kpi-icon"><i class="lucide-wallet"></i></div>
+              </div>
+              <div class="kpi-value" id="kpi-profit">$0 <span style="font-size: 14px; font-weight: normal; color: var(--text-secondary);" id="kpi-margin">(0%)</span></div>
+              <div class="kpi-footer">
+                <span class="trend-indicator up" id="trend-profit"><i class="lucide-arrow-up-right"></i> 0.0%</span>
+                <span class="trend-text">vs baseline</span>
+              </div>
+            </div>
+
+            <!-- Conversion Rate Card -->
+            <div class="card kpi-card conversion">
+              <div class="kpi-header">
+                <span>CONVERSION RATE</span>
+                <div class="kpi-icon"><i class="lucide-activity"></i></div>
+              </div>
+              <div class="kpi-value" id="kpi-conversion">0.0%</div>
+              <div class="kpi-footer">
+                <span class="trend-indicator up" id="trend-conversion"><i class="lucide-arrow-up-right"></i> 0.0%</span>
+                <span class="trend-text">vs average</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Main Chart Grid -->
+          <div class="charts-grid-main">
+            <!-- Revenue Trend Chart -->
+            <div class="card chart-card">
+              <div class="chart-card-title-bar">
+                <h3>Revenue & Profit Growth Trend</h3>
+                <div style="font-size: 12px; color: var(--text-muted);">Monthly aggregations</div>
+              </div>
+              <div id="chart-revenue-trend"></div>
+            </div>
+
+            <!-- Category Share Chart -->
+            <div class="card chart-card">
+              <div class="chart-card-title-bar">
+                <h3>Sales by Product Category</h3>
+                <div style="font-size: 12px; color: var(--text-muted);">Share of Revenue</div>
+              </div>
+              <div id="chart-category-pie"></div>
+            </div>
+          </div>
+
+          <!-- Secondary Grid -->
+          <div class="charts-grid-secondary">
+            <!-- Regional Performance -->
+            <div class="card chart-subcard">
+              <div class="chart-card-title-bar">
+                <h3>Regional Revenue & Margins</h3>
+              </div>
+              <div id="chart-regional-bar"></div>
+            </div>
+
+            <!-- Top Performing Products -->
+            <div class="card chart-subcard">
+              <div class="chart-card-title-bar">
+                <h3>Top 5 Best Selling Products</h3>
+                <span style="font-size: 11px; color: var(--text-muted);">By Total Revenue</span>
+              </div>
+              <div style="margin-top: 10px;">
+                <table class="explorer-table" style="font-size: 12.5px;" id="top-products-table">
+                  <thead>
+                    <tr>
+                      <th style="padding: 10px 12px;">Product</th>
+                      <th style="padding: 10px 12px;">Category</th>
+                      <th style="padding: 10px 12px; text-align: right;">Sales</th>
+                      <th style="padding: 10px 12px; text-align: right;">Margin</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- Populated dynamically -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Channel Mix -->
+            <div class="card chart-subcard">
+              <div class="chart-card-title-bar">
+                <h3>Sales Channel Mix</h3>
+              </div>
+              <div id="chart-channel-donut"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Tab 2: Sales Explorer Panel -->
+        <section id="panel-explorer" class="tab-panel">
+          <!-- Search & Filter Controls -->
+          <div class="table-filter-bar">
+            <!-- Search Text -->
+            <div class="search-wrapper">
+              <i class="lucide-search"></i>
+              <input type="text" id="explorer-search" class="search-input" placeholder="Search by Order ID, Product name...">
+            </div>
+
+            <!-- Category Filter -->
+            <select id="explorer-filter-category" class="filter-dropdown">
+              <option value="All">All Categories</option>
+              <!-- Populated dynamically -->
+            </select>
+
+            <!-- Region Filter -->
+            <select id="explorer-filter-region" class="filter-dropdown">
+              <option value="All">All Regions</option>
+              <!-- Populated dynamically -->
+            </select>
+
+            <!-- Channel Filter -->
+            <select id="explorer-filter-channel" class="filter-dropdown">
+              <option value="All">All Channels</option>
+              <!-- Populated dynamically -->
+            </select>
+
+            <!-- Segment Filter -->
+            <select id="explorer-filter-segment" class="filter-dropdown">
+              <option value="All">All Customers</option>
+              <option value="New">New Customers</option>
+              <option value="Returning">Returning Customers</option>
+            </select>
+
+            <!-- Reset Filters -->
+            <button class="btn-icon" id="explorer-reset" title="Reset all filters">
+              <i class="lucide-filter-x"></i>
+            </button>
+
+            <!-- Export to CSV Button -->
+            <button class="btn-primary" id="explorer-export">
+              <i class="lucide-download"></i>
+              <span>Export CSV</span>
+            </button>
+          </div>
+
+          <!-- Transaction Logs Table -->
+          <div class="table-wrapper">
+            <div class="table-scroller">
+              <table class="explorer-table" id="transaction-table">
+                <thead>
+                  <tr>
+                    <th data-sort="id">Order ID <span class="sort-icon"><i class="lucide-arrow-up-down"></i></span></th>
+                    <th data-sort="date">Date <span class="sort-icon"><i class="lucide-arrow-up-down"></i></span></th>
+                    <th data-sort="productName">Product <span class="sort-icon"><i class="lucide-arrow-up-down"></i></span></th>
+                    <th data-sort="category">Category <span class="sort-icon"><i class="lucide-arrow-up-down"></i></span></th>
+                    <th data-sort="quantity" style="text-align: right;">Qty <span class="sort-icon"><i class="lucide-arrow-up-down"></i></span></th>
+                    <th data-sort="revenue" style="text-align: right;">Revenue <span class="sort-icon"><i class="lucide-arrow-up-down"></i></span></th>
+                    <th data-sort="profit" style="text-align: right;">Profit <span class="sort-icon"><i class="lucide-arrow-up-down"></i></span></th>
+                    <th data-sort="region">Region <span class="sort-icon"><i class="lucide-arrow-up-down"></i></span></th>
+                    <th data-sort="channel">Channel <span class="sort-icon"><i class="lucide-arrow-up-down"></i></span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Populated dynamically -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Pagination Bar -->
+          <div class="pagination-bar">
+            <div id="explorer-pagination-summary">Showing 0-0 of 0 entries</div>
+            <div class="pagination-controls">
+              <button class="pagination-btn" id="explorer-prev" disabled><i class="lucide-chevron-left"></i> Previous</button>
+              <button class="pagination-btn" id="explorer-next" disabled>Next <i class="lucide-chevron-right"></i></button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Tab 3: Scenario Planner Panel -->
+        <section id="panel-planner" class="tab-panel">
+          <div class="planner-layout">
+            <!-- Left Side Inputs -->
+            <div class="card sidebar-settings-card">
+              <div class="chart-card-title-bar" style="margin-bottom: 20px;">
+                <h3>Forecast Variables</h3>
+                <button class="btn-icon" id="planner-reset-sliders" title="Reset to baseline">
+                  <i class="lucide-undo-2"></i>
+                </button>
+              </div>
+
+              <!-- Slider 1: Marketing Investment -->
+              <div class="planner-setting-group">
+                <h4>Customer Acquisition</h4>
+                <div class="slider-container">
+                  <div class="slider-label-row">
+                    <span class="slider-name">Marketing Ad Spend</span>
+                    <span class="slider-val" id="val-marketing">1.0x</span>
+                  </div>
+                  <input type="range" class="styled-range" id="slider-marketing" min="0.5" max="3.0" step="0.1" value="1.0">
+                  <div class="slider-label-row" style="font-size: 10px; color: var(--text-muted); margin-top: 4px;">
+                    <span>0.5x (Budget cut)</span>
+                    <span>3.0x (Aggressive growth)</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slider 2: Pricing Strategy -->
+              <div class="planner-setting-group">
+                <h4>Pricing Model</h4>
+                <div class="slider-container">
+                  <div class="slider-label-row">
+                    <span class="slider-name">Price Adjustment</span>
+                    <span class="slider-val" id="val-pricing">0%</span>
+                  </div>
+                  <input type="range" class="styled-range" id="slider-pricing" min="-20" max="20" step="1" value="0">
+                  <div class="slider-label-row" style="font-size: 10px; color: var(--text-muted); margin-top: 4px;">
+                    <span>-20% (Discounts)</span>
+                    <span>+20% (Premium markup)</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slider 3: Conversion Optimization -->
+              <div class="planner-setting-group">
+                <h4>Conversion Funnel</h4>
+                <div class="slider-container">
+                  <div class="slider-label-row">
+                    <span class="slider-name">Web CRO Improvement</span>
+                    <span class="slider-val" id="val-cro">0%</span>
+                  </div>
+                  <input type="range" class="styled-range" id="slider-cro" min="0" max="50" step="5" value="0">
+                  <div class="slider-label-row" style="font-size: 10px; color: var(--text-muted); margin-top: 4px;">
+                    <span>Baseline UX</span>
+                    <span>+50% (Checkout streamline)</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Delta Summary Metrics -->
+              <div class="chart-card-title-bar" style="margin-top: 30px; margin-bottom: 12px; border-top: 1px solid var(--border); padding-top: 20px;">
+                <h3>Projected Impact</h3>
+              </div>
+              <div class="planner-metrics-list">
+                <!-- Forecast Revenue -->
+                <div class="mini-metric">
+                  <div class="mini-metric-label">Projected Revenue</div>
+                  <div class="mini-metric-val" id="plan-val-revenue">$0</div>
+                  <div class="slider-label-row" style="justify-content: center; margin-top: 4px;">
+                    <span id="plan-diff-revenue" class="mini-metric-val impact-positive" style="font-size: 12px;">+0%</span>
+                  </div>
+                </div>
+                <!-- Forecast Profit -->
+                <div class="mini-metric">
+                  <div class="mini-metric-label">Projected Net Profit</div>
+                  <div class="mini-metric-val" id="plan-val-profit">$0</div>
+                  <div class="slider-label-row" style="justify-content: center; margin-top: 4px;">
+                    <span id="plan-diff-profit" class="mini-metric-val impact-positive" style="font-size: 12px;">+0%</span>
+                  </div>
+                </div>
+                <!-- ROI -->
+                <div class="mini-metric" style="grid-column: span 2;">
+                  <div class="mini-metric-label">Acquisition ROI / CAC Efficiency</div>
+                  <div class="mini-metric-val" id="plan-val-cac">0.0x LTV/CAC</div>
+                  <div class="slider-label-row" style="justify-content: center; margin-top: 4px;">
+                    <span id="plan-diff-cac" class="mini-metric-val" style="font-size: 12px; color: var(--text-muted);">Baseline Efficiency</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Side Visualization -->
+            <div class="card chart-card">
+              <div class="chart-card-title-bar">
+                <h3>What-If Predictive Sales Forecast</h3>
+                <div style="font-size: 12px; color: var(--text-secondary);">6-Month Forward Projection Model</div>
+              </div>
+              <div id="chart-planner-forecast" style="margin-top: 20px;"></div>
+              
+              <!-- Analytical Summary Box -->
+              <div style="margin-top: 24px; padding: 16px; border-radius: 8px; background: rgba(99, 102, 241, 0.05); border: 1px dashed rgba(99, 102, 241, 0.2); font-size: 13px; line-height: 1.5; color: var(--text-secondary);">
+                <i class="lucide-sparkles" style="color: var(--secondary); margin-right: 6px; float: left; margin-top: 2px;"></i>
+                <strong>Predictive Insight:</strong> <span id="planner-model-summary">Adjusting sliders will run a real-time linear forecasting simulator. Raising pricing expands margins, but creates elastic sales resistance (lower sales volume). Raising ad spend scales traffic, but displays diminishing marginal returns (raising CAC).</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Tab 4: Alerts & Insights Panel -->
+        <section id="panel-alerts" class="tab-panel">
+          <div class="alerts-tab-grid">
+            <!-- Left: Current System Alerts & Recommendations -->
+            <div class="card">
+              <div class="chart-card-title-bar" style="margin-bottom: 24px;">
+                <h3>Active Insights & Alerts</h3>
+                <button class="btn-icon" id="btn-clear-alerts" title="Dismiss all resolved alerts">
+                  <i class="lucide-check-check"></i> Clear All
+                </button>
+              </div>
+
+              <!-- Interactive Alert List -->
+              <div class="alerts-list" id="system-alerts-container">
+                <!-- Populated dynamically -->
+              </div>
+            </div>
+
+            <!-- Right: Alert Threshold Rule Configurator -->
+            <div class="card">
+              <div class="chart-card-title-bar" style="margin-bottom: 24px;">
+                <h3>Configure Performance Rules</h3>
+                <div style="font-size: 12px; color: var(--text-muted);">Set customized business boundary triggers</div>
+              </div>
+
+              <form class="alert-creator-form" id="rule-config-form" onsubmit="event.preventDefault();">
+                <div class="form-group">
+                  <label for="rule-metric">Select Monitoring Metric</label>
+                  <select id="rule-metric" class="filter-dropdown" style="width: 100%;">
+                    <option value="revenue_min">Monthly Revenue Floor (Alert if below)</option>
+                    <option value="margin_min">Product Margin Threshold (Alert if below)</option>
+                    <option value="cac_max">Maximum Allowed CAC (Alert if exceeded)</option>
+                    <option value="discount_max">Average Discount Threshold (Alert if exceeded)</option>
+                  </select>
+                </div>
+
+                <div class="form-row-2">
+                  <div class="form-group">
+                    <label for="rule-val">Trigger Value</label>
+                    <input type="number" id="rule-val" class="form-input" placeholder="e.g. 5000" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="rule-severity">Trigger Severity</label>
+                    <select id="rule-severity" class="filter-dropdown" style="width: 100%;">
+                      <option value="critical">Critical (Red)</option>
+                      <option value="warning-status">Warning (Yellow)</option>
+                      <option value="info">Info (Blue)</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="rule-description">Context Alert Name / Notes</label>
+                  <input type="text" id="rule-description" class="form-input" placeholder="e.g., Q3 Ad-Spend Overrun Guardrail" required>
+                </div>
+
+                <button type="submit" class="btn-primary" style="align-self: flex-start; margin-top: 10px;" id="btn-add-rule">
+                  <i class="lucide-plus-circle"></i>
+                  <span>Establish Metric Guardrail</span>
+                </button>
+              </form>
+
+              <!-- List of current rules -->
+              <div style="margin-top: 32px; border-top: 1px solid var(--border); padding-top: 24px;">
+                <h4 style="font-family: var(--font-display); font-size: 14px; color: var(--text-primary); margin-bottom: 16px;">Active Guardrails</h4>
+                <div style="display: flex; flex-direction: column; gap: 10px;" id="active-guardrails-list">
+                  <!-- Populated dynamically -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+  </div>
+
+  <!-- Script Libraries -->
+  <!-- ApexCharts CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <!-- Lucide icons runner -->
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.344.0/dist/umd/lucide.min.js"></script>
+  <!-- Core Javascript Scripts -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
