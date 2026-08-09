@@ -47,6 +47,7 @@ To test the Python-based data processing module:
 ## 💡 Key Features of the Prototype
 
 1.  **Interactive Performance Dashboard**: Features time-frame sorting (All Time, 30 Days, 90 Days, YTD), dynamic graphs (growth trends, category revenue shares, regional profit distributions, channel blends), and Top 5 selling product lists.
-2.  **Sales Explorer Data Grid**: A searchable database grid supporting multi-column sorting, channel/region filtering, pagination, and a dynamic **Export CSV** download feature.
-3.  **Scenario Forecast Simulator**: Real-time modeling that calculates the delta impact of ad-spend increases, pricing changes, and conversion optimization using microeconomic demand elasticity models.
-4.  **Metric Guardrails**: Set custom floor/ceiling rules (such as max CAC limits or minimum revenue targets) to automatically flags anomalies in system logs.
+2.  **Dataset Upload & Import**: Drag-and-drop or browse custom sales CSV files, auto-detect columns/metrics, preview sample records, and dynamically refresh all charts and filters.
+3.  **Sales Explorer Data Grid**: A searchable database grid supporting multi-column sorting, channel/region filtering, pagination, and a dynamic **Export CSV** download feature.
+4.  **Scenario Forecast Simulator**: Real-time modeling that calculates the delta impact of ad-spend increases, pricing changes, and conversion optimization using microeconomic demand elasticity models.
+5.  **Metric Guardrails**: Set custom floor/ceiling rules (such as max CAC limits or minimum revenue targets) to automatically flag anomalies in system logs.

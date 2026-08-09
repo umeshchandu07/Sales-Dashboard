@@ -58,6 +58,12 @@
         </div>
         
         <div class="header-actions">
+          <!-- Active Dataset Status Pill -->
+          <div class="dataset-status-pill" id="dataset-status-pill" title="Current Active Dataset">
+            <span class="pill-dot"></span>
+            <span id="dataset-pill-label">Simulated Dataset (850 rows)</span>
+          </div>
+
           <!-- Global Timeframe Selector -->
           <div class="form-group" style="margin-bottom: 0;">
             <select id="global-timeframe" class="filter-dropdown">
@@ -67,6 +73,12 @@
               <option value="ytd">Year to Date (YTD)</option>
             </select>
           </div>
+
+          <!-- Upload New Dataset Button -->
+          <button class="btn-upload-trigger" id="btn-open-upload" title="Upload New CSV Dataset">
+            <i class="lucide-upload-cloud"></i>
+            <span>Upload Dataset</span>
+          </button>
           
           <!-- Alerts Bell Indicator -->
           <div class="alert-indicator" id="header-alert-btn" onclick="switchTab('alerts')">
@@ -243,6 +255,12 @@
             <!-- Reset Filters -->
             <button class="btn-icon" id="explorer-reset" title="Reset all filters">
               <i class="lucide-filter-x"></i>
+            </button>
+
+            <!-- Import CSV Button -->
+            <button class="btn-icon" id="explorer-upload-btn" title="Upload / Import New CSV Dataset">
+              <i class="lucide-upload"></i>
+              <span>Import CSV</span>
             </button>
 
             <!-- Export to CSV Button -->
@@ -472,6 +490,111 @@
     </main>
 
   </div>
+
+  <!-- Upload Dataset Modal -->
+  <div class="modal-backdrop" id="upload-modal">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <div class="modal-title-icon">
+            <i class="lucide-upload-cloud"></i>
+          </div>
+          <div>
+            <h3 class="modal-title">Upload New Dataset</h3>
+            <p class="modal-subtitle">Import your own sales transaction CSV to analyze metrics instantly</p>
+          </div>
+        </div>
+        <button class="modal-close-btn" id="modal-close-btn" title="Close modal">
+          <i class="lucide-x"></i>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <!-- Drag & Drop Zone -->
+        <div class="dropzone" id="csv-dropzone">
+          <div class="dropzone-icon">
+            <i class="lucide-file-spreadsheet"></i>
+          </div>
+          <div>
+            <p class="dropzone-text-main">Click to browse or drag & drop your CSV file here</p>
+            <p class="dropzone-text-sub">Supports standard .csv format with transaction headers</p>
+          </div>
+          <input type="file" id="csv-file-input" accept=".csv,text/csv" style="display: none;">
+        </div>
+
+        <!-- Quick actions / template bar -->
+        <div class="modal-actions-bar">
+          <button class="btn-link-action" id="btn-download-template" type="button">
+            <i class="lucide-download"></i>
+            <span>Download Sample CSV Template</span>
+          </button>
+          <button class="btn-link-action" id="btn-load-sample-csv" type="button">
+            <i class="lucide-database"></i>
+            <span>Load 'fictional_sales_data.csv' (1,000 rows)</span>
+          </button>
+        </div>
+
+        <!-- Upload Preview Container -->
+        <div class="upload-preview-container" id="upload-preview-container">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h4 style="font-size: 13px; font-weight: 600; color: var(--text-primary);" id="preview-file-title">Dataset Preview</h4>
+            <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: var(--success);" id="preview-valid-badge">Ready to apply</span>
+          </div>
+
+          <!-- Quick Stats Preview Grid -->
+          <div class="preview-stats-grid">
+            <div class="preview-stat-card">
+              <div class="preview-stat-label">Total Rows</div>
+              <div class="preview-stat-val" id="preview-stat-rows">0</div>
+            </div>
+            <div class="preview-stat-card">
+              <div class="preview-stat-label">Total Revenue</div>
+              <div class="preview-stat-val" id="preview-stat-rev">$0</div>
+            </div>
+            <div class="preview-stat-card">
+              <div class="preview-stat-label">Categories</div>
+              <div class="preview-stat-val" id="preview-stat-cats">0</div>
+            </div>
+            <div class="preview-stat-card">
+              <div class="preview-stat-label">Regions</div>
+              <div class="preview-stat-val" id="preview-stat-regs">0</div>
+            </div>
+          </div>
+
+          <!-- Mini Table Preview (First 5 Rows) -->
+          <div class="preview-table-wrapper">
+            <table class="preview-table" id="preview-mini-table">
+              <thead>
+                <!-- Populated dynamically -->
+              </thead>
+              <tbody>
+                <!-- Populated dynamically -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <div class="modal-footer-left">
+          <button class="btn-icon" id="btn-reset-default-data" type="button" title="Restore default dataset">
+            <i class="lucide-rotate-ccw"></i>
+            <span>Reset to Default</span>
+          </button>
+        </div>
+        <div class="modal-footer-right">
+          <button class="btn-icon" id="modal-cancel-btn" type="button">Cancel</button>
+          <button class="btn-primary" id="btn-apply-dataset" type="button" disabled>
+            <i class="lucide-check-circle"></i>
+            <span>Apply & Load Dataset</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container"></div>
 
   <!-- Script Libraries -->
   <!-- ApexCharts CDN -->

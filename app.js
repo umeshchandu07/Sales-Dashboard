@@ -146,8 +146,36 @@ document.addEventListener('DOMContentLoaded', () => {
     alertsCountBadge: document.getElementById('active-alert-dot'),
     ruleForm: document.getElementById('rule-config-form'),
     activeRulesContainer: document.getElementById('active-guardrails-list'),
-    btnClearAlerts: document.getElementById('btn-clear-alerts')
+    btnClearAlerts: document.getElementById('btn-clear-alerts'),
+
+    // Dataset Management & Upload Modal
+    datasetPill: document.getElementById('dataset-status-pill'),
+    datasetPillLabel: document.getElementById('dataset-pill-label'),
+    btnOpenUpload: document.getElementById('btn-open-upload'),
+    explorerUploadBtn: document.getElementById('explorer-upload-btn'),
+    uploadModal: document.getElementById('upload-modal'),
+    modalCloseBtn: document.getElementById('modal-close-btn'),
+    modalCancelBtn: document.getElementById('modal-cancel-btn'),
+    csvDropzone: document.getElementById('csv-dropzone'),
+    csvFileInput: document.getElementById('csv-file-input'),
+    btnDownloadTemplate: document.getElementById('btn-download-template'),
+    btnLoadSampleCsv: document.getElementById('btn-load-sample-csv'),
+    btnResetDefaultData: document.getElementById('btn-reset-default-data'),
+    btnApplyDataset: document.getElementById('btn-apply-dataset'),
+    uploadPreviewContainer: document.getElementById('upload-preview-container'),
+    previewFileTitle: document.getElementById('preview-file-title'),
+    previewStatRows: document.getElementById('preview-stat-rows'),
+    previewStatRev: document.getElementById('preview-stat-rev'),
+    previewStatCats: document.getElementById('preview-stat-cats'),
+    previewStatRegs: document.getElementById('preview-stat-regs'),
+    previewMiniTableHead: document.querySelector('#preview-mini-table thead'),
+    previewMiniTableBody: document.querySelector('#preview-mini-table tbody'),
+    toastContainer: document.getElementById('toast-container')
   };
+
+  // Pending file upload state
+  let pendingCSVText = null;
+  let pendingFilename = null;
 
   // --------------------------------------------------------
   // 1. Initializers & Routings
@@ -156,6 +184,7 @@ document.addEventListener('DOMContentLoaded', () => {
     lucide.createIcons();
     initFilters();
     updateDateFilters();
+    updateDatasetPill();
     
     // Load lists & charts
     renderDashboard();
@@ -207,11 +236,264 @@ document.addEventListener('DOMContentLoaded', () => {
     // Rule Config Form
     elements.ruleForm.addEventListener('submit', handleAddRule);
     elements.btnClearAlerts.addEventListener('click', dismissAllAlerts);
+
+    // Dataset Upload Modal Bindings
+    if (elements.btnOpenUpload) elements.btnOpenUpload.addEventListener('click', openUploadModal);
+    if (elements.explorerUploadBtn) elements.explorerUploadBtn.addEventListener('click', openUploadModal);
+    if (elements.modalCloseBtn) elements.modalCloseBtn.addEventListener('click', closeUploadModal);
+    if (elements.modalCancelBtn) elements.modalCancelBtn.addEventListener('click', closeUploadModal);
+
+    // Close modal on backdrop click
+    if (elements.uploadModal) {
+      elements.uploadModal.addEventListener('click', (e) => {
+        if (e.target === elements.uploadModal) closeUploadModal();
+      });
+    }
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && elements.uploadModal && elements.uploadModal.classList.contains('active')) {
+        closeUploadModal();
+      }
+    });
+
+    // Dropzone & File Input
+    if (elements.csvDropzone) {
+      elements.csvDropzone.addEventListener('click', () => elements.csvFileInput.click());
+      
+      elements.csvDropzone.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        elements.csvDropzone.classList.add('dragover');
+      });
+
+      elements.csvDropzone.addEventListener('dragleave', () => {
+        elements.csvDropzone.classList.remove('dragover');
+      });
+
+      elements.csvDropzone.addEventListener('drop', (e) => {
+        e.preventDefault();
+        elements.csvDropzone.classList.remove('dragover');
+        if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
+          processFile(e.dataTransfer.files[0]);
+        }
+      });
+    }
+
+    if (elements.csvFileInput) {
+      elements.csvFileInput.addEventListener('change', (e) => {
+        if (e.target.files && e.target.files.length > 0) {
+          processFile(e.target.files[0]);
+        }
+      });
+    }
+
+    if (elements.btnDownloadTemplate) elements.btnDownloadTemplate.addEventListener('click', handleDownloadTemplate);
+    if (elements.btnLoadSampleCsv) elements.btnLoadSampleCsv.addEventListener('click', handleLoadSampleCsv);
+    if (elements.btnResetDefaultData) elements.btnResetDefaultData.addEventListener('click', handleResetDefaultData);
+    if (elements.btnApplyDataset) elements.btnApplyDataset.addEventListener('click', handleApplyDataset);
+  }
+
+  // Toast Notification Manager
+  function showToast(message, type = 'success') {
+    if (!elements.toastContainer) return;
+    const toast = document.createElement('div');
+    toast.className = `toast ${type}`;
+    let iconClass = 'lucide-check-circle';
+    if (type === 'error') iconClass = 'lucide-alert-circle';
+    if (type === 'info') iconClass = 'lucide-info';
+
+    toast.innerHTML = `
+      <i class="${iconClass} toast-icon"></i>
+      <span>${message}</span>
+    `;
+
+    elements.toastContainer.appendChild(toast);
+    lucide.createIcons();
+
+    setTimeout(() => toast.classList.add('show'), 10);
+
+    setTimeout(() => {
+      toast.classList.remove('show');
+      setTimeout(() => {
+        if (toast.parentNode) toast.parentNode.removeChild(toast);
+      }, 300);
+    }, 4000);
+  }
+
+  // Update Dataset Status Pill
+  function updateDatasetPill() {
+    if (!elements.datasetPill || !elements.datasetPillLabel) return;
+    const meta = window.dataEngine.getDatasetMeta();
+    if (meta.isCustom) {
+      elements.datasetPill.classList.add('custom');
+      elements.datasetPillLabel.textContent = `${meta.name} (${meta.rowCount.toLocaleString()} rows)`;
+      elements.datasetPill.title = `Custom active dataset: ${meta.name} (${meta.rowCount.toLocaleString()} rows loaded)`;
+    } else {
+      elements.datasetPill.classList.remove('custom');
+      elements.datasetPillLabel.textContent = `Simulated Dataset (${meta.rowCount.toLocaleString()} rows)`;
+      elements.datasetPill.title = 'Default simulated dataset';
+    }
+  }
+
+  // Modal Open & Close
+  function openUploadModal() {
+    elements.uploadModal.classList.add('active');
+    lucide.createIcons();
+  }
+
+  function closeUploadModal() {
+    elements.uploadModal.classList.remove('active');
+    pendingCSVText = null;
+    pendingFilename = null;
+    if (elements.csvFileInput) elements.csvFileInput.value = '';
+    if (elements.uploadPreviewContainer) elements.uploadPreviewContainer.classList.remove('active');
+    if (elements.btnApplyDataset) elements.btnApplyDataset.disabled = true;
+  }
+
+  // Process and preview uploaded CSV file
+  function processFile(file) {
+    if (!file) return;
+    if (!file.name.endsWith('.csv') && file.type !== 'text/csv' && file.type !== 'application/vnd.ms-excel') {
+      showToast('Please select a valid .csv file.', 'error');
+      return;
+    }
+
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      const content = e.target.result;
+      try {
+        const rows = window.dataEngine.parseCSV(content);
+        if (!rows || rows.length < 2) {
+          throw new Error('The CSV does not have enough rows or header columns.');
+        }
+
+        pendingCSVText = content;
+        pendingFilename = file.name;
+
+        // Render preview info
+        elements.previewFileTitle.textContent = `Preview: ${file.name} (${(file.size / 1024).toFixed(1)} KB)`;
+        elements.previewStatRows.textContent = (rows.length - 1).toLocaleString();
+
+        const headers = rows[0];
+        elements.previewMiniTableHead.innerHTML = `<tr>${headers.slice(0, 7).map(h => `<th>${h}</th>`).join('')}</tr>`;
+
+        elements.previewMiniTableBody.innerHTML = '';
+        const sampleRows = rows.slice(1, 6);
+        sampleRows.forEach(r => {
+          const tr = document.createElement('tr');
+          tr.innerHTML = headers.slice(0, 7).map((h, i) => `<td>${r[i] !== undefined ? r[i] : '-'}</td>`).join('');
+          elements.previewMiniTableBody.appendChild(tr);
+        });
+
+        // Quick rough totals
+        const revIdx = headers.findIndex(h => /rev|amount|total|sales/i.test(h));
+        let totalRev = 0;
+        if (revIdx !== -1) {
+          for (let i = 1; i < rows.length; i++) {
+            const val = parseFloat(String(rows[i][revIdx]).replace(/[^0-9.-]+/g, ''));
+            if (!isNaN(val)) totalRev += val;
+          }
+        }
+        elements.previewStatRev.textContent = totalRev > 0 ? formatCurrency(totalRev) : 'Auto-calc';
+
+        const catIdx = headers.findIndex(h => /cat|dept|type/i.test(h));
+        const catsSet = new Set();
+        if (catIdx !== -1) {
+          for (let i = 1; i < rows.length; i++) {
+            if (rows[i][catIdx]) catsSet.add(rows[i][catIdx]);
+          }
+        }
+        elements.previewStatCats.textContent = catsSet.size > 0 ? catsSet.size : 'Auto';
+
+        const regIdx = headers.findIndex(h => /reg|country|market|loc/i.test(h));
+        const regsSet = new Set();
+        if (regIdx !== -1) {
+          for (let i = 1; i < rows.length; i++) {
+            if (rows[i][regIdx]) regsSet.add(rows[i][regIdx]);
+          }
+        }
+        elements.previewStatRegs.textContent = regsSet.size > 0 ? regsSet.size : 'Auto';
+
+        elements.uploadPreviewContainer.classList.add('active');
+        elements.btnApplyDataset.disabled = false;
+        showToast(`Parsed ${rows.length - 1} records from ${file.name}. Click "Apply & Load" to import.`, 'info');
+      } catch (err) {
+        showToast(`Failed to parse CSV: ${err.message}`, 'error');
+      }
+    };
+    reader.onerror = () => {
+      showToast('Error reading the selected file.', 'error');
+    };
+    reader.readAsText(file);
+  }
+
+  // Apply Dataset handler
+  function handleApplyDataset() {
+    if (!pendingCSVText) return;
+    try {
+      const summary = window.dataEngine.loadCSVData(pendingCSVText, pendingFilename);
+      updateDatasetPill();
+      initFilters();
+      renderDashboard();
+      renderExplorer();
+      renderPlanner();
+      checkRulesAndGenerateAlerts();
+      closeUploadModal();
+      showToast(`Successfully loaded ${summary.rowCount.toLocaleString()} records from "${pendingFilename}"!`, 'success');
+    } catch (err) {
+      showToast(`Error applying dataset: ${err.message}`, 'error');
+    }
+  }
+
+  // Reset to default data handler
+  function handleResetDefaultData() {
+    window.dataEngine.resetToDefaultData();
+    updateDatasetPill();
+    initFilters();
+    renderDashboard();
+    renderExplorer();
+    renderPlanner();
+    checkRulesAndGenerateAlerts();
+    closeUploadModal();
+    showToast('Reset to default simulated transactions dataset.', 'info');
+  }
+
+  // Download Sample CSV Template
+  function handleDownloadTemplate() {
+    const templateCSV = `Transaction_ID,Date,Product_ID,Product_Name,Category,Quantity,Price,Revenue,Cost,Net_Profit,Region,Channel,Customer_Segment,CAC\nTX-200001,2026-01-15 10:30:00,P001,AuraBook Pro 15,Electronics,1,1299,1299,780,519,North America,Online,New,32\nTX-200002,2026-01-16 14:15:00,P006,Stratus Comfort Sneakers,Fashion,2,85,170,60,110,Europe,In-Store,Returning,0\nTX-200003,2026-01-18 09:45:00,P017,DermaBright Serum Duo,Beauty & Care,1,55,55,14,41,Asia-Pacific,Affiliate,New,18\nTX-200004,2026-01-20 18:20:00,P013,IronPulse Adjustable Dumbbell,Fitness & Sports,1,249,249,120,129,Latin America,Online,New,25\nTX-200005,2026-01-22 11:10:00,P009,Nova Glow LED Desk Lamp,Home & Living,3,45,135,42,93,North America,In-Store,Returning,0\n`;
+    
+    const blob = new Blob([templateCSV], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.setAttribute('href', url);
+    link.setAttribute('download', 'sales_dataset_template.csv');
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+    showToast('Downloaded sample CSV template.', 'info');
+  }
+
+  // Load sample fictional_sales_data.csv
+  function handleLoadSampleCsv() {
+    fetch('fictional_sales_data.csv')
+      .then(res => {
+        if (!res.ok) throw new Error('Could not fetch fictional_sales_data.csv');
+        return res.text();
+      })
+      .then(csvText => {
+        const file = new File([csvText], 'fictional_sales_data.csv', { type: 'text/csv' });
+        processFile(file);
+      })
+      .catch(err => {
+        showToast(`Could not load local fictional_sales_data.csv: ${err.message}`, 'error');
+      });
   }
 
   // Populate dynamic category, region, channel options
   function initFilters() {
     // Populate Category selects
+    elements.explorerCategory.innerHTML = '<option value="All">All Categories</option>';
     const cats = window.dataEngine.categories;
     cats.forEach(c => {
       const opt = document.createElement('option');
@@ -221,6 +503,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Populate Regions
+    elements.explorerRegion.innerHTML = '<option value="All">All Regions</option>';
     const regs = window.dataEngine.regions;
     regs.forEach(r => {
       const opt = document.createElement('option');
@@ -230,6 +513,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Populate Channels
+    elements.explorerChannel.innerHTML = '<option value="All">All Channels</option>';
     const chans = window.dataEngine.channels;
     chans.forEach(ch => {
       const opt = document.createElement('option');

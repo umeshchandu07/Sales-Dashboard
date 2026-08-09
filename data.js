@@ -158,8 +158,20 @@ const dataEngine = (() => {
     return list.sort((a, b) => a.date - b.date);
   }
 
-  // Pre-generate static list
-  const transactions = generateTransactions();
+  // Pre-generate static default list
+  const defaultTransactions = generateTransactions();
+  let transactions = [...defaultTransactions];
+  let dynamicCategories = [...categories];
+  let dynamicRegions = [...regions];
+  let dynamicChannels = [...channels];
+  let dynamicProducts = [...products];
+
+  let currentDatasetMeta = {
+    isCustom: false,
+    name: 'Simulated Seed Transactions',
+    rowCount: transactions.length,
+    uploadedAt: null
+  };
 
   // Generate Daily Web Traffic and Conversions for Funnel Analysis
   function generateFunnelData() {
@@ -200,11 +212,233 @@ const dataEngine = (() => {
     return funnel;
   }
 
-  const funnelData = generateFunnelData();
+  let funnelData = generateFunnelData();
+
+  // CSV Text Parser Utility
+  function parseCSV(text) {
+    const rows = [];
+    let currentRow = [];
+    let currentField = '';
+    let insideQuote = false;
+
+    for (let i = 0; i < text.length; i++) {
+      const char = text[i];
+      const nextChar = text[i + 1];
+
+      if (char === '"') {
+        if (insideQuote && nextChar === '"') {
+          currentField += '"';
+          i++; // skip next quote
+        } else {
+          insideQuote = !insideQuote;
+        }
+      } else if (char === ',' && !insideQuote) {
+        currentRow.push(currentField.trim());
+        currentField = '';
+      } else if ((char === '\r' || char === '\n') && !insideQuote) {
+        if (char === '\r' && nextChar === '\n') i++;
+        currentRow.push(currentField.trim());
+        if (currentRow.some(val => val.length > 0)) {
+          rows.push(currentRow);
+        }
+        currentRow = [];
+        currentField = '';
+      } else {
+        currentField += char;
+      }
+    }
+    if (currentField.length > 0 || currentRow.length > 0) {
+      currentRow.push(currentField.trim());
+      if (currentRow.some(val => val.length > 0)) {
+        rows.push(currentRow);
+      }
+    }
+    return rows;
+  }
+
+  // Load and Parse CSV Content
+  function loadCSVData(csvText, filename = 'Uploaded Dataset.csv') {
+    const rows = parseCSV(csvText);
+    if (!rows || rows.length < 2) {
+      throw new Error('The CSV file does not contain enough data (minimum header + 1 row required).');
+    }
+
+    const rawHeaders = rows[0].map(h => h.toLowerCase().replace(/[^a-z0-9]/g, ''));
+    
+    // Helper to find column index with various common aliases
+    const findCol = (aliases) => {
+      for (let alias of aliases) {
+        const idx = rawHeaders.indexOf(alias.toLowerCase().replace(/[^a-z0-9]/g, ''));
+        if (idx !== -1) return idx;
+      }
+      return -1;
+    };
+
+    const colIdx = {
+      id: findCol(['transaction_id', 'transactionid', 'tx_id', 'order_id', 'id', 'invoice_no']),
+      date: findCol(['date', 'order_date', 'transaction_date', 'timestamp', 'time', 'datetime', 'created_at']),
+      productId: findCol(['product_id', 'productid', 'item_id', 'sku', 'pid']),
+      productName: findCol(['product_name', 'product', 'item', 'item_name', 'title', 'name', 'description']),
+      category: findCol(['category', 'product_category', 'dept', 'department', 'type', 'group']),
+      quantity: findCol(['quantity', 'qty', 'units', 'count', 'items', 'volume']),
+      price: findCol(['price', 'unit_price', 'item_price', 'rate', 'unitprice', 'selling_price']),
+      revenue: findCol(['revenue', 'sales', 'total', 'total_amount', 'total_revenue', 'gross_sales', 'amount']),
+      cost: findCol(['cost', 'cogs', 'total_cost', 'unit_cost', 'expense', 'expenses']),
+      profit: findCol(['net_profit', 'profit', 'netprofit', 'margin', 'net_income', 'gross_profit']),
+      region: findCol(['region', 'country', 'market', 'location', 'territory', 'geo', 'state']),
+      channel: findCol(['channel', 'sales_channel', 'source', 'medium', 'acquisition_channel', 'type']),
+      segment: findCol(['customer_segment', 'segment', 'customer_type', 'user_type', 'client_type']),
+      cac: findCol(['cac', 'ad_spend', 'acquisition_cost', 'cost_per_acquisition', 'marketing_cost'])
+    };
+
+    const newTransactions = [];
+    const discoveredCategories = new Set();
+    const discoveredRegions = new Set();
+    const discoveredChannels = new Set();
+    const discoveredProductsMap = {};
+
+    const now = new Date();
+
+    for (let r = 1; r < rows.length; r++) {
+      const row = rows[r];
+      if (row.length === 0 || (row.length === 1 && !row[0])) continue;
+
+      const id = colIdx.id !== -1 && row[colIdx.id] ? row[colIdx.id] : `TX-${100000 + r}`;
+      
+      // Parse Date
+      let dateVal = now;
+      if (colIdx.date !== -1 && row[colIdx.date]) {
+        const parsed = new Date(row[colIdx.date]);
+        if (!isNaN(parsed.getTime())) {
+          dateVal = parsed;
+        }
+      }
+
+      // Quantity & Price
+      let quantity = colIdx.quantity !== -1 && row[colIdx.quantity] ? parseFloat(row[colIdx.quantity].replace(/[^0-9.-]+/g, '')) : 1;
+      if (isNaN(quantity) || quantity <= 0) quantity = 1;
+
+      let price = colIdx.price !== -1 && row[colIdx.price] ? parseFloat(row[colIdx.price].replace(/[^0-9.-]+/g, '')) : 50;
+      if (isNaN(price) || price < 0) price = 50;
+
+      // Revenue
+      let revenue = colIdx.revenue !== -1 && row[colIdx.revenue] ? parseFloat(row[colIdx.revenue].replace(/[^0-9.-]+/g, '')) : (quantity * price);
+      if (isNaN(revenue)) revenue = quantity * price;
+
+      // Cost
+      let cost = colIdx.cost !== -1 && row[colIdx.cost] ? parseFloat(row[colIdx.cost].replace(/[^0-9.-]+/g, '')) : (revenue * 0.45);
+      if (isNaN(cost)) cost = revenue * 0.45;
+
+      // Net Profit
+      let profit = colIdx.profit !== -1 && row[colIdx.profit] ? parseFloat(row[colIdx.profit].replace(/[^0-9.-]+/g, '')) : (revenue - cost);
+      if (isNaN(profit)) profit = revenue - cost;
+
+      // Product & Category
+      const productName = colIdx.productName !== -1 && row[colIdx.productName] ? row[colIdx.productName] : 'Standard Item';
+      const productId = colIdx.productId !== -1 && row[colIdx.productId] ? row[colIdx.productId] : `P${String(r).padStart(3, '0')}`;
+      const category = colIdx.category !== -1 && row[colIdx.category] ? row[colIdx.category] : 'General';
+
+      // Region & Channel & Segment
+      const region = colIdx.region !== -1 && row[colIdx.region] ? row[colIdx.region] : 'Global';
+      const channel = colIdx.channel !== -1 && row[colIdx.channel] ? row[colIdx.channel] : 'Direct';
+      const segment = colIdx.segment !== -1 && row[colIdx.segment] ? row[colIdx.segment] : (r % 2 === 0 ? 'New' : 'Returning');
+
+      // CAC
+      let cac = colIdx.cac !== -1 && row[colIdx.cac] ? parseFloat(row[colIdx.cac].replace(/[^0-9.-]+/g, '')) : (segment === 'New' ? 20 : 0);
+      if (isNaN(cac)) cac = segment === 'New' ? 20 : 0;
+
+      discoveredCategories.add(category);
+      discoveredRegions.add(region);
+      discoveredChannels.add(channel);
+      
+      if (!discoveredProductsMap[productId]) {
+        discoveredProductsMap[productId] = {
+          id: productId,
+          name: productName,
+          category: category,
+          price: price,
+          cost: cost / quantity
+        };
+      }
+
+      newTransactions.push({
+        id,
+        date: dateVal,
+        productId,
+        productName,
+        category,
+        quantity,
+        price,
+        revenue,
+        cost,
+        profit,
+        region,
+        channel,
+        segment,
+        cac,
+        hasDiscount: price < (discoveredProductsMap[productId].price || price)
+      });
+    }
+
+    if (newTransactions.length === 0) {
+      throw new Error('No valid transaction rows could be parsed from the CSV.');
+    }
+
+    // Sort chronologically
+    newTransactions.sort((a, b) => a.date - b.date);
+
+    // Apply updates to state
+    transactions = newTransactions;
+    dynamicCategories = Array.from(discoveredCategories);
+    dynamicRegions = Array.from(discoveredRegions);
+    dynamicChannels = Array.from(discoveredChannels);
+    dynamicProducts = Object.values(discoveredProductsMap);
+
+    currentDatasetMeta = {
+      isCustom: true,
+      name: filename,
+      rowCount: transactions.length,
+      uploadedAt: new Date()
+    };
+
+    return {
+      rowCount: transactions.length,
+      categoriesCount: dynamicCategories.length,
+      regionsCount: dynamicRegions.length,
+      channelsCount: dynamicChannels.length,
+      totalRevenue: transactions.reduce((acc, t) => acc + t.revenue, 0),
+      dateRange: {
+        start: transactions[0]?.date || now,
+        end: transactions[transactions.length - 1]?.date || now
+      }
+    };
+  }
+
+  // Reset to default seeded transactions
+  function resetToDefaultData() {
+    transactions = [...defaultTransactions];
+    dynamicCategories = [...categories];
+    dynamicRegions = [...regions];
+    dynamicChannels = [...channels];
+    dynamicProducts = [...products];
+
+    currentDatasetMeta = {
+      isCustom: false,
+      name: 'Simulated Seed Transactions',
+      rowCount: transactions.length,
+      uploadedAt: null
+    };
+
+    return {
+      rowCount: transactions.length,
+      name: currentDatasetMeta.name
+    };
+  }
 
   // Fetch full lists
   const getRawTransactions = () => transactions;
   const getRawFunnel = () => funnelData;
+  const getDatasetMeta = () => ({ ...currentDatasetMeta });
 
   // Filter Transaction List
   const getFilteredData = (filters) => {
@@ -255,18 +489,13 @@ const dataEngine = (() => {
     const avgOrderValue = totalOrders > 0 ? (revenue / totalOrders) : 0;
     const margin = revenue > 0 ? (profit / revenue) * 100 : 0;
     
-    // Calculate Web Stats matching the timeframe
+    // Funnel integration
     let totalTraffic = 0;
     let totalWebOrders = 0;
-    
-    // Simple filter matching dates for funnel data
-    let minDate = filteredTrans.length > 0 ? filteredTrans[0].date : new Date();
-    let maxDate = filteredTrans.length > 0 ? filteredTrans[filteredTrans.length - 1].date : new Date();
-    
-    funnelData.forEach(day => {
-      if (day.date >= minDate && day.date <= maxDate) {
-        totalTraffic += day.traffic;
-        totalWebOrders += day.orders;
+    funnelData.forEach(f => {
+      if (filteredTrans.length > 0) {
+        totalTraffic += f.traffic;
+        totalWebOrders += f.orders;
       }
     });
 
@@ -322,16 +551,20 @@ const dataEngine = (() => {
   // Group by Product Category
   const getCategoryDistribution = (filteredTrans) => {
     const catMap = {};
-    categories.forEach(c => {
+    
+    // Seed with all current active categories
+    dynamicCategories.forEach(c => {
       catMap[c] = { category: c, revenue: 0, profit: 0, units: 0 };
     });
 
     filteredTrans.forEach(t => {
-      if (catMap[t.category]) {
-        catMap[t.category].revenue += t.revenue;
-        catMap[t.category].profit += t.profit;
-        catMap[t.category].units += t.quantity;
+      const cat = t.category || 'Other';
+      if (!catMap[cat]) {
+        catMap[cat] = { category: cat, revenue: 0, profit: 0, units: 0 };
       }
+      catMap[cat].revenue += t.revenue;
+      catMap[cat].profit += t.profit;
+      catMap[cat].units += t.quantity;
     });
 
     return Object.values(catMap).sort((a, b) => b.revenue - a.revenue);
@@ -340,16 +573,19 @@ const dataEngine = (() => {
   // Group by Region
   const getRegionalPerformance = (filteredTrans) => {
     const regMap = {};
-    regions.forEach(r => {
+    
+    dynamicRegions.forEach(r => {
       regMap[r] = { region: r, revenue: 0, profit: 0, units: 0 };
     });
 
     filteredTrans.forEach(t => {
-      if (regMap[t.region]) {
-        regMap[t.region].revenue += t.revenue;
-        regMap[t.region].profit += t.profit;
-        regMap[t.region].units += t.quantity;
+      const reg = t.region || 'Other';
+      if (!regMap[reg]) {
+        regMap[reg] = { region: reg, revenue: 0, profit: 0, units: 0 };
       }
+      regMap[reg].revenue += t.revenue;
+      regMap[reg].profit += t.profit;
+      regMap[reg].units += t.quantity;
     });
 
     return Object.values(regMap).sort((a, b) => b.revenue - a.revenue);
@@ -358,16 +594,19 @@ const dataEngine = (() => {
   // Group by Acquisition Channel
   const getChannelDistribution = (filteredTrans) => {
     const chanMap = {};
-    channels.forEach(ch => {
+    
+    dynamicChannels.forEach(ch => {
       chanMap[ch] = { channel: ch, revenue: 0, units: 0, count: 0 };
     });
 
     filteredTrans.forEach(t => {
-      if (chanMap[t.channel]) {
-        chanMap[t.channel].revenue += t.revenue;
-        chanMap[t.channel].units += t.quantity;
-        chanMap[t.channel].count += 1;
+      const ch = t.channel || 'Direct';
+      if (!chanMap[ch]) {
+        chanMap[ch] = { channel: ch, revenue: 0, units: 0, count: 0 };
       }
+      chanMap[ch].revenue += t.revenue;
+      chanMap[ch].units += t.quantity;
+      chanMap[ch].count += 1;
     });
 
     return Object.values(chanMap);
@@ -377,9 +616,10 @@ const dataEngine = (() => {
   const getTopProducts = (filteredTrans, limit = 5) => {
     const prodMap = {};
     filteredTrans.forEach(t => {
-      if (!prodMap[t.productId]) {
-        prodMap[t.productId] = {
-          id: t.productId,
+      const pId = t.productId || t.productName;
+      if (!prodMap[pId]) {
+        prodMap[pId] = {
+          id: pId,
           name: t.productName,
           category: t.category,
           revenue: 0,
@@ -388,9 +628,9 @@ const dataEngine = (() => {
           margin: 0
         };
       }
-      prodMap[t.productId].revenue += t.revenue;
-      prodMap[t.productId].profit += t.profit;
-      prodMap[t.productId].units += t.quantity;
+      prodMap[pId].revenue += t.revenue;
+      prodMap[pId].profit += t.profit;
+      prodMap[pId].units += t.quantity;
     });
 
     return Object.values(prodMap)
@@ -412,11 +652,15 @@ const dataEngine = (() => {
     getRegionalPerformance,
     getChannelDistribution,
     getTopProducts,
-    categories,
-    regions,
-    channels,
-    segments,
-    products
+    loadCSVData,
+    resetToDefaultData,
+    getDatasetMeta,
+    parseCSV,
+    get categories() { return dynamicCategories; },
+    get regions() { return dynamicRegions; },
+    get channels() { return dynamicChannels; },
+    get segments() { return segments; },
+    get products() { return dynamicProducts; }
   };
 })();
 
