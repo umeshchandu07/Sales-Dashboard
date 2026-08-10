@@ -45,7 +45,7 @@ Businesses lack real-time visibility into sales performance trends due to siloed
 *   **Documentation**: Markdown files linked locally in the workspace.
 
 ### 3.2 Simulated Data Source
-*   **File**: `fictional_sales_data.csv` (1,000 transaction entries, generated via `generate_data.py`).
+*   **File**: `fictional_sales_data.csv` (1,000 transaction entries, generated via `sales_analytics.py`).
 *   **Fields**: Transaction ID, Date, Product Name, Category, Price, Cost, Quantity, Region, Channel, Customer Segment, and CAC.
 
 ---

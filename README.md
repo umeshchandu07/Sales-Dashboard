@@ -10,9 +10,8 @@ AuraSales is a professional, high-fidelity sales analytics dashboard prototype a
 *   **[`styles.css`](file:///d:/Sadre/styles.css)**: Custom CSS design system implementing a premium glassmorphic dark-theme with neon accents. Leverages **Outfit** for typography headers, **Plus Jakarta Sans** for body interfaces, and **JetBrains Mono** for data cells.
 *   **[`data.js`](file:///d:/Sadre/data.js)**: Procedural client-side JavaScript mock data generator modeling seasonal transaction curves.
 *   **[`app.js`](file:///d:/Sadre/app.js)**: Controller scripting that coordinates filtering states, dynamically renders ApexCharts, handles pagination/sorting, runs real-time mathematical forecasts, and checks threshold alert rules.
-*   **[`generate_data.py`](file:///d:/Sadre/generate_data.py)**: Python data generator script that outputs a CP1252-safe transactional CSV log.
-*   **[`analyze_sales.py`](file:///d:/Sadre/analyze_sales.py)**: Pandas-based Python utility for descriptive sales and CAC analysis.
-*   **[`fictional_sales_data.csv`](file:///d:/Sadre/fictional_sales_data.csv)**: Fictional dataset of 1,000 transaction rows populated via Python.
+*   **[`sales_analytics.py`](file:///d:/Sadre/sales_analytics.py)**: Unified Python data generator and analytics pipeline. Supports CLI flags for generating datasets, calculating business KPIs, and running financial summaries.
+*   **[`fictional_sales_data.csv`](file:///d:/Sadre/fictional_sales_data.csv)**: Fictional dataset populated via Python.
 *   **[`sales_analytics_documentation.md`](file:///d:/Sadre/sales_analytics_documentation.md)**: Granular technical documentation covering equations, PostgreSQL/Snowflake data schemas, and ETL dbt architectures.
 
 ---
@@ -29,18 +28,19 @@ Since AuraSales is a high-fidelity frontend prototype, it can run directly in th
 *   **Option B (Direct Execution)**: Double-click **[`index.html`](file:///d:/Sadre/index.html)** inside your Windows Explorer to open it in Chrome, Edge, or Firefox.
 
 ### 2. Running Python Analytical Scripts
-To test the Python-based data processing module:
-1.  **Generate Data**:
+To use the combined Python data and analytics pipeline:
+*   **Run All (Generate & Analyze)**:
     ```bash
-    python generate_data.py
+    python sales_analytics.py
     ```
-    This generates the CSV file `fictional_sales_data.csv`.
-2.  **Process Data** (Requires `pandas`):
+*   **Generate Dataset Only**:
     ```bash
-    pip install pandas
-    python analyze_sales.py
+    python sales_analytics.py --generate --count 1000
     ```
-    This outputs key KPIs, product category index performance, regional share, and customer LTV/CAC ratios directly to your command prompt.
+*   **Analyze Existing Dataset**:
+    ```bash
+    python sales_analytics.py --analyze
+    ```
 
 ---
 

@@ -120,28 +120,30 @@ To supply data to our dashboard dynamically:
 
 ---
 
-## 5. Python Data Processing & Fictional Dataset Tools
+## 5. Python Data Processing & Analytical Pipeline (`sales_analytics.py`)
 
-To enable structured data manipulation and support scale validation, the AuraSales package includes two Python scripts:
+To enable structured data manipulation and support scale validation, the AuraSales package includes the unified tool [`sales_analytics.py`](file:///d:/Sadre/sales_analytics.py):
 
-### 5.1 Fictional Data Generation (`generate_data.py`)
-Since no specific real-world dataset was provided, we developed a Python dataset creation tool located at [`generate_data.py`](file:///d:/Sadre/generate_data.py). 
-*   **Methodology**: Procedurally outputs a transactional dataset (`fictional_sales_data.csv`) of 1,000 transactions.
+### 5.1 Fictional Data Generation
+*   **Methodology**: Procedurally outputs a transactional dataset (`fictional_sales_data.csv`) of customizable size (default 1,000 transactions).
 *   **Realism Model**: Incorporates regional sales biases, product margin parameters, holiday seasonal spikes (Nov/Dec), customer segment ratios, and acquisition channel marketing cost distributions.
 *   **Run command**:
     ```bash
-    python generate_data.py
+    python sales_analytics.py --generate --count 1000
     ```
 
-### 5.2 Pandas Data Analysis (`analyze_sales.py`)
-To process the generated records using professional data science toolsets, we built [`analyze_sales.py`](file:///d:/Sadre/analyze_sales.py).
-*   **Pandas Grouping & Aggregations**: Reads the CSV, parses timestamp fields, cleans missing values, and aggregates data to inspect:
+### 5.2 Analytical Processing & Reporting
+*   **Pandas Grouping & Aggregations**: Reads the CSV, parses timestamp fields, cleans data, and calculates:
     *   **Financial KPIs**: Total revenue, COGS, and operating margins.
     *   **Performance Matrices**: Revenue contribution and unit margins grouped by Product Category and Region.
     *   **Customer Acquisition Health**: Summarizes average CAC across marketing channels and computes LTV/CAC ratios (Customer Lifetime Value to Customer Acquisition Cost).
-*   **Run command** (Requires `pandas` installed):
+*   **Run command**:
     ```bash
-    python analyze_sales.py
+    python sales_analytics.py --analyze
+    ```
+*   **Full End-to-End Pipeline**:
+    ```bash
+    python sales_analytics.py
     ```
 
 ---
