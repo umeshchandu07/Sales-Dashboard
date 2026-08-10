@@ -10,7 +10,9 @@ AuraSales is a professional, high-fidelity sales analytics dashboard prototype a
 *   **[`styles.css`](file:///d:/Sadre/styles.css)**: Custom CSS design system implementing a premium glassmorphic dark-theme with neon accents. Leverages **Outfit** for typography headers, **Plus Jakarta Sans** for body interfaces, and **JetBrains Mono** for data cells.
 *   **[`data.js`](file:///d:/Sadre/data.js)**: Procedural client-side JavaScript mock data generator modeling seasonal transaction curves.
 *   **[`app.js`](file:///d:/Sadre/app.js)**: Controller scripting that coordinates filtering states, dynamically renders ApexCharts, handles pagination/sorting, runs real-time mathematical forecasts, and checks threshold alert rules.
+*   **[`app.py`](file:///d:/Sadre/app.py)**: Interactive Python enterprise analytics dashboard powered by **Streamlit**, **Pandas**, **Plotly Express**, and **OpenPyXL**.
 *   **[`sales_analytics.py`](file:///d:/Sadre/sales_analytics.py)**: Unified Python data generator and analytics pipeline. Supports CLI flags for generating datasets, calculating business KPIs, and running financial summaries.
+*   **[`requirements.txt`](file:///d:/Sadre/requirements.txt)**: Python package dependencies (`streamlit`, `pandas`, `plotly`, `openpyxl`).
 *   **[`fictional_sales_data.csv`](file:///d:/Sadre/fictional_sales_data.csv)**: Fictional dataset populated via Python.
 *   **[`sales_analytics_documentation.md`](file:///d:/Sadre/sales_analytics_documentation.md)**: Granular technical documentation covering equations, PostgreSQL/Snowflake data schemas, and ETL dbt architectures.
 
@@ -18,29 +20,25 @@ AuraSales is a professional, high-fidelity sales analytics dashboard prototype a
 
 ## ⚡ Quick Start & Verification
 
-### 1. Launching the Interactive Web Dashboard
-Since AuraSales is a high-fidelity frontend prototype, it can run directly in the browser:
-*   **Option A (Local Server)**: Run a local server from the project directory. For example, using Python's built-in server:
+### 1. Launching the Streamlit Interactive Python App
+Run the full-featured Python dashboard with real-time Plotly charts and Excel/CSV exporting:
+```bash
+python -m streamlit run app.py
+```
+Open **[http://localhost:8501](http://localhost:8501)** in your browser.
+
+### 2. Launching the Web Prototype (Vanilla JS & CSS)
+*   **Option A (Local Server)**:
     ```bash
     python -m http.server 8000
     ```
-    Then open your browser and navigate to: **[http://localhost:8000](http://localhost:8000)**
-*   **Option B (Direct Execution)**: Double-click **[`index.html`](file:///d:/Sadre/index.html)** inside your Windows Explorer to open it in Chrome, Edge, or Firefox.
+    Open **[http://localhost:8000](http://localhost:8000)**
+*   **Option B (Direct Execution)**: Double-click **[`index.html`](file:///d:/Sadre/index.html)** in Windows Explorer.
 
-### 2. Running Python Analytical Scripts
-To use the combined Python data and analytics pipeline:
-*   **Run All (Generate & Analyze)**:
-    ```bash
-    python sales_analytics.py
-    ```
-*   **Generate Dataset Only**:
-    ```bash
-    python sales_analytics.py --generate --count 1000
-    ```
-*   **Analyze Existing Dataset**:
-    ```bash
-    python sales_analytics.py --analyze
-    ```
+### 3. Running Python Analytical CLI Pipeline
+```bash
+python sales_analytics.py
+```
 
 ---
 
