@@ -6,7 +6,7 @@ AuraSales is a professional, high-fidelity sales analytics dashboard prototype a
 
 ## 📂 Project Structure
 
-*   **[`index.html`](file:///d:/Sadre/index.html)**: The main single-page application structure. Contains layouts for the analytical Dashboard, Sales Explorer, Scenario Planner, and Guardrail Alerts.
+*   **[`index.html`](file:///d:/Sadre/index.html)**: The main single-page web application structure. Contains layouts for the analytical Dashboard, Sales Explorer, Scenario Planner, and Guardrail Alerts.
 *   **[`styles.css`](file:///d:/Sadre/styles.css)**: Custom CSS design system implementing a premium glassmorphic dark-theme with neon accents. Leverages **Outfit** for typography headers, **Plus Jakarta Sans** for body interfaces, and **JetBrains Mono** for data cells.
 *   **[`data.js`](file:///d:/Sadre/data.js)**: Procedural client-side JavaScript mock data generator modeling seasonal transaction curves.
 *   **[`app.js`](file:///d:/Sadre/app.js)**: Controller scripting that coordinates filtering states, dynamically renders ApexCharts, handles pagination/sorting, runs real-time mathematical forecasts, and checks threshold alert rules.
@@ -20,7 +20,7 @@ AuraSales is a professional, high-fidelity sales analytics dashboard prototype a
 
 ## ⚡ Quick Start & Verification
 
-### 1. Launching the Streamlit Interactive Python App
+### 1. Launching the Streamlit Interactive Python Dashboard
 Run the full-featured Python dashboard with real-time Plotly charts and Excel/CSV exporting:
 ```bash
 python -m streamlit run app.py
@@ -32,8 +32,8 @@ Open **[http://localhost:8501](http://localhost:8501)** in your browser.
     ```bash
     python -m http.server 8000
     ```
-    Open **[http://localhost:8000](http://localhost:8000)**
-*   **Option B (Direct Execution)**: Double-click **[`index.html`](file:///d:/Sadre/index.html)** in Windows Explorer.
+    Open **[http://localhost:8000](http://localhost:8000)** in your browser.
+*   **Option B (Direct Execution)**: Double-click **[`index.html`](file:///d:/Sadre/index.html)** in Windows Explorer or open it in any modern browser.
 
 ### 3. Running Python Analytical CLI Pipeline
 ```bash
