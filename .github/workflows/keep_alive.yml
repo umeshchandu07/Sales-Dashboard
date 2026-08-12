@@ -1,16 +1,31 @@
-name: Keep Streamlit App Alive
+name: Keep Streamlit App Awake
 
 on:
   schedule:
-    # Runs every 6 hours to prevent Streamlit Community Cloud from sleeping
-    - cron: '0 */6 * * *'
+    # Runs every 2 hours to keep the Streamlit app active 24/7
+    - cron: '0 */2 * * *'
   workflow_dispatch:
 
 jobs:
-  ping:
+  keep_awake:
+    name: Ping Streamlit Dashboard
     runs-on: ubuntu-latest
     steps:
-      - name: Ping Streamlit Cloud Application
+      - name: Ping Streamlit App URL and Health Endpoint
         run: |
-          curl -I -s -L "https://sales-dashboard-gepexnacdzs7bvtfpfmo26.streamlit.app/" || true
-          echo "Streamlit app pinged successfully."
+          APP_URL="https://sales-dashboard-gepexnacdzs7bvtfpfmo26.streamlit.app"
+          USER_AGENT="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+          
+          echo "Pinging main application URL: $APP_URL"
+          RESPONSE_CODE=$(curl -s -o /dev/null -w "%{http_code}" -A "$USER_AGENT" -L "$APP_URL")
+          echo "Main URL HTTP Status: $RESPONSE_CODE"
+          
+          echo "Pinging Streamlit internal health endpoint: $APP_URL/_stcore/health"
+          HEALTH_CODE=$(curl -s -o /dev/null -w "%{http_code}" -A "$USER_AGENT" -L "$APP_URL/_stcore/health" || true)
+          echo "Health check HTTP Status: $HEALTH_CODE"
+          
+          if [ "$RESPONSE_CODE" -ge 200 ] && [ "$RESPONSE_CODE" -lt 400 ]; then
+            echo "SUCCESS: Streamlit app is active and awake!"
+          else
+            echo "WARNING: App returned status $RESPONSE_CODE, waking up..."
+          fi
